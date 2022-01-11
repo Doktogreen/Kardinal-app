@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+<title>Kardinal -Setting</title>
+<link rel="icon" type="image/x-icon" href="../assets/img/icon.png"/>
+<link href="assets/css/loader.css" rel="stylesheet" type="text/css" />
+<script src="assets/js/loader.js"></script>
+
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+<!-- END GLOBAL MANDATORY STYLES -->
+
+<!-- BEGIN PAGE LEVEL plugins/CUSTOM STYLES -->
+<link rel="stylesheet" type="text/css" href="plugins/table/datatable/datatables.css">
+<link rel="stylesheet" type="text/css" href="assets/css/forms/theme-checkbox-radio.css">
+<link rel="stylesheet" type="text/css" href="plugins/table/datatable/dt-global_style.css">
+<link rel="stylesheet" type="text/css" href="plugins/table/datatable/custom_dt_custom.css">
+<link href="plugins/apex/apexcharts.css" rel="stylesheet" type="text/css">
+<link href="assets/css/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/dashboard/dash_2.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="assets/css/widgets/modules-widgets.css">   
+<link href="assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/components/tabs-accordian/custom-tabs.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/components/cards/card.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="assets/css/forms/theme-checkbox-radio.css">
+<link href="plugins/file-upload/file-upload-with-preview.min.css" rel="stylesheet" type="text/css" />
+<!-- END PAGE LEVEL plugins/CUSTOM STYLES -->
+
+
+</head>
+<body class="sidebar-noneoverflow">
+
+<!-- BEGIN LOADER -->
+<div id="load_screen"> <div class="loader"> <div class="loader-content">
+<div class="spinner-grow align-self-center"></div>
+</div></div></div>
+<!--  END LOADER -->
+
+<!--  BEGIN NAVBAR  -->
+<div class="header-container">
+<header class="header navbar navbar-expand-sm">
+
+<a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a>
+
+<div class="nav-logo align-self-center">
+<a class="navbar-brand" href="../index.html"><img alt="logo" src="../assets/img/kardinal.png"></a>
+</div>
+
+<ul class="navbar-item topbar-navigation">
+
+<!--  BEGIN TOPBAR  -->
+<div class="topbar-nav header navbar" role="banner">
+<nav id="topbar">
+<ul class="navbar-nav theme-brand flex-row  text-center">
+<li class="nav-item theme-logo">
+<a href="index.html">
+<img src="assets/img/logo-kardinal.png" class="navbar-logo" alt="logo">
+</a>
+</li>
+
+</ul>
+
+<ul class="list-unstyled menu-categories" id="topAccordion">
+
+<li class="menu single-menu">
+<a href="dashboard.html">
+<div class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+
+<span>Dashboard</span>
+
+</div>
+</a>
+</li>
+
+<li class="menu single-menu">
+<a href="#app" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+<div class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+
+<span>Trips</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</div>
+</a>
+</li>
+<li class="menu single-menu">
+        <a href="invoicing.html">
+        <div class="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+       
+        <span>Invoice </span>
+        </div>
+        </a>
+        </li>
+        <li class="menu single-menu">
+        <a href="reporting.html">
+        <div class="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+       
+        <span>Reporting</span>
+        </div>
+        </a>
+        </li>
+
+<li class="menu single-menu">
+<a href="trip_histroy.html">
+<div class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+
+<span>Trip Histroy</span>
+</div>
+</a>
+</li>
+
+<li class="menu single-menu active">
+    <a href="setting.html">
+<div class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+
+<span>Setting</span>
+</div>
+</a>
+
+</li>
+
+<li class="menu single-menu ">
+    <a href="#">
+<div class="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>  
+                    <span>Event</span>
+</div>
+</a>
+
+</li>
+
+
+
+</ul>
+</nav>
+</div>
+<!--  END TOPBAR  -->
+
+</ul>
+
+<ul class="navbar-item flex-row ml-auto">
+<li class="font-weight-bold">Username</li>
+</ul>
+
+<ul class="navbar-item flex-row nav-dropdowns">
+
+
+<li class="nav-item dropdown user-profile-dropdown order-lg-0 order-1">
+<a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="user-profile-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<div class="media">
+<img src="assets/img/90x90.jpg" class="img-fluid" alt="admin-profile">
+<!-- <div class="media-body align-self-center">
+<h6><span>Hi,</span> Alan</h6>
+</div> -->
+</div>
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg> -->
+</a>
+<div class="dropdown-menu position-absolute animated fadeInUp" aria-labelledby="userProfileDropdown">
+<div class="user-profile-section">
+<div class="media mx-auto">
+<img src="assets/img/90x90.jpg" class="img-fluid mr-2" alt="avatar">
+<div class="media-body">
+<h5>Ghulam Abbas</h5>
+<p>Admin</p>
+</div>
+</div>
+</div>
+<div class="dropdown-item">
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> <span>My Profile</span>
+</a>
+</div>
+<div class="dropdown-item">
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-inbox"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg> <span>My Inbox</span>
+</a>
+</div>
+<div class="dropdown-item">
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> <span>Lock Screen</span>
+</a>
+</div>
+<div class="dropdown-item">
+<a href="../auth_login.html">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg> <span>Log Out</span>
+</a>
+</div>
+</div>
+
+</li>
+</ul>
+</header>
+</div>
+<!--  END NAVBAR  -->
+
+<!--  BEGIN MAIN CONTAINER  -->
+<div class="main-container" id="container">
+
+<div class="overlay"></div>
+<div class="search-overlay"></div>
+
+<!--  BEGIN CONTENT AREA  -->
+            <div id="content" class="main-content">
+            <div class="layout-px-spacing">
+            
+            <div class="page-header">
+            <div class="page-title">
+                                    <h3>Settings</h3>
+                                </div>
+            
+            
+            
+            </div>
+
+            <div class="row layout-spacing">
+                    <div class="col-lg-12">
+                        <div class="statbox widget box box-shadow widget-chart-three" style="padding: 0px 20px;">
+                            
+                            <div class="widget-heading" style="padding: 20px 0px;">
+                                <div>
+                                    <h5>Settings</h5>
+                                </div>
+
+                            </div>
+                            
+                            <div class="widget-content widget-content-area border-top-tab">
+                                    <ul class="nav nav-tabs mb-3 mt-3" id="borderTop" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="border-top-security-tab" data-toggle="tab" style="padding: 12px 100px;" href="#border-top-security" role="tab" aria-controls="border-top-security" aria-selected="true">Security</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="border-top-company-tab" data-toggle="tab" style="padding: 12px 100px;" href="#border-top-company" role="tab" aria-controls="border-top-company" aria-selected="false">Company</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="border-top-travelers-tab" data-toggle="tab" style="padding: 12px 100px;" href="#border-top-travelers" role="tab" aria-controls="border-top-travelers" aria-selected="false">Travelers</a>
+                                        </li>
+                                        
+                                    </ul>
+                                        
+                                    <div class="tab-content" id="borderTopContent">
+                                        <div class="tab-pane fade show active" id="border-top-security" role="tabpanel" aria-labelledby="border-top-security-tab">
+                                            
+                                            <div class="row">
+                                                
+                                                <div id="flRegistrationForm" class="col-lg-12 layout-spacing">
+                                                    <div class="statbox widget box box-shadow">
+                                                        <div class="widget-header">                                
+                                                            <div class="row">
+                                                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                                                    <h4></h4>
+                                                                </div>                                                                        
+                                                            </div>
+                                                        </div>
+                                                        <div class="widget-content widget-content-area ">
+                                                            <form>
+                                                                <div class="row" style="padding: 0 20px;">
+                                                                    <div class="col-md-6">
+                                                                        <h5>Change Password</h5>
+                                                                        <p>Password must be 8 characters long</p>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group mb-4">
+                                                                            <input type="password" class="form-control" id="cPassword" placeholder="Current Password *">
+                                                                        </div>
+                                                                        <div class="form-group mb-4">
+                                                                            <input type="password" class="form-control" id="nPassword" placeholder="New Password *">
+                                                                            
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password *">
+                                                                            <small id="emailHelp2" class="form-text text-muted">Password must be 8 characters long</small>
+                                                                        </div>
+                                                                
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                
+                                                                <div class="mb-3" style="padding: 0 20px; text-align:right" >
+                                                                    <button type="submit" class="btn btn-primary mt-3">Change Password</button>
+                                                                </div>
+                                                                
+                                                            </form>
+                                                        </div>    
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="col-lg-12 layout-spacing">
+                                                    <div class="statbox widget box box-shadow">
+                                                        <div class="widget-header">                                
+                                                            <div class="row">
+                                                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                                                    <h4></h4>
+                                                                </div>                                                                        
+                                                            </div>
+                                                        </div>
+                                                        <div class="widget-content widget-content-area ">
+                                                            <form>
+                                                                <div class="row" style="padding: 0 20px;">
+                                                                    <div class="col-md-6">
+                                                                        <h5>Two-Factor authenication(2FA)</h5>
+                                                                        <p>Decide your prefered method of receiving one time password(OTP)</p>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="n-chk mb-4">
+                                                                            <label class="new-control new-radio new-radio-text">
+                                                                              <input type="radio" class="new-control-input" name="custom-radio-4">
+                                                                              <span class="new-control-indicator"></span><span class="new-radio-content">Recieve OTP via email</span>
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="n-chk mb-4">
+                                                                            <label class="new-control new-radio new-radio-text">
+                                                                              <input type="radio" class="new-control-input" name="custom-radio-4" checked>
+                                                                              <span class="new-control-indicator"></span><span class="new-radio-content">Recieve OTP via authenticator app</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                
+                                                                
+                                                            </form>
+                                                        </div>    
+                                                    </div>
+                                                </div>
+                                            </div>    
+                                              
+                                        </div>
+                                        <div class="tab-pane fade" id="border-top-company" role="tabpanel" aria-labelledby="border-top-company-tab">
+                                            <div class="row">
+                                                <div id="flRegistrationForm" class="col-lg-12 layout-spacing">
+                                                    <div class="statbox widget box box-shadow">
+                                                        <div class="widget-header">                                
+                                                            <div class="row">
+                                                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                                                    <h4></h4>
+                                                                </div>                                                                        
+                                                            </div>
+                                                        </div>
+                                                        <div class="widget-content widget-content-area ">
+                                                            <form>
+                                                                <div class="row mb-5" style="padding: 0 20px;">
+                                                                    <div class="col-md-6">
+                                                                        <h5>Company Logo</h5>
+                                                                        <p>Please upload a valid (500*500) PNG format of your logo</p>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="custom-file-container" data-upload-id="myFirstImage">
+                                                                            
+                                                                            <label class="custom-file-container__custom-file" >
+                                                                                <input type="file" class="custom-file-container__custom-file__custom-file-input" accept="image/*">
+                                                                                <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+                                                                                <span class="custom-file-container__custom-file__custom-file-control"></span>
+                                                                            </label>
+                                                                            <!--<div class="custom-file-container__image-preview"></div>-->
+                                                                        </div>
+                                                                
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                
+                                                                <div class="row mb-5" style="padding: 0 20px;">
+                                                                    <div class="col-md-6">
+                                                                        <h5>Business Name</h5>
+                                                                        <p>You can change your name after your account has been created</p>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <input type="text" class="form-control" id="businessName" placeholder="Business Name">
+                                                                            
+                                                                        </div>
+                                                                
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                
+                                                                <div class="row mb-5" style="padding: 0 20px;">
+                                                                    <div class="col-md-6">
+                                                                        <h5>Company bio</h5>
+                                                                        <p>Tell us a little about your business</p>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="9">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                                                                            </textarea>
+                                                                            
+                                                                        </div>
+                                                                
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                
+                                                                <div class="row mb-5" style="padding: 0 20px;">
+                                                                    <div class="col-md-6">
+                                                                        <h5>Business Industry</h5>
+                                                                        <p>The industry closest to the one in which your company operates</p>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <select class="form-control" id="exampleFormControlSelect2">
+                                                                                <option>Textile</option>
+                                                                                <option>Information Technology</option>
+                                                                                <option>Media &amp; Finanace</option>
+                                                                                <option>Civil Works</option>
+                                                                                <option>Electrical</option>
+                                                                            </select>
+                                                                        </div>
+                                                                
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                
+                                                                <div class="row mb-5" style="padding: 0 20px;">
+                                                                    <div class="col-md-6">
+                                                                        <h5>Business address</h5>
+                                                                        <p>This is where your business is located</p>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <input type="text" class="form-control" id="businessAddress" placeholder="Business Address">
+                                                                            
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <input type="text" class="form-control" id="stateName" placeholder="State">
+                                                                            
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <input type="text" class="form-control" id="cityName" placeholder="City">
+                                                                            
+                                                                        </div>
+                                                                
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                
+                                                                <div class="mb-3" style="padding: 0 20px; text-align:right" >
+                                                                    <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+                                                                </div>
+                                                                
+                                                            </form>
+                                                        </div>    
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="border-top-travelers" role="tabpanel" aria-labelledby="border-top-travelers-tab">
+                                            <div class="row">
+                                                <div class="col-lg-12 layout-spacing">
+                                                    <div class="statbox box box-shadow">
+                                                        <div class="widget-header">                                
+                                                            <div class="row">
+                                                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                                                    <h4></h4>
+                                                                </div>                                                                        
+                                                            </div>
+                                                        </div>
+                                                        <div class="widget-content widget-content-area ">
+                                                            
+                                                                <div class="row mb-5" style="padding: 0 20px;">
+                                                                    <div class="col-md-6">
+                                                                        <h5>Travelers List</h5>
+                                                                        <p>Click to view list of travellers</p>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="row">
+
+                                                                            <div class="col-lg-6">
+                                                                                <!--<p class="mb-4"><code>To view all</code></p>-->
+                                                                                <a href="#" class="btn btn-primary mb-2">View all</a>
+                                                                            </div>
+                                    
+                                                                            <div class="col-lg-6">
+                                                                                <!--<p class="mb-4"><code>To add new travlers</code></p>-->
+                                                                                <button href="#" class="btn btn-outline-primary mb-2"  data-toggle="modal" data-target="#addNewTraveler">Add Traveler</button>
+                                                                            </div>
+                                    
+                                                                        </div>
+                                                                
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                
+                                                                
+                                                                
+                                                            
+                                                        </div>    
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                          
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Add New Traveler Modal -->
+                                    <div class="modal fade" id="addNewTraveler" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalCenterTitle">New Traveler</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="form-group mb-4">
+                                                        <label for="firstName">First name</label>
+                                                        <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                                                    </div>
+                                                    <div class="form-group mb-4">
+                                                        <label for="lastName">Last name</label>
+                                                        <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                                                    </div>
+                                                    <div class="form-group mb-4">
+                                                        <label for="dateOfBirth">Date of birth</label>
+                                                        <input type="date" class="form-control" id="dateOfBirth" placeholder="First Name">
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Cancel</button>
+                                                    <button type="button" class="btn btn-primary">Add </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+            <div class="footer-wrapper">
+                <div class="footer-section f-section-1">
+                    <p class="">Copyright © 2021 <a target="_blank" href="https://elabdisb.com">Abbas</a>, All rights reserved.</p>
+                </div>
+                <div class="footer-section f-section-2">
+                    <p class="">Coded with <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></p>
+                </div>
+            </div>
+
+</div>
+
+</div>
+<!--  END CONTENT AREA  -->
+
+</div>
+<!-- END MAIN CONTAINER -->
+
+
+
+<!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+<script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+<script src="bootstrap/js/popper.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="plugins/blockui/jquery.blockUI.min.js"></script>
+<script src="assets/js/app.js"></script>
+
+<script>
+$(document).ready(function() {
+App.init();
+});
+</script>
+<script src="assets/js/custom.js"></script>
+<!-- END GLOBAL MANDATORY SCRIPTS -->
+<script src="plugins/highlight/highlight.pack.js"></script>
+<script src="assets/js/scrollspyNav.js"></script>
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="plugins/table/datatable/datatables.js"></script>
+<script src="plugins/file-upload/file-upload-with-preview.min.js"></script>
+
+
+
+    <script>
+        //First upload
+        var firstUpload = new FileUploadWithPreview('myFirstImage')
+        //Second upload
+        var secondUpload = new FileUploadWithPreview('mySecondImage')
+    </script>
+    
+<!-- END PAGE LEVEL SCRIPTS -->  
+</body>
+</html>

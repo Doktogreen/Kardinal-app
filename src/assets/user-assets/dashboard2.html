@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+<title>Kardinal - Dashboard </title>
+<link rel="icon" type="image/x-icon" href="../assets/img/icon.png"/>
+<link href="assets/css/loader.css" rel="stylesheet" type="text/css" />
+<script src="assets/js/loader.js"></script>
+
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+<!-- END GLOBAL MANDATORY STYLES -->
+
+<!-- BEGIN PAGE LEVEL plugins/CUSTOM STYLES -->
+<link href="plugins/apex/apexcharts.css" rel="stylesheet" type="text/css">
+<link href="assets/css/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/dashboard/dash_2.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="assets/css/widgets/modules-widgets.css">   
+<!-- END PAGE LEVEL plugins/CUSTOM STYLES -->
+
+<style>
+
+.toggle-switch {
+display: flex;
+margin-right: 7px;
+}
+
+.switch {
+position: relative;
+display: inline-block;
+width: 35px;
+height: 18px;
+}
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+/* The slider */
+.switch .slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ebedf2;
+-webkit-transition: .4s;
+transition: .4s;
+}
+.switch.s-icons .slider svg {
+position: absolute;
+width: 19px;
+height: 19px;
+top: 4px;
+color: #fff;
+/* fill: rgba(224, 230, 237, 0.9686274509803922); */
+}
+
+.switch.s-icons .slider svg.feather-sun {
+left: 4px;
+color: #e2a03f;
+fill: #e2a03f;
+}
+.switch.s-icons .slider svg.feather-moon {
+right: 4px;
+}
+
+.switch .slider:before {
+position: absolute;
+content: "";
+background-color: white;
+-webkit-transition: .4s;
+-ms-transition: .4s;
+transition: .4s;
+height: 14px;
+width: 14px;
+left: 2px;
+bottom: 2px;
+box-shadow: 0 1px 15px 1px rgba(52, 40, 104, 0.34);
+}
+.switch input:checked + .slider:before {
+-webkit-transform: translateX(17px);
+-ms-transform: translateX(17px);
+transform: translateX(17px)
+}
+/* Rounded Slider Switches */
+.switch .slider.round { border-radius: 34px; }
+.switch .slider.round:before { border-radius: 50%; }
+
+.switch.s-outline .slider {
+border: 2px solid rgb(129, 149, 238);
+background-color: transparent;
+width: 36px;
+height: 19px;
+}
+
+
+
+.switch.s-outline .slider:before {     height: 21px;
+width: 21px; z-index: 1; }
+.switch.s-outline[class*="s-outline-"] .slider:before {
+bottom: 2px;
+left: 3px;
+border: 2px solid #bfc9d4;
+background-color: #bfc9d4;
+color: #ebedf2;
+box-shadow: 0 1px 15px 1px rgba(52, 40, 104, 0.25);
+}
+
+.switch.s-icons.s-outline-secondary { color: #5c1ac3; }
+.switch.s-outline-secondary input:checked + .slider { border: 2px solid #e0e6ed; }
+.switch.s-outline-secondary input:checked + .slider:before {
+border: 2px solid #1b55e2;
+background-color: #1b55e2;
+box-shadow: 0 1px 15px 1px rgba(52, 40, 104, 0.34);
+}
+.switch.s-outline-secondary input:focus + .slider { box-shadow: 0 0 1px #5c1ac3; }
+
+.switch.s-icons {
+width: 57px;
+height: 30px;
+}
+.switch.s-icons .slider {
+width: 64px;
+height: 30px;
+background: #3b3f5c;
+border-color: #3b3f5c;
+}
+.switch.s-outline-secondary input:checked + .slider { background: #e0e6ed; }
+
+.switch.s-icons input:checked + .slider:before {
+-webkit-transform: translateX(34px);
+-ms-transform: translateX(34px);
+transform: translateX(34px);
+}
+
+</style>
+
+</head>
+<body class="alt-menu sidebar-noneoverflow">
+
+
+<!-- BEGIN LOADER -->
+<div id="load_screen"> <div class="loader"> <div class="loader-content">
+<div class="spinner-grow align-self-center"></div>
+</div></div></div>
+<!--  END LOADER -->
+
+<!--  BEGIN NAVBAR  -->
+<div class="header-container">
+<header class="header navbar navbar-expand-sm">
+
+<a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a>
+
+<div class="nav-logo align-self-center">
+<a class="navbar-brand" href="../index.html"><img alt="logo" src="../assets/img/kardinal.png"></a>
+</div>
+
+<ul class="navbar-item topbar-navigation">
+
+<!--  BEGIN TOPBAR  -->
+<div class="topbar-nav header navbar" role="banner">
+<nav id="topbar">
+<ul class="navbar-nav theme-brand flex-row  text-center">
+<li class="nav-item theme-logo">
+<a href=" index.html">
+<img src="assets/img/logo-kardinal.png" class="navbar-logo" alt="logo">
+</a>
+</li>
+
+</ul>
+
+<ul class="list-unstyled menu-categories" id="topAccordion">
+
+<li class="menu single-menu active">
+<a href="dashboard.html">
+<div class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+
+<span>Dashboard</span>
+ 
+</div>
+</a>
+</li>
+
+<li class="menu single-menu">
+<a href="trip.html">
+<div class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+
+<span>Trips</span>
+</div>
+</a>
+</li>
+<li class="menu single-menu">
+<a href="invoicing.html">
+<div class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+
+<span>Invoice & Reporting</span>
+</div>
+</a>
+</li>
+
+<li class="menu single-menu">
+    <a href="trip_histroy.html">
+<div class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+<span>Trip Histroy</span>
+</div>
+</a>
+</li>
+
+
+
+<li class="menu single-menu">
+<a href="#" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle autodroprown">
+<div class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>    
+<span>Event</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+
+</div>
+</a>
+
+</li>
+
+
+</ul>
+</nav>
+</div>
+<!--  END TOPBAR  -->
+
+</ul>
+
+<ul class="navbar-item flex-row ml-auto">
+<li class="font-weight-bold">Username</li>
+</ul>
+
+<ul class="navbar-item flex-row nav-dropdowns">
+
+
+<li class="nav-item dropdown user-profile-dropdown order-lg-0 order-1">
+<a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="user-profile-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<div class="media">
+<img src="assets/img/90x90.jpg" class="img-fluid" alt="admin-profile">
+<!-- <div class="media-body align-self-center">
+<h6><span>Hi,</span> Alan</h6>
+</div> -->
+</div>
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg> -->
+</a>
+<div class="dropdown-menu position-absolute animated fadeInUp" aria-labelledby="userProfileDropdown">
+<div class="user-profile-section">
+<div class="media mx-auto">
+<img src="assets/img/90x90.jpg" class="img-fluid mr-2" alt="avatar">
+<div class="media-body">
+<h5>Shaun Park</h5>
+<p>Project Leader</p>
+</div>
+</div>
+</div>
+
+
+<div class="dropdown-item">
+<a href="setting.html">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> <span>Settings</span>
+</a>
+</div>
+<div class="dropdown-item">
+<a href=" ../auth_login.html">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg> <span>Log Out</span>
+</a>
+</div>
+</div>
+
+</li>
+</ul>
+</header>
+</div>
+<!--  END NAVBAR  -->
+
+<!--  BEGIN MAIN CONTAINER  -->
+<div class="main-container" id="container">
+
+<div class="overlay"></div>
+<div class="search-overlay"></div>
+
+<!--  BEGIN CONTENT PART  -->
+<div id="content" class="main-content">
+<div class="layout-px-spacing">
+
+<div class="page-header">
+<div class="page-title">
+<h3>Dashboard</h3>
+</div>
+
+<div class="toggle-switch">
+    <button class="btn btn-primary mb-2" data-toggle="modal" data-target="#exampleModal">Fund your account</button>
+
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="container mt-3">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-12">
+                <h4 style="text-align: center;" >Add money to account</h4>
+            </div>
+            <div col-md-6><button class="btn btn-outline-primary mb-2">Pay with card</button></div>
+            <div col-md-6><button class="btn btn-primary mb-2" style="margin-left: 20px;">Bank transfer</button></div>
+            
+            
+            </div>
+            </div>
+            <div class="container-fluid mt-5">
+                <div class="content2">
+                <h5>Bank transfer information</h5>
+                <p>Bank name:  Wema Bank</p>
+                <p>Account name:  Kardinal Corporate Extern</p>
+                <p>Bank name:  7820059143</p>
+            </div>
+            <p>Accept transfer from customers or send to this account</p>
+            </div>
+            
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row layout-top-spacing">
+
+<div id="chartArea" class="col-xl-7 layout-spacing">
+
+<div class="statbox widget box box-shadow">
+<div class="widget-header">                                
+<div class="row">
+<div class="col-xl-12 col-md-12 col-sm-12 col-12">
+<h4>Simple Area</h4> 
+</div>
+</div>
+</div>
+<div class="widget-content widget-content-area">
+<div id="s-line-area" class="" style="min-height: 365px;">
+    <div id="apexcharts8dnfaev6" class="apexcharts-canvas apexcharts8dnfaev6 light zoomable" style="width: 681px; height: 350px;">
+        <svg id="SvgjsSvg1869" width="681" height="350" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" style="background: transparent;">
+            <foreignObject x="0" y="0" width="681" height="350">
+            <div class="apexcharts-legend center position-bottom" xmlns="http://www.w3.org/1999/xhtml" style="inset: auto 0px 10px; position: absolute;">
+            <div class="apexcharts-legend-series" rel="1" data:collapsed="false" style="margin: 0px 5px;">
+            <span class="apexcharts-legend-marker" rel="1" data:collapsed="false" style="background: rgb(0, 143, 251); color: rgb(0, 143, 251); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></span>
+            <span class="apexcharts-legend-text" rel="1" data:collapsed="false" style="color: rgb(55, 61, 63); font-size: 12px; font-family: Helvetica, Arial, sans-serif;">series1</span></div>
+            </div>
+        <style type="text/css">
+
+.apexcharts-legend {
+display: flex;
+overflow: auto;
+padding: 0 10px;
+}
+
+.apexcharts-legend.position-bottom, .apexcharts-legend.position-top {
+flex-wrap: wrap
+}
+.apexcharts-legend.position-right, .apexcharts-legend.position-left {
+flex-direction: column;
+bottom: 0;
+}
+
+.apexcharts-legend.position-bottom.left, .apexcharts-legend.position-top.left, .apexcharts-legend.position-right, .apexcharts-legend.position-left {
+justify-content: flex-start;
+}
+
+.apexcharts-legend.position-bottom.center, .apexcharts-legend.position-top.center {
+justify-content: center;  
+}
+
+.apexcharts-legend.position-bottom.right, .apexcharts-legend.position-top.right {
+justify-content: flex-end;
+}
+
+.apexcharts-legend-series {
+cursor: pointer;
+line-height: normal;
+}
+
+.apexcharts-legend.position-bottom .apexcharts-legend-series, .apexcharts-legend.position-top .apexcharts-legend-series{
+display: flex;
+align-items: center;
+}
+
+.apexcharts-legend-text {
+position: relative;
+font-size: 14px;
+}
+
+.apexcharts-legend-text *, .apexcharts-legend-marker * {
+pointer-events: none;
+}
+
+.apexcharts-legend-marker {
+position: relative;
+display: inline-block;
+cursor: pointer;
+margin-right: 3px;
+}
+
+.apexcharts-legend.right .apexcharts-legend-series, .apexcharts-legend.left .apexcharts-legend-series{
+display: inline-block;
+}
+
+.apexcharts-legend-series.no-click {
+cursor: auto;
+}
+
+.apexcharts-legend .apexcharts-hidden-zero-series, .apexcharts-legend .apexcharts-hidden-null-series {
+display: none !important;
+}
+
+.inactive-legend {
+opacity: 0.45;
+}</style></foreignObject><g id="SvgjsG1871" class="apexcharts-inner apexcharts-graphical" transform="translate(56.359375, 40)">
+    <defs id="SvgjsDefs1870"><clipPath id="gridRectMask8dnfaev6"><rect id="SvgjsRect1884" width="618.640625" height="257.348" x="-2" y="-2" rx="0" ry="0" fill="#ffffff" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect></clipPath>
+        <clipPath id="gridRectMarkerMask8dnfaev6"><rect id="SvgjsRect1885" width="616.640625" height="255.348" x="-1" y="-1" rx="0" ry="0" fill="#ffffff" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect></clipPath>
+        <linearGradient id="SvgjsLinearGradient1891" x1="0" y1="0" x2="0" y2="1"><stop id="SvgjsStop1892" stop-opacity="0.65" stop-color="rgba(0,143,251,0.65)" offset="0"></stop><stop id="SvgjsStop1893" stop-opacity="0.5" stop-color="rgba(128,199,253,0.5)" offset="1"></stop><stop id="SvgjsStop1894" stop-opacity="0.5" stop-color="rgba(128,199,253,0.5)" offset="1"></stop></linearGradient>
+        <linearGradient id="SvgjsLinearGradient1900" x1="0" y1="0" x2="0" y2="1"><stop id="SvgjsStop1901" stop-opacity="0.65" stop-color="rgba(0,227,150,0.65)" offset="0"></stop><stop id="SvgjsStop1902" stop-opacity="0.5" stop-color="rgba(128,241,203,0.5)" offset="1"></stop><stop id="SvgjsStop1903" stop-opacity="0.5" stop-color="rgba(128,241,203,0.5)" offset="1"></stop></linearGradient></defs>
+        <line id="SvgjsLine1875" x1="519.5805288461538" y1="0" x2="519.5805288461538" y2="253.348" stroke="#b6b6b6" stroke-dasharray="3" class="apexcharts-xcrosshairs" x="519.5805288461538" y="0" width="1" height="253.348" fill="#b1b9c4" filter="none" fill-opacity="0.9" stroke-width="1"></line>
+        <g id="SvgjsG1906" class="apexcharts-xaxis" transform="translate(0, 0)"><g id="SvgjsG1907" class="apexcharts-xaxis-texts-g" transform="translate(0, -4)">
+        <text id="SvgjsText1908" font-family="Helvetica, Arial, sans-serif" x="0" y="282.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan1909" style="font-family: Helvetica, Arial, sans-serif;">01 aug</tspan><title>01 aug</title></text>
+        <text id="SvgjsText1910" font-family="Helvetica, Arial, sans-serif" x="94.56009615384615" y="282.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan1911" style="font-family: Helvetica, Arial, sans-serif;">02 aug</tspan><title>02 aug</title></text>
+        <text id="SvgjsText1912" font-family="Helvetica, Arial, sans-serif" x="189.1201923076923" y="282.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan1913" style="font-family: Helvetica, Arial, sans-serif;">03 aug</tspan><title>03 Aug</title></text>
+        <text id="SvgjsText1914" font-family="Helvetica, Arial, sans-serif" x="283.68028846153845" y="282.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan1915" style="font-family: Helvetica, Arial, sans-serif;">04 aug</tspan><title>04 aug</title></text>
+        <text id="SvgjsText1916" font-family="Helvetica, Arial, sans-serif" x="378.2403846153846" y="282.348" text-anchor="middle" dominant-baseline="auto" font-size="12px" fill="#373d3f" class="apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;"><tspan id="SvgjsTspan1917" style="font-family: Helvetica, Arial, sans-serif;">05 aug</tspan><title>05 aug</title></text></g>
+        <line id="SvgjsLine1922" x1="0" y1="254.348" x2="614.640625" y2="254.348" stroke="#78909c" stroke-dasharray="0" stroke-width="1"></line></g><g id="SvgjsG1932" class="apexcharts-grid">
+        
+      
+        <line id="SvgjsLine1948" x1="0" y1="253.34800000000004" x2="614.640625" y2="253.34800000000004" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line></g><g id="SvgjsG1934" class="apexcharts-gridlines-vertical"></g><line id="SvgjsLine1935" x1="0" y1="254.348" x2="0" y2="260.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine1936" x1="94.56009615384615" y1="254.348" x2="94.56009615384615" y2="260.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line>
+        <line id="SvgjsLine1937" x1="189.1201923076923" y1="254.348" x2="189.1201923076923" y2="260.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine1938" x1="283.68028846153845" y1="254.348" x2="283.68028846153845" y2="260.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine1939" x1="378.2403846153846" y1="254.348" x2="378.2403846153846" y2="260.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine1940" x1="472.8004807692307" y1="254.348" x2="472.8004807692307" y2="260.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line>
+        <line id="SvgjsLine1941" x1="567.3605769230769" y1="254.348" x2="567.3605769230769" y2="260.348" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine1950" x1="0" y1="253.348" x2="614.640625" y2="253.348" stroke="transparent" stroke-dasharray="0"></line><line id="SvgjsLine1949" x1="0" y1="1" x2="0" y2="253.348" stroke="transparent" stroke-dasharray="0"></line></g><g id="SvgjsG1887" class="apexcharts-area-series apexcharts-plot-series">        <g id="SvgjsG1898" class="apexcharts-series-markers-wrap">
+        <g class="apexcharts-series-markers">
+        <circle id="SvgjsCircle1956" r="0" cx="520.0805288461538" cy="143.56386666666668" class="apexcharts-marker w6qkmh8bt no-pointer-events" stroke="#ffffff" fill="#00e396" fill-opacity="1" stroke-width="2" stroke-opacity="0.9" default-marker-size="0"></circle></g></g>
+        <g id="SvgjsG1899" class="apexcharts-datalabels"></g></g>
+        <g id="SvgjsG1888" class="apexcharts-series" seriesName="series1" data:longestSeries="true" rel="1" data:realIndex="0"><path id="apexcharts-area-0" d="M 0 253.348L 0 187.89976666666666C 49.644050480769224 187.89976666666666 92.19609375 168.89866666666666 141.84014423076923 168.89866666666666C 174.93617788461538 168.89866666666666 203.30420673076924 194.2334666666667 236.4002403846154 194.2334666666667C 269.49627403846154 194.2334666666667 297.86430288461537 145.6751 330.96033653846155 145.6751C 364.05637019230767 145.6751 392.42439903846156 164.6762 425.5204326923077 164.6762C 458.6164663461538 164.6762 486.9844951923077 23.22356666666667 520.0805288461538 23.22356666666667C 553.1765624999999 23.22356666666667 581.5445913461539 42.22466666666668 614.640625 42.22466666666668C 614.640625 42.22466666666668 614.640625 42.22466666666668 614.640625 253.348M 614.640625 42.22466666666668z" fill="url(#SvgjsLinearGradient1891)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="0" stroke-dasharray="0" class="apexcharts-area" index="0" clip-path="url(#gridRectMask8dnfaev6)" pathTo="M 0 253.348L 0 187.89976666666666C 49.644050480769224 187.89976666666666 92.19609375 168.89866666666666 141.84014423076923 168.89866666666666C 174.93617788461538 168.89866666666666 203.30420673076924 194.2334666666667 236.4002403846154 194.2334666666667C 269.49627403846154 194.2334666666667 297.86430288461537 145.6751 330.96033653846155 145.6751C 364.05637019230767 145.6751 392.42439903846156 164.6762 425.5204326923077 164.6762C 458.6164663461538 164.6762 486.9844951923077 23.22356666666667 520.0805288461538 23.22356666666667C 553.1765624999999 23.22356666666667 581.5445913461539 42.22466666666668 614.640625 42.22466666666668C 614.640625 42.22466666666668 614.640625 42.22466666666668 614.640625 253.348M 614.640625 42.22466666666668z" pathFrom="M -1 253.348L -1 253.348L 141.84014423076923 253.348L 236.4002403846154 253.348L 330.96033653846155 253.348L 425.5204326923077 253.348L 520.0805288461538 253.348L 614.640625 253.348"></path>
+        <path id="apexcharts-area-0" d="M 0 187.89976666666666C 49.644050480769224 187.89976666666666 92.19609375 168.89866666666666 141.84014423076923 168.89866666666666C 174.93617788461538 168.89866666666666 203.30420673076924 194.2334666666667 236.4002403846154 194.2334666666667C 269.49627403846154 194.2334666666667 297.86430288461537 145.6751 330.96033653846155 145.6751C 364.05637019230767 145.6751 392.42439903846156 164.6762 425.5204326923077 164.6762C 458.6164663461538 164.6762 486.9844951923077 23.22356666666667 520.0805288461538 23.22356666666667C 553.1765624999999 23.22356666666667 581.5445913461539 42.22466666666668 614.640625 42.22466666666668" fill="none" fill-opacity="1" stroke="#008ffb" stroke-opacity="1" stroke-linecap="butt" stroke-width="4" stroke-dasharray="0" class="apexcharts-area" index="0" clip-path="url(#gridRectMask8dnfaev6)" pathTo="M 0 187.89976666666666C 49.644050480769224 187.89976666666666 92.19609375 168.89866666666666 141.84014423076923 168.89866666666666C 174.93617788461538 168.89866666666666 203.30420673076924 194.2334666666667 236.4002403846154 194.2334666666667C 269.49627403846154 194.2334666666667 297.86430288461537 145.6751 330.96033653846155 145.6751C 364.05637019230767 145.6751 392.42439903846156 164.6762 425.5204326923077 164.6762C 458.6164663461538 164.6762 486.9844951923077 23.22356666666667 520.0805288461538 23.22356666666667C 553.1765624999999 23.22356666666667 581.5445913461539 42.22466666666668 614.640625 42.22466666666668" pathFrom="M -1 253.348L -1 253.348L 141.84014423076923 253.348L 236.4002403846154 253.348L 330.96033653846155 253.348L 425.5204326923077 253.348L 520.0805288461538 253.348L 614.640625 253.348"></path><g id="SvgjsG1889" class="apexcharts-series-markers-wrap"><g class="apexcharts-series-markers"><circle id="SvgjsCircle1957" r="0" cx="520.0805288461538" cy="23.22356666666667" class="apexcharts-marker woff19yay no-pointer-events" stroke="#ffffff" fill="#008ffb" fill-opacity="1" stroke-width="2" stroke-opacity="0.9" default-marker-size="0"></circle></g></g>
+        <g id="SvgjsG1890" class="apexcharts-datalabels"></g></g></g>
+        <line id="SvgjsLine1951" x1="0" y1="0" x2="614.640625" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1" class="apexcharts-ycrosshairs"></line><line id="SvgjsLine1952" x1="0" y1="0" x2="614.640625" y2="0" stroke-dasharray="0" stroke-width="0" class="apexcharts-ycrosshairs-hidden"></line>
+        <g id="SvgjsG1953" class="apexcharts-yaxis-annotations"></g>
+        <g id="SvgjsG1954" class="apexcharts-xaxis-annotations"></g>
+        <g id="SvgjsG1955" class="apexcharts-point-annotations"></g>
+        <rect id="SvgjsRect1958" width="0" height="0" x="0" y="0" rx="0" ry="0" fill="#fefefe" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" class="apexcharts-zoom-rect"></rect>
+        <rect id="SvgjsRect1959" width="0" height="0" x="0" y="0" rx="0" ry="0" fill="#fefefe" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" class="apexcharts-selection-rect"></rect></g>
+        <rect id="SvgjsRect1874" width="0" height="0" x="0" y="0" rx="0" ry="0" fill="#fefefe" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect>
+        <g id="SvgjsG1923" class="apexcharts-yaxis" rel="0" transform="translate(23.359375, 0)"><g id="SvgjsG1924" class="apexcharts-yaxis-texts-g">
+        <text id="SvgjsText1925" font-family="Helvetica, Arial, sans-serif" x="20" y="41.6" text-anchor="end" dominant-baseline="auto" font-size="11px" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">50K</text>
+        <text id="SvgjsText1926" font-family="Helvetica, Arial, sans-serif" x="20" y="83.92466666666667" text-anchor="end" dominant-baseline="auto" font-size="11px" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">40K</text>
+        <text id="SvgjsText1927" font-family="Helvetica, Arial, sans-serif" x="20" y="126.24933333333334" text-anchor="end" dominant-baseline="auto" font-size="11px" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">30K</text><text id="SvgjsText1928" font-family="Helvetica, Arial, sans-serif" x="20" y="168.574" text-anchor="end" dominant-baseline="auto" font-size="11px" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">20K</text>
+        <text id="SvgjsText1929" font-family="Helvetica, Arial, sans-serif" x="20" y="210.89866666666668" text-anchor="end" dominant-baseline="auto" font-size="11px" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">10K</text><text id="SvgjsText1930" font-family="Helvetica, Arial, sans-serif" x="20" y="253.22333333333336" text-anchor="end" dominant-baseline="auto" font-size="11px" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">5K</text>
+        <text id="SvgjsText1931" font-family="Helvetica, Arial, sans-serif" x="20" y="295.54800000000006" text-anchor="end" dominant-baseline="auto" font-size="11px" fill="#373d3f" class="apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">0</text></g></g></svg>
+        <div class="apexcharts-tooltip light" style="left: 445.969px; top: 26px;">
+            <div class="apexcharts-tooltip-title" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;">19/09/18 05:30</div>
+        <div class="apexcharts-tooltip-series-group active" style="display: flex;"><span class="apexcharts-tooltip-marker" style="background-color: rgb(0, 143, 251);"></span>
+        <div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;">
+         <div class="apexcharts-tooltip-y-group">
+         <span class="apexcharts-tooltip-text-label">series1: </span>
+           <span class="apexcharts-tooltip-text-value">109</span></div>
+             <div class="apexcharts-tooltip-z-group">
+              <span class="apexcharts-tooltip-text-z-label"></span>
+                <span class="apexcharts-tooltip-text-z-value"></span></div></div></div>
+                  <div class="apexcharts-tooltip-series-group active" style="display: flex;">
+                    <span class="apexcharts-tooltip-marker" style="background-color: rgb(0, 227, 150);"></span>
+                     <div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;">
+                        <div class="apexcharts-tooltip-y-group">
+                          <span class="apexcharts-tooltip-text-label">series2: </span>
+                            <span class="apexcharts-tooltip-text-value">52</span></div>
+                             <div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span>
+                                <span class="apexcharts-tooltip-text-z-value"></span></div></div></div></div>
+                                 <div class="apexcharts-xaxistooltip apexcharts-xaxistooltip-bottom light" style="left: 521.401px; top: 295.348px;">
+                                    <div class="apexcharts-xaxistooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; min-width: 100.125px;">19/09/18 05:30</div></div></div></div>
+
+
+</div>
+</div>
+</div>
+
+<div id="chartArea" class="col-xl-5 layout-spacing" >
+
+    <div class="statbox widget box box-shadow  widget-table-one" style="padding-bottom: 35px">
+    <div class="widget-header">                                
+    <div class="row">
+    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+    <h4>Transactions</h4> 
+    </div>
+    </div>
+    </div>
+    <div class="widget-content widget-content-area">
+        <div class="transactions-list">
+            <div class="t-item">
+                <div class="t-company-name">
+                    <div class="t-icon">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="t-name">
+                        <h4>Total Spend</h4>
+                        <div class="t-rate rate-inc">
+                            <p><span>+$4,508.771</span> </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="t-company-name">
+                <div class="t-icon">
+                    <div class="avatar avatar-xl">
+                        <span class="avatar-title rounded-circle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg></span>
+                    </div>
+                </div>
+                <div class="t-name">
+                    <h4>Credit Available</h4>
+                    <div class="t-rate rate-dec">
+                        <p><span>-$3,000,000</span> </p>
+                    </div>
+                </div>
+             </div>
+            </div>
+        </div>
+
+        <div class="transactions-list">
+            <div class="t-item">
+                <div class="t-company-name">
+                    <div class="t-icon">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="t-name">
+                        <h4>Travel Spend</h4>
+                        <div class="t-rate rate-inc">
+                            <p><span>+$876</span></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="t-company-name" style="margin-right: 45px;">
+                    <div class="t-icon">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="t-name">
+                        <h4>Mileage</h4>
+                        <div class="t-rate rate-inc">
+                            <p><span>+$4,321,429</span></p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+
+        <div class="transactions-list">
+            <div class="t-item">
+                <div class="t-company-name">
+                    <div class="t-icon">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="t-name">
+                        <h4>Car Spend</h4>
+                        <div class="t-rate rate-inc">
+                            <p><span>+$1345</span></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="t-company-name" style="margin-right: 20px;">
+                    <div class="t-icon">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                        </div>
+                    </div>
+                <div class="t-name">
+                    <h4>Bonus Points</h4>
+                    <div class="t-rate rate-inc">
+                        <p><span>+$4,321,429</span></p>
+                    </div>
+                </div>
+             </div>
+            </div>
+        </div>
+        
+        <div class="transactions-list">
+            <div class="t-item">
+                <div class="t-company-name">
+                    <div class="t-icon">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="t-name">
+                        <h4>Hotel Spend</h4>
+                        <div class="t-rate rate-inc">
+                            <p><span>+$1345</span> </p>
+                        </div>
+                    </div>
+
+                </div>
+               
+            </div>
+        </div>
+    
+    </div>
+    </div>
+</div>
+    
+<div id="chartArea" class="col-xl-6 layout-spacing">
+
+        <div class="statbox widget box box-shadow widget widget-table-two" >
+        <div class="widget-header">                                
+        <div class="row">
+        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+        <h4>Histroy</h4> 
+        </div>
+        </div>
+        </div>
+        <div class="widget-content widget-content-area">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th><div class="th-content">S/N</div></th>
+                            <th><div class="th-content">Date</div></th>
+                            <th><div class="th-content">Name of Passenger</div></th>
+                            <th><div class="th-content">Booking ID</div></th>
+                            <th><div class="th-content">Request Type</div></th>
+                            <th><div class="th-content">Status</div></th>
+                            
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><div class="td-content">1</div></td>
+                            <td><div class="td-content">05-Aug-2021</div></td>
+                            <td><div class="td-content"> Lilian Bach</div></td>
+                            <td><div class="td-content">VM342</div></td>
+                            <td><div class="td-content">Flight</div></td>
+                            <td><div class="td-content">Processed</div></td>
+                           
+                          
+                        </tr>
+                        <tr>
+                            <td><div class="td-content">2</div></td>
+                            <td><div class="td-content"><span class="">05-Aug-2021</span></div></td>
+                            <td><div class="td-content ">Austin Malone</div></td>
+                            <td><div class="td-content">QO1345</div></td>
+                            <td><div class="td-content">Hotel</div></td>
+                            <td><div class="td-content">Processed</div></td>
+                            
+                           
+                        </tr>
+                        <tr>
+                            <td><div class="td-content">3</div></td>
+                            <td><div class="td-content"><span class="">05-Aug-2021</span></div></td>
+                            <td><div class="td-content ">Cardi Notsob</div></td>
+                            <td><div class="td-content">N2-121</div></td>
+                            <td><div class="td-content">Car</div></td>
+                            <td><div class="td-content">On Hold</div></td>        
+                        </tr>
+                       
+                       
+                       
+                       
+
+                      
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+</div>
+
+<div id="chartArea" class="col-xl-6 layout-spacing">
+
+    <div class="statbox widget box box-shadow widget widget-table-two" style="    padding-bottom: 20px;" >
+    <div class="widget-header">  
+        <div class="row">
+            <div class="col-xl-12">
+            <h4>On Holding Bookings</h4> 
+            </div>
+        
+            </div>
+                                  
+    
+    </div>
+    <div class="widget-content widget-content-area">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                       
+                        <th><div class="th-content">Booking Ref</div></th>
+                        <th><div class="th-content">Lead Pax</div></th>
+                        <th><div class="th-content">Destinations</div></th>
+                        <th><div class="th-content">Cancellation Deadline</div></th>
+                        
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        
+                        <td><div class="td-content"><span class="">FL1234</span></div></td>
+                        <td><div class="td-content">Mr George Angel</div></td>
+                        <td><div class="td-content">Delhi</div></td>
+                        <td><div class="td-content">20-Feb-2018</div></td>
+                        
+                       
+                      
+                    </tr>
+                    <tr>
+                       
+                        <td><div class="td-content"><span class="">FL1233</span></div></td>
+                        <td><div class="td-content ">Mr George</div></td>
+                        <td><div class="td-content">Mumbai</div></td>
+                        <td><div class="td-content">23-jan-2017</div></td>
+                       
+                        
+                       
+                    </tr>
+                    <tr>
+                        <td><div class="td-content"><span class="">FL1232</span></div></td>
+                        <td><div class="td-content ">Mr Arpit Garg </div></td>
+                        <td><div class="td-content">Dubai</div></td>
+                        <td><div class="td-content">08-jan-2017</div></td>  
+                    </tr>
+                  
+
+                   
+                   
+
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<div class="col-xl-5 col-lg-6 col-md-6 col-sm-6 col-12  layout-spacing">
+    <div class="widget widget-five">
+    <div class="widget-content">
+    
+    <div class="header">
+    <div class="header-body">
+    <h6>Trip Summary</h6>
+    
+    </div>
+    </div>
+    
+    <div class="w-content">
+    <div class="row">    
+    <div class="col-xl-4">   
+    <p class="task-completed"><span>Flights</span></p>                                     
+    <p class="task-left"><i class="fa fa-plane"></i></p>
+    <div class="t-rate rate-inc">
+        <p class="task-completed"><span>+$4,508.771</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></p>
+    </div>
+    </div>
+    
+        <div class="col-xl-4">     
+            <p class="task-completed"><span>Cars</span></p>                                     
+            <p class="task-left"><i class="fas fa-car-alt"></i></p>
+            <div class="t-rate rate-inc">
+                <p class="task-completed"><span>+$3,000.000</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></p>
+            </div>
+        </div>
+        <div class="col-xl-4"> 
+            <p class="task-completed"><span>Hotel</span></p>                                         
+            <p class="task-left"><i class="fas fa-hotel"></i></p>
+           
+            </div>
+    </div> 
+     
+    </div>
+    </div>
+    </div>
+    
+</div>
+
+</div>
+
+<div class="footer-wrapper">
+<div class="footer-section f-section-1">
+<p class="">Copyright © 2020 <a target="_blank" href="https://designreset.com">DesignReset</a>, All rights reserved.</p>
+</div>
+<div class="footer-section f-section-2">
+<p class="">Coded with <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></p>
+</div>
+</div>
+
+</div>
+</div>
+<!--  END CONTENT PART  -->
+
+</div>
+<!-- END MAIN CONTAINER -->
+
+<!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+<script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+<script src="bootstrap/js/popper.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+$(document).ready(function() {
+App.init();
+});
+</script>
+<script src="assets/js/custom.js"></script>
+<!-- END GLOBAL MANDATORY SCRIPTS -->
+
+<!-- BEGIN PAGE LEVEL plugins/CUSTOM SCRIPTS -->
+<script src="plugins/apex/apexcharts.min.js"></script>
+<script src="assets/js/dashboard/dash_2.js"></script>
+<script src="assets/js/widgets/modules-widgets.js"></script>
+<!-- BEGIN PAGE LEVEL plugins/CUSTOM SCRIPTS -->
+
+<script>
+/*$(document).click(function(event){
+$('.topbar-nav .collapse').collapse('hide')
+});*/
+</script>
+</body>
+</html>
