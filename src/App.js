@@ -1,9 +1,12 @@
 import './App.css';
+// import KardinalLayout from './layout/web-app/KardinalLayout';
+import Home from './views/components/home/Home';
 
 function App() {
   return (
     <div className="App">
-      <h1>This is Canada App.</h1>
+      {/* <KardinalLayout /> */}
+      <Home />
     </div>
   );
 }
