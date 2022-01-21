@@ -1,4 +1,5 @@
 import React from "react";
+import { Particles } from "../home/FAQ";
 
 function BlogNews(){
     return(
@@ -6,12 +7,7 @@ function BlogNews(){
             <div className="container">
                 <div className="section-internal">
                     <div className="section-particle-effect d-none d-md-block section-particle-effect-v2">
-                        <img className="particle-1 animate-zoom-fade" src="assets/img/particle/particle-1.png" alt="particle One"/>
-                        <img className="particle-2 animate-rotate-me" src="assets/img/particle/particle-2.png" alt="particle Two" />
-                        <img className="particle-3 animate-float-bob-y" src="assets/img/particle/particle-3.png" alt="particle Three" />
-                        <img className="particle-4 animate-zoominout" src="assets/img/particle/particle-4.png" alt="particle Four" />
-                        <img className="particle-5 animate-zoominout" src="assets/img/particle/particle-5.png" alt="particle Five" />
-                        <img className="particle-7 animate-float-bob-x" src="assets/img/particle/particle-7.png" alt="particle Seven" />
+                        <Particles />
                     </div>
                     <div className="row">
                         <div className="col-lg-12 pb-50">

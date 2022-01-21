@@ -1,4 +1,24 @@
 import React from "react";
+import particle_1 from "../../../assets/general-assets/img/particle/particle-1.png";
+import particle_2 from "../../../assets/general-assets/img/particle/particle-2.png";
+import particle_3 from "../../../assets/general-assets/img/particle/particle-3.png";
+import particle_4 from "../../../assets/general-assets/img/particle/particle-4.png";
+import particle_5 from "../../../assets/general-assets/img/particle/particle-5.png";
+import particle_7 from "../../../assets/general-assets/img/particle/particle-7.png";
+import k_care from "../../../assets/general-assets/img/illustration-kcare.png";
+
+export function Particles(){
+    return(
+        <>
+            <img className="particle-1 animate-zoom-fade" src={particle_1} alt="particle One" />
+            <img className="particle-2 animate-rotate-me" src={particle_2} alt="particle Two" />
+            <img className="particle-3 animate-float-bob-x" src={particle_3} alt="particle Three" />
+            <img className="particle-4 animate-zoominout" src={particle_4} alt="particle Four" />
+            <img className="particle-5 animate-zoominout" src={particle_5} alt="particle Five" />
+            <img className="particle-7 animate-float-bob-x" src={particle_7} alt="particle Seven" />
+        </>
+    )
+}
 
 function FAQ(){
     return(
@@ -6,12 +26,7 @@ function FAQ(){
             <div className="container">
                 <div className="section-internal">
                     <div className="section-particle-effect d-none d-md-block section-particle-effect-v2">
-                        <img className="particle-1 animate-zoom-fade" src="assets/img/particle/particle-1.png" alt="particle One" />
-                        <img className="particle-2 animate-rotate-me" src="assets/img/particle/particle-2.png" alt="particle Two" />
-                        <img className="particle-3 animate-float-bob-x" src="assets/img/particle/particle-3.png" alt="particle Three" />
-                        <img className="particle-4 animate-zoominout" src="assets/img/particle/particle-4.png" alt="particle Four" />
-                        <img className="particle-5 animate-zoominout" src="assets/img/particle/particle-5.png" alt="particle Five" />
-                        <img className="particle-7 animate-float-bob-x" src="assets/img/particle/particle-7.png" alt="particle Seven" />
+                        {Particles}
                     </div>
                         <div className="row align-items-center">
                         <div className="col-lg-6">
@@ -68,7 +83,7 @@ function FAQ(){
                         </div>
                         <div className="col-lg-6">
                             <div className="section-right-image animate-float-bob-y wow fadeInUp" data-wow-delay="0ms" data-wow-duration="2500ms">
-                                <img src="assets/general-assets/img/illustration-kcare.png" alt="faq" />
+                                <img src={k_care} alt="faq" />
                             </div>
                         </div>
                     </div> 

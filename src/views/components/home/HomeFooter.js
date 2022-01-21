@@ -1,4 +1,5 @@
 import React from "react";
+import footer_logo from "../../../assets/general-assets/img/logo-kardinal-white.png";
 
 function HomeFooter(){
     return(
@@ -9,7 +10,7 @@ function HomeFooter(){
             {/* <!-- Single Footer Widget --> */}
             <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div className="single-footer-widget footer-text-widget">
-                    <img src="assets/img/logo-kardinal-white.png" alt="footer logo" />
+                    <img src={footer_logo} alt="footer logo" />
                     <p>2a Alara Steet, Sabo Yaba, Lagos Nigeria.<br />wecare@gokardinal.com<br />+234 8025198619</p>
                     {/* <!--<a className="footer-contact-link" href="tel:+01234567899"><i className="fas fa-phone"></i> +012 (345) 678 99</a>--> */}
                     <a href="contact.html" className="btn-contact">Contact Us</a>
@@ -38,7 +39,7 @@ function HomeFooter(){
                             <li><a href="...">Guides</a></li>
                             <li><a href="...">Webinars</a></li>
                             {/* <!--<li><a href="...">Ebooks</a></li>--> */}
-                            <li><a href="https://gokardinal.medium.com/" target="_blank" rel="noreferrer">Blog</a></li>
+                            <li><a href="/blog" target="_blank" rel="noreferrer">Blog</a></li>
                         </ul>
                     </div>
                 </div>

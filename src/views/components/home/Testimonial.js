@@ -1,4 +1,9 @@
 import React from "react";
+import kema from "../../../assets/general-assets/img/testimonial/Kema.PNG";
+import Thompson from "../../../assets/general-assets/img/testimonial/Thompson.PNG";
+import Ebube from "../../../assets/general-assets/img/testimonial/Ebube.jpeg";
+import left_particle from "../../../assets/general-assets/img/cta/cta-left-particle-1.png";
+import right_particle from "../../../assets/general-assets/img/cta/cta-right-particle-1.png";
 
 function Testimonial(){
     return(
@@ -19,7 +24,7 @@ function Testimonial(){
                                     
                                     <p>I cannot count how many times Kardinal has come through. The platform is so easy to use and they still walk me through all my travel journey.</p>
                                     <div className="testimonial-author">
-                                        <img src="assets/img/testimonial/Kema.PNG" alt="testimonial author" />
+                                        <img src={kema} alt="testimonial author" />
                                         <h6>Kema <span>Femi Kuti’s Manager </span></h6>
                                     </div>
                                 </div>
@@ -27,7 +32,7 @@ function Testimonial(){
                                     
                                     <p>With how unpredictable tickets prices are, Kardinal’s response time ensures we get the best value at all times. </p>
                                     <div className="testimonial-author">
-                                        <img src="assets/img/testimonial/Thompson.PNG" alt="testimonial author" />
+                                        <img src={Thompson} alt="testimonial author" />
                                         <h6>Thompson <span>Fidson Healthcare LTD</span></h6>
                                     </div>
                                 </div>
@@ -35,7 +40,7 @@ function Testimonial(){
                                     
                                     <p>I don’t think any platform cares about their travel agents as deeply as Kardinal does. Price wise, service wise. Everything is so easy. </p>
                                     <div className="testimonial-author">
-                                        <img src="assets/img/testimonial/Ebube.jpeg" alt="testimonial author" />
+                                        <img src={Ebube} alt="testimonial author" />
                                         <h6>Ebube <span>Travel Manager</span></h6>
                                     </div>
                                 </div>
@@ -61,8 +66,8 @@ function Testimonial(){
                             <div className="container">
                             <div className="cta-content-internal">
                             <div className="cta-section-particle d-none d-lg-block">
-                            <img className="cta-particle-left" src="assets/img/cta/cta-left-particle-1.png" alt="cta particle 1" />
-                            <img className="cta-particle-right" src="assets/img/cta/cta-right-particle-1.png" alt="cta particle 2" />
+                            <img className="cta-particle-left" src={left_particle} alt="cta particle 1" />
+                            <img className="cta-particle-right" src={right_particle} alt="cta particle 2" />
                             </div>
                             <div className="row justify-content-center">
                             <div className="col-lg-7">

@@ -1,4 +1,7 @@
 import React from "react";
+import illustration_inventory from "../../../assets/general-assets/img/illustration-Inventory-male.png";
+import illustration_flexible_payment from "../../../assets/general-assets/img/illustration-flexible-payment.png";
+import illustration_support_pay from "../../../assets/general-assets/img/illustration-support-you-need.png"
 
 function CollaborationArea(){
     return(
@@ -8,7 +11,7 @@ function CollaborationArea(){
                 <div className="row align-items-center">
                     <div className="col-lg-7">
                         <div className="app-preview-image text-center text-lg-left content-right-spacer oval-gradient animate-float-bob-x wow fadeInDown" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <img src="assets/img/illustration-Inventory-male.png" alt="promote your app" />
+                            <img src={illustration_inventory} alt="promote your app" />
                         </div>
                         </div>
                         <div className="col-lg-5">
@@ -52,7 +55,7 @@ function CollaborationArea(){
                         </div>
                         <div className="col-lg-7">
                         <div className="app-preview-image content-left-spacer oval-gradient animate-float-bob-x wow fadeInDown" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <img src="assets/img/illustration-flexible-payment.png" alt="promote your app" />
+                            <img src={illustration_flexible_payment} alt="promote your app" />
                         </div>
                         </div>
                         </div> 
@@ -68,7 +71,7 @@ function CollaborationArea(){
                         <div className="row align-items-center">
                         <div className="col-lg-7">
                         <div className="app-preview-image text-center text-lg-left content-right-spacer oval-gradient animate-float-bob-x wow fadeInDown" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <img src="assets/img/illustration-support-you-need.png" alt="promote your app" />
+                            <img src={illustration_support_pay} alt="promote your app" />
                         </div>
                         </div>
                         <div className="col-lg-5">

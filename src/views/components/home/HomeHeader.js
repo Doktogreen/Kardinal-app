@@ -1,4 +1,5 @@
 import React from "react";
+import kardinal_logo from "../../../assets/general-assets/img/kardinal.png"
 
 function HomeHeader(){
     return(
@@ -11,7 +12,7 @@ function HomeHeader(){
                             <div className="site-branding-and-language-selection">
                                 <div className="brand-logo">
                                     <a href="index.html">
-                                        <img src="assets/img/kardinal.png" alt="logo" />
+                                        <img src={kardinal_logo} alt="logo" />
                                     </a>
                                 </div>
                             </div>

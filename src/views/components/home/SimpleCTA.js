@@ -1,8 +1,9 @@
 import React from "react";
+import cta from "../../../assets/general-assets/img/cta/simple-cta-bg.png";
 
 function SimpleCTA(){
     return(
-        <section className="simple-cta-area bg-royal-blue" style={{backgroundImage: "url(assets/img/cta/simple-cta-bg.png)"}}>
+        <section className="simple-cta-area bg-royal-blue" style={{backgroundImage: `url(${cta})`}}>
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-xl-10">

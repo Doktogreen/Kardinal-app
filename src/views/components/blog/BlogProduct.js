@@ -1,4 +1,9 @@
 import React from "react";
+import { 
+    thumbnail_8, 
+    thumbnail_9, 
+    thumbnail_10 
+} from "./BlogMoneyChronicle";
 
 function BlogProduct(){
     return(
@@ -20,7 +25,7 @@ function BlogProduct(){
                             <div className="blog-post-item blog-post-item-v5 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms">
                                 <div className="post-thumbnail">
                                     <a href="#">
-                                        <img src="assets/img/blog/blog-thumbnail-8.jpg" alt="blog thumbnail one" />
+                                        <img src={thumbnail_8} alt="blog thumbnail one" />
                                     </a>
                                 </div>
                                 <div className="blog-post-entry-content">
@@ -38,7 +43,7 @@ function BlogProduct(){
                             <div className="blog-post-item blog-post-item-v5 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1500ms">
                                 <div className="post-thumbnail">
                                     <a href="#">
-                                        <img src="assets/img/blog/blog-thumbnail-9.jpg" alt="blog thumbnail two" />
+                                        <img src={thumbnail_9} alt="blog thumbnail two" />
                                     </a>
                                 </div>
                                 <div className="blog-post-entry-content">
@@ -56,7 +61,7 @@ function BlogProduct(){
                             <div className="blog-post-item blog-post-item-v5 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1500ms">
                                 <div className="post-thumbnail">
                                     <a href="#">
-                                        <img src="assets/img/blog/blog-thumbnail-10.jpg" alt="blog thumbnail three" />
+                                        <img src={thumbnail_10} alt="blog thumbnail three" />
                                     </a>
                                 </div>
                                 <div className="blog-post-entry-content">

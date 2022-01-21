@@ -1,4 +1,7 @@
 import React from "react";
+import blog_thumbnail from "../../../assets/general-assets/img/blog/blog-thumbnail-8.jpg";
+import blog_thumbnail_9 from "../../../assets/general-assets/img/blog/blog-thumbnail-9.jpg";
+import blog_thumbnail_10 from "../../../assets/general-assets/img/blog/blog-thumbnail-10.jpg";
 
 function BlogMoneyChronicle(){
     return(
@@ -20,7 +23,7 @@ function BlogMoneyChronicle(){
                             <div className="blog-post-item blog-post-item-v5 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms">
                                 <div className="post-thumbnail">
                                     <a href="#">
-                                        <img src="assets/img/blog/blog-thumbnail-8.jpg" alt="blog thumbnail one" />
+                                        <img src={blog_thumbnail} alt="blog thumbnail one" />
                                     </a>
                                 </div>
                                 <div className="blog-post-entry-content">
@@ -38,7 +41,7 @@ function BlogMoneyChronicle(){
                             <div className="blog-post-item blog-post-item-v5 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1500ms">
                                 <div className="post-thumbnail">
                                     <a href="#">
-                                        <img src="assets/img/blog/blog-thumbnail-9.jpg" alt="blog thumbnail two" />
+                                        <img src={blog_thumbnail_9} alt="blog thumbnail two" />
                                     </a>
                                 </div>
                                 <div className="blog-post-entry-content">
@@ -56,7 +59,7 @@ function BlogMoneyChronicle(){
                             <div className="blog-post-item blog-post-item-v5 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1500ms">
                                 <div className="post-thumbnail">
                                     <a href="#">
-                                        <img src="assets/img/blog/blog-thumbnail-10.jpg" alt="blog thumbnail three" />
+                                        <img src={blog_thumbnail_10} alt="blog thumbnail three" />
                                     </a>
                                 </div>
                                 <div className="blog-post-entry-content">
