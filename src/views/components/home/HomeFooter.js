@@ -13,7 +13,7 @@ function HomeFooter(){
                     <img src={footer_logo} alt="footer logo" />
                     <p>2a Alara Steet, Sabo Yaba, Lagos Nigeria.<br />wecare@gokardinal.com<br />+234 8025198619</p>
                     {/* <!--<a className="footer-contact-link" href="tel:+01234567899"><i className="fas fa-phone"></i> +012 (345) 678 99</a>--> */}
-                    <a href="contact.html" className="btn-contact">Contact Us</a>
+                    <a href="/contact" className="btn-contact">Contact Us</a>
                 </div> 
             </div>
             {/* <!-- Single Footer Widget --> */}
@@ -22,8 +22,8 @@ function HomeFooter(){
                     <h5 className="widget-title">Solutions</h5>
                     <div className="footer-widget-menu">
                         <ul>
-                            <li><a href="travel.html">Travel</a></li>
-                            <li><a href="hotel.html">Hotel</a></li>
+                            <li><a href="/travel">Travel</a></li>
+                            <li><a href="/hotel">Hotel</a></li>
                             <li><a href="...">Accomodation</a></li>
                             <li><a href="...">Corporate Hospitality</a></li>
                         </ul>
@@ -36,8 +36,8 @@ function HomeFooter(){
                     <h5 className="widget-title">Resources</h5>
                     <div className="footer-widget-menu">
                         <ul>
-                            <li><a href="...">Guides</a></li>
-                            <li><a href="...">Webinars</a></li>
+                            <li><a href="/guide">Guides</a></li>
+                            <li><a href="/webinar">Webinars</a></li>
                             {/* <!--<li><a href="...">Ebooks</a></li>--> */}
                             <li><a href="/blog" target="_blank" rel="noreferrer">Blog</a></li>
                         </ul>
@@ -58,7 +58,7 @@ function HomeFooter(){
                         </ul>
                     </div>
                     <div className="footer-copyright">
-                        <p>&copy; 2021 <a href="...">Kardinal</a> <br/>All Rights Reserved</p>
+                        <p>&copy; 2021 <a href="/">Kardinal</a> <br/>All Rights Reserved</p>
                     </div>
                 </div> 
             </div>

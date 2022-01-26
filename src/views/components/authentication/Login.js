@@ -1,14 +1,15 @@
 import React from "react";
+import AuthContainer from "./AuthContainer";
 
-function Login(){
-    return(
-        <div className="form-container outer " >
+export let login;
+login = (
+    <div className="form-container outer " >
             <div className="form-form">
                 <div className="form-form-wrap">
                     <div className="form-container">
                         <div className="form-content">
                             <h1 className="">Sign In</h1>
-                            <p className="signup-link register">Not Register ? <a href="auth_register.html">Create an account</a></p>
+                            <p className="signup-link register">Not Register ? <a href="/register">Create an account</a></p>
                             <form className="text-left">
                                 <div className="form">
                                     <div id="username-field" className="field-wrapper input">
@@ -22,7 +23,7 @@ function Login(){
                                     </div>
                                     <div className="d-sm-flex justify-content-between">
                                         <div className="field-wrapper">
-                                            <a href="user/dashboard.html" className="btn btn-primary" value="">Log In</a>
+                                            <a href="/dashboard" className="btn btn-primary" value="">Log In</a>
                                         </div>
                                     </div>
                                 </div>
@@ -32,6 +33,13 @@ function Login(){
                 </div>
             </div>
         </div>
+)
+
+function Login(){
+    return(
+        <>
+            <AuthContainer data={login}/>
+        </>
     )
 }
 

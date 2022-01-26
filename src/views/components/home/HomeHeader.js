@@ -11,7 +11,7 @@ function HomeHeader(){
                         <div className="col-xl-2 col-lg-4 col-md-5 col-8">
                             <div className="site-branding-and-language-selection">
                                 <div className="brand-logo">
-                                    <a href="index.html">
+                                    <a href="/">
                                         <img src={kardinal_logo} alt="logo" />
                                     </a>
                                 </div>
@@ -28,12 +28,12 @@ function HomeHeader(){
                                     <nav className="main-menu">
                                         <ul>
                                             <li className="menu-item ">
-                                                <a href="index.html" className={{navLink: "active"}}> Solutions</a>
+                                                <a href="/" className={{navLink: "active"}}> Solutions</a>
                                                 <ul className="sub-menu"  style={{width: "500px"}}>
                                                     <div className="row">
                                                             <div className="col-md-6">
                                                                 <li>
-                                                                    <a href="travel.html">
+                                                                    <a href="/travel">
                                                                         <div className="d-inline-flex ">
                                                                             <div className="menu-icon-drop">
                                                                                 <i className="fa fa-plane fa-2x"></i>
@@ -45,7 +45,7 @@ function HomeHeader(){
                                                             </div>
                                                             <div className="col-md-6">
                                                                 <li>
-                                                                    <a href="k-care.html">
+                                                                    <a href="/k-care">
                                                                         <div className="d-inline-flex ">
                                                                             <div className="menu-icon-drop">
                                                                                 <i className="fa fa-building fa-2x"></i>
@@ -57,7 +57,7 @@ function HomeHeader(){
                                                             </div>
                                                             <div className="col-md-6">
                                                                 <li>
-                                                                    <a href="hotel.html">
+                                                                    <a href="/hotel">
                                                                         <div className="d-inline-flex ">
                                                                             <div className="menu-icon-drop">
                                                                                 <i className="fa fa-bed fa-2x"></i>
@@ -69,7 +69,7 @@ function HomeHeader(){
                                                             </div>
                                                             <div className="col-md-6">
                                                                 <li>
-                                                                    <a href="car-rental.html">
+                                                                    <a href="/car-rental">
                                                                         <div className="d-inline-flex ">
                                                                             <div className="menu-icon-drop">
                                                                                 <i className="fa fa-car fa-2x"></i>
@@ -79,32 +79,32 @@ function HomeHeader(){
                                                                     </a>
                                                                 </li> 
                                                             </div>
-                                                        {/* <!--<div className="col-md-6">-->
-                                                        <!--    <li>-->
-                                                        <!--        <a href="corporate.html">-->
-                                                        <!--            <div className="d-inline-flex ">-->
-                                                        <!--                <div className="menu-icon-drop">-->
-                                                        <!--                    <i className="fa fa-bed fa-2x"></i>-->
-                                                        <!--                </div>-->
-                                                        <!--                <p className="drop-menu-new-p"><span style="font-size: 12px; font-weight: 500">Corporate Hospitality</span><br> Lorem ipsum text goes here</p>-->
-                                                        <!--            </div> -->
-                                                        <!--        </a>-->
-                                                        <!--    </li> -->
-                                                        <!--</div>--> */}
+                                                            <div className="col-md-6">
+                                                               <li>
+                                                                    <a href="/corporate">
+                                                                        <div className="d-inline-flex ">
+                                                                            <div className="menu-icon-drop">
+                                                                                <i className="fa fa-bed fa-2x"></i>
+                                                                           </div>
+                                                                           <p className="drop-menu-new-p"><span style={{fontSize: "12px", fontWeight: "500"}}>Corporate Hospitality</span><br /> Lorem ipsum text goes here</p>
+                                                                       </div>
+                                                                   </a>
+                                                                </li>
+                                                            </div>
                                                         </div>
                                                     </ul>
                                                 </li>
-                                            {/* <!--<li className="menu-item">-->
-                                            <!--    <a href="pricing.html" className="nav-link">Pricing</a>-->
+                                                <li className="menu-item">
+                                                   <a href="/pricing" className="nav-link">Pricing</a>
                                                 
-                                            <!--</li>--> */}
+                                                </li>
                                                 <li className="menu-item ">
                                                 <a href="..." className="nav-link">Resources</a>
                                                 <ul className="sub-menu"  style={{width: "500px"}}>
                                                     <div className="row">
                                                         <div className="col-md-6">
                                                             <li>
-                                                                <a href="guide.html">
+                                                                <a href="/guide">
                                                                     <div className="d-inline-flex ">
                                                                         <div className="menu-icon-drop">
                                                                             <i className="fas fa-directions fa-2x"></i>
@@ -116,7 +116,7 @@ function HomeHeader(){
                                                         </div>
                                                         <div className="col-md-6">
                                                             <li>
-                                                                <a href="webinar.html">
+                                                                <a href="/webinar">
                                                                     <div className="d-inline-flex ">
                                                                         <div className="menu-icon-drop">
                                                                             <i className="fas fa-webcam fa-2x"></i>
@@ -126,18 +126,18 @@ function HomeHeader(){
                                                                 </a>
                                                             </li> 
                                                         </div>
-                                                        {/* <!--<div className="col-md-6">-->
-                                                        <!--    <li>-->
-                                                        <!--        <a href="ebook.html">-->
-                                                        <!--            <div className="d-inline-flex ">-->
-                                                        <!--                <div className="menu-icon-drop">-->
-                                                        <!--                    <i className="fas fa-book fa-2x"></i>-->
-                                                        <!--                </div>-->
-                                                        <!--                <p className="drop-menu-new-p"><span style="font-size: 12px; font-weight: 500">Ebooks</span><br> Lorem ipsum text goes here</p>-->
-                                                        <!--            </div> -->
-                                                        <!--        </a>-->
-                                                        <!--    </li> -->
-                                                        <!--</div>--> */}
+                                                            <div className="col-md-6">
+                                                                <li>
+                                                                   <a href="/ebook">
+                                                                       <div className="d-inline-flex ">
+                                                                           <div className="menu-icon-drop">
+                                                                               <i className="fas fa-book fa-2x"></i>
+                                                                            </div>
+                                                                           <p className="drop-menu-new-p"><span style={{fontSize: "12px", fontWeight: "500"}}>Ebooks</span><br /> Lorem ipsum text goes here</p>
+                                                                       </div>
+                                                                   </a>
+                                                               </li>
+                                                            </div>
                                                         <div className="col-md-6">
                                                             <li>
                                                                 <a href="https://gokardinal.medium.com/" target="_blank" rel="noreferrer">
@@ -153,71 +153,68 @@ function HomeHeader(){
                                                 </div> 
                                                 </ul>
                                             </li>
-                                            {/* <!--<li className="menu-item ">-->
-                                            <!--    <a href="..." className="nav-link">Customers</a>-->
+                                                <li className="menu-item ">
+                                                   <a href="..." className="nav-link">Customers</a>
                                             
-                                            <!--    <ul className="sub-menu"  style="width: 500px;">-->
-                                            <!--        <div className="row">-->
-                                            <!--            <div className="col-md-6">-->
-                                            <!--                <li>-->
-                                            <!--                    <a href="team.html">-->
-                                            <!--                        <div className="d-inline-flex ">-->
-                                            <!--                            <div className="menu-icon-drop">-->
-                                            <!--                                <i className="fas fa-user-friends fa-2x"></i>-->
-                                            <!--                            </div>-->
-                                            <!--                            <p className="drop-menu-new-p"><span style="font-size: 12px; font-weight: 500">Team</span><br> Lorem ipsum text goes here</p>-->
-                                            <!--                        </div> -->
-                                            <!--                    </a>-->
-                                            <!--                </li> -->
-                                            <!--            </div>-->
-                                            <!--            <div className="col-md-6">-->
-                                            <!--                <li>-->
-                                            <!--                    <a href="customer.html">-->
-                                            <!--                        <div className="d-inline-flex ">-->
-                                            <!--                            <div className="menu-icon-drop">-->
-                                            <!--                                <i className="fab fa-intercom fa-2x"></i>-->
-                                            <!--                            </div>-->
-                                            <!--                            <p className="drop-menu-new-p"><span style="font-size: 12px; font-weight: 500">Customers</span><br> Lorem ipsum text goes here</p>-->
-                                            <!--                        </div> -->
-                                            <!--                    </a>-->
-                                            <!--                </li> -->
-                                            <!--            </div>-->
-                                            <!--            <div className="col-md-6">-->
-                                            <!--                <li>-->
-                                            <!--                    <a href="vendor.html">-->
-                                            <!--                        <div className="d-inline-flex ">-->
-                                            <!--                            <div className="menu-icon-drop">-->
-                                            <!--                                <i className="fas fa-inventory fa-2x"></i>-->
-                                            <!--                            </div>-->
-                                            <!--                            <p className="drop-menu-new-p"><span style="font-size: 12px; font-weight: 500">Vendor</span><br> Lorem ipsum text goes here</p>-->
-                                            <!--                        </div> -->
-                                            <!--                    </a>-->
-                                            <!--                </li> -->
-                                            <!--            </div>-->
-                                            <!--            <div className="col-md-6">-->
-                                            <!--                <li>-->
-                                            <!--                    <a href="career.html">-->
-                                            <!--                        <div className="d-inline-flex ">-->
-                                            <!--                            <div className="menu-icon-drop">-->
-                                            <!--                                <i className="fas fa-briefcase fa-2x"></i>-->
-                                            <!--                            </div>-->
-                                            <!--                            <p className="drop-menu-new-p"><span style="font-size: 12px; font-weight: 500">Careers</span><br> Lorem ipsum text goes here</p>-->
-                                            <!--                        </div> -->
-                                            <!--                    </a>-->
-                                            <!--                </li> -->
-                                            <!--            </div>-->    
-                                            <!--    </div>-->
+                                                  <ul className="sub-menu"  style={{width: "500px"}}>
+                                                       <div className="row">
+                                                           <div className="col-md-6">
+                                                                <li>
+                                                                    <a href="/team">
+                                                                       <div className="d-inline-flex ">
+                                                                           <div className="menu-icon-drop">
+                                                                                <i className="fas fa-user-friends fa-2x"></i>
+                                                                            </div>
+                                                                            <p className="drop-menu-new-p"><span style={{fontSize: "12px", fontWeight: "500"}}>Team</span><br /> Lorem ipsum text goes here</p>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                            </div>
+                                                            <div className="col-md-6">
+                                                                <li>
+                                                                    <a href="/customer">
+                                                                        <div className="d-inline-flex ">
+                                                                            <div className="menu-icon-drop">
+                                                                                <i className="fab fa-intercom fa-2x"></i>
+                                                                            </div>
+                                                                            <p className="drop-menu-new-p"><span style={{fontSize: "12px", fontWeight: "500"}}>Customers</span><br /> Lorem ipsum text goes here</p>
+                                                                        </div>
+                                                                    </a>
+                                                                </li> 
+                                                            </div>
+                                                            <div className="col-md-6">
+                                                                <li>
+                                                                    <a href="/vendor">
+                                                                        <div className="d-inline-flex ">
+                                                                            <div className="menu-icon-drop">
+                                                                                <i className="fas fa-inventory fa-2x"></i>
+                                                                            </div>
+                                                                            <p className="drop-menu-new-p"><span style={{fontSize: "12px", fontWeight: "500"}}>Vendor</span><br /> Lorem ipsum text goes here</p>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                            </div>
+                                                            <div className="col-md-6">
+                                                                <li>
+                                                                    <a href="/career">
+                                                                        <div className="d-inline-flex ">
+                                                                            <div className="menu-icon-drop">
+                                                                                <i className="fas fa-briefcase fa-2x"></i>
+                                                                            </div>
+                                                                            <p className="drop-menu-new-p"><span style={{fontSize: "12px", fontWeight: "500"}}>Careers</span><br /> Lorem ipsum text goes here</p>
+                                                                        </div> 
+                                                                    </a>
+                                                                </li>
+                                                            </div>  
+                                                    </div>
                                                 
-                                            <!--    </ul>-->
-                                            <!--</li>--> */}
+                                                    </ul>
+                                                </li>
                                             <li className="menu-item">
-                                                <a href="customer.html" className="nav-link">Customers</a>
+                                                <a href="/company" className="nav-link">Company</a>
                                             </li>
                                             <li className="menu-item">
-                                                <a href="company.html" className="nav-link">Company</a>
-                                            </li>
-                                            <li className="menu-item">
-                                                <a href="contact.html" className="nav-link">Contact</a>
+                                                <a href="/contact" className="nav-link">Contact</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -229,13 +226,13 @@ function HomeHeader(){
                             <div className="header-right">
                                 <ul>
                                     <li className="get-started-wrapper">
-                                        <a href="auth_login.html" className="filled-btn bg-filled button-radius btn-bordered">
+                                        <a href="/login" className="filled-btn bg-filled button-radius btn-bordered">
                                             Login 
                                         </a>
                                         
                                     </li>
                                     <li className="get-started-wrapper">
-                                        <a href="auth_register.html" className="btn1" >
+                                        <a href="/register" className="btn1" >
                                             Sign Up For Free
                                         </a>
                                     </li>

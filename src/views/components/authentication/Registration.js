@@ -1,14 +1,15 @@
 import React from "react";
+import AuthContainer from "./AuthContainer";
 
-function Register(){
-    return(
-        <div className="form-container outer " >
+export let register;
+register = (
+    <div className="form-container outer " >
             <div className="form-form">
                 <div className="form-form-wrap">
                     <div className="form-container">
                         <div className="form-content">
                             <h1 className="">Register</h1>
-                            <p className="signup-link register">Already have an account? <a href="auth_login.html">Log in</a></p>
+                            <p className="signup-link register">Already have an account? <a href="/login">Log in</a></p>
                             <form className="text-left">
                                 <div className="form">
                                     <div id="username-field" className="field-wrapper input">
@@ -56,13 +57,13 @@ function Register(){
                                         <div className="n-chk">
                                             <label className="new-control new-checkbox checkbox-primary">
                                             <input type="checkbox" className="new-control-input" />
-                                            <span className="new-control-indicator"></span><span>I agree to the <a href="javascript:void(0);">  terms and conditions </a></span>
+                                            <span className="new-control-indicator"></span><span>I agree to the <a href={{javascript:void(0)}}>  terms and conditions </a></span>
                                             </label>
                                         </div>
                                     </div>
                                     <div className="d-sm-flex justify-content-between">
                                         <div className="field-wrapper">
-                                            <a href="user/dashboard.html" className="btn btn-primary" value="">CREATE ACCOUNT</a>
+                                            <a href="/dashboard" className="btn btn-primary" value="">CREATE ACCOUNT</a>
                                         </div>
                                     </div>
                                 </div>
@@ -72,6 +73,12 @@ function Register(){
                 </div>
             </div>
         </div>
+    )
+function Register(){
+    return(
+        <>
+        <AuthContainer data={register}/>
+    </>
     )
 }
 

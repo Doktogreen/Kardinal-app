@@ -1,4 +1,27 @@
 import React from "react";
+import dot_pattern from "../../../assets/general-assets/img/services/dots-pattern-bg.png";
+import ball_shape from "../../../assets/general-assets/img/particle/gradient-ball-shape.png";
+import curve_shape from "../../../assets/general-assets/img/particle/gradient-curve-shape.png";
+import pic3 from "../../../assets/general-assets/img/app/pic3.jpg";
+import pic4 from "../../../assets/general-assets/img/app/pic4.jpg";
+import pic5 from "../../../assets/general-assets/img/app/pic5.jpg";
+import pic7 from "../../../assets/general-assets/img/app/pic7.jpg";
+import img1 from "../../../assets/general-assets/img/faq/faq-image-1.jpg";
+import cta_bg from "../../../assets/general-assets/img/cta/ctabg.jpg";
+
+import { 
+    newsletter,
+    particle_five, 
+    particle_four, 
+    particle_one, 
+    particle_three, 
+    particle_two 
+} from "../car-rental/CarRental";
+
+export let ctabg = cta_bg;
+export let dotpattern = dot_pattern;
+export let ball = ball_shape;
+export let curve = curve_shape;
 
 function Career(){
     return(
@@ -7,11 +30,11 @@ function Career(){
             <div className="container">
                 <div className="section-internal">
                     <div className="section-particle-effect d-none d-md-block section-particle-effect-v3">
-                        <img className="particle-1 animate-zoom-fade" src="assets/img/particle/particle-1.png" alt="particle One" />
-                        <img className="particle-2 animate-rotate-me" src="assets/img/particle/particle-2.png" alt="particle Two" />
-                        <img className="particle-3 animate-float-bob-x" src="assets/img/particle/particle-3.png" alt="particle Three" />
-                        <img className="particle-4 animate-float-bob-y" src="assets/img/particle/particle-4.png" alt="particle Four" />
-                        <img className="particle-5 animate-float-bob-y" src="assets/img/particle/particle-5.png" alt="particle Five" />
+                        <img className="particle-1 animate-zoom-fade" src={particle_one} alt="particle One" />
+                        <img className="particle-2 animate-rotate-me" src={particle_two} alt="particle Two" />
+                        <img className="particle-3 animate-float-bob-x" src={particle_three} alt="particle Three" />
+                        <img className="particle-4 animate-float-bob-y" src={particle_four} alt="particle Four" />
+                        <img className="particle-5 animate-float-bob-y" src={particle_five} alt="particle Five" />
                     </div>
                     <div className="row align-items-center">
                         <div className="col-12">
@@ -37,7 +60,7 @@ function Career(){
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-12">
-                        <div className="section-title text-center" style="padding: 0 10%;">
+                        <div className="section-title text-center" style={{padding: "0 10%"}}>
                             <h2>
                                 We’re building a growth engine for modern businesses in Africa</h2>
                             <div className="section-title-description">
@@ -54,12 +77,12 @@ function Career(){
             {/* <!-- /.container --> */}
         </section>
         {/* <!--====== Start Our Services Area ======--> */}
-     <section className="our-services our-services-v1 pt-100 pb-100" style="background-image: url(assets/img/services/dots-pattern-bg.png);">
+     <section className="our-services our-services-v1 pt-100 pb-100" style={{backgroundImage: `url(${dot_pattern})`}}>
             <div className="container">
                 <div className="service-area-internal">
                     <div className="section-particle-effect d-none d-lg-block">
-                        <img className="particle-1 animate-zoominout" src="assets/img/particle/gradient-ball-shape.png" alt="ball shape" />
-                        <img className="particle-3 animate-rotate-me" src="assets/img/particle/gradient-curve-shape.png" alt="curve shape" />
+                        <img className="particle-1 animate-zoominout" src={ball_shape} alt="ball shape" />
+                        <img className="particle-3 animate-rotate-me" src={curve_shape} alt="curve shape" />
                     </div>
                     <div className="row justify-content-center">
                         <div className="col-12">
@@ -79,8 +102,8 @@ function Career(){
                     <div className="container-fluid">
                     <div className="row pt-100">
                         <div className="col-lg-6">
-                        <div className="app-preview-image text-center text-lg-left content-right-spacer oval-gradient animate-float-bob-x wow fadeInDown animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: float-bob-x;">
-                            <img src="assets/img/app/pic3.jpg" alt="promote your app" />
+                        <div className="app-preview-image text-center text-lg-left content-right-spacer oval-gradient animate-float-bob-x wow fadeInDown animated" data-wow-delay="0ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay: "0ms", animationName: "float-bob-x"}}>
+                            <img src={pic3} alt="promote your app" />
                         </div>
                     </div>
                     <div className="col-lg-6">
@@ -106,16 +129,16 @@ function Career(){
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <div className="app-preview-image text-center text-lg-left content-left-spacer oval-gradient animate-float-bob-x wow fadeInDown animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: float-bob-x;">
-                            <img src="assets/img/app/pic4.jpg" alt="promote your app" />
+                        <div className="app-preview-image text-center text-lg-left content-left-spacer oval-gradient animate-float-bob-x wow fadeInDown animated" data-wow-delay="0ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay: "0ms", animationName: "float-bob-x"}}>
+                            <img src={pic4} alt="promote your app" />
                         </div>
                     </div>
                     </div>
                     {/* <!-- /.row --> */}
                     <div className="row pt-100">
                         <div className="col-lg-6">
-                        <div className="app-preview-image text-center text-lg-left content-right-spacer oval-gradient animate-float-bob-x wow fadeInDown animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: float-bob-x;">
-                            <img src="assets/img/app/pic5.jpg" alt="promote your app" />
+                        <div className="app-preview-image text-center text-lg-left content-right-spacer oval-gradient animate-float-bob-x wow fadeInDown animated" data-wow-delay="0ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay: "0ms", animationName: "float-bob-x"}}>
+                            <img src={pic5} alt="promote your app" />
                         </div>
                     </div>
                     <div className="col-lg-6">
@@ -142,8 +165,8 @@ function Career(){
                         
                     </div>
                     <div className="col-lg-6">
-                        <div className="app-preview-image text-center text-lg-left content-left-spacer oval-gradient animate-float-bob-x wow fadeInDown animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: float-bob-x;">
-                            <img src="assets/img/app/pic7.jpg" alt="promote your app" />
+                        <div className="app-preview-image text-center text-lg-left content-left-spacer oval-gradient animate-float-bob-x wow fadeInDown animated" data-wow-delay="0ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"0ms", animationName: "float-bob-x"}}>
+                            <img src={pic7} alt="promote your app" />
                         </div>
                     </div>
                     </div>
@@ -249,7 +272,7 @@ function Career(){
                         </div>
                         <div className="col-lg-6">
                             <div className="section-right-image faq-right-image animate-float-bob-y wow fadeInUp" data-wow-delay="0ms" data-wow-duration="2500ms">
-                                <img src="assets/img/faq/faq-image-1.jpg" alt="faq image" />
+                                <img src={img1} alt="faq im" />
                             </div>
                         </div>
                     </div> 
@@ -261,20 +284,20 @@ function Career(){
         </section> 
         {/* <!-- /.faq-area --> */}
         {/* <!--====== End FAQ Area ======--> */}
-        <section className="cta-area cta-area-v2" style="background-image: url(assets/img/cta/ctabg.jpg);">
+        <section className="cta-area cta-area-v2" style={{backgroundImage: `url(${cta_bg})`}}>
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-lg-8">
                         <div className="cta-content">
                             <div className="section-title section-title-white text-center">
                                
-                                <h2 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0.2s; animation-name: fadeInUp;">Spotlight: Engineering at <br className="d-none d-md-block" /> Kardinal</h2>
-                                <div className="section-heading-tag wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0.1s; animation-name: fadeInUp;">
+                                <h2 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"0.2s", animationName: "fadeInUp"}}>Spotlight: Engineering at <br className="d-none d-md-block" /> Kardinal</h2>
+                                <div className="section-heading-tag wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"0.2ms", animationName: "fadeInUp"}}>
                                     <span className="single-heading-tag">Solving Africa's biggest payments challenges, one commit at a time.<br /> We're building simple, powerful tools to connect African businesses<br /> with customers all over the world — and we'd love your help!</span>
                                 </div>
-                                <div className="section-button-wrapper section-dual-button justify-content-center text-center wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                <div className="section-button-wrapper section-dual-button justify-content-center text-center wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"0.3ms", animationName: "fadeInUp"}}>
                                   
-                                    <a href="#" className="filled-btn btn-bordered">
+                                    <a href="..." className="filled-btn btn-bordered">
                                        Learn more about Engineering at Kardinal 
                                     </a>
                                 </div>
@@ -287,14 +310,14 @@ function Career(){
             {/* <!-- /.container --> */}
         </section>
         {/* <!--====== Start Subscribe Newsletter Area ======--> */}
-        <section className="subscribe-newsletter-area bg-white-lilac pt-80 pb-80" style="background-image: url(assets/img/particle/newsletter-bg.png);">
+        <section className="subscribe-newsletter-area bg-white-lilac pt-80 pb-80" style={{backgroundImage: `url(${newsletter})`}}>
             <div className="container">
                 <div className="section-internal">
                     <div className="section-particle-effect d-none d-md-block section-particle-effect-v4">
-                        <img className="particle-1 animate-rotate-me" src="assets/img/particle/particle-2.png" alt="particle One" />
-                        <img className="particle-2 animate-rotate-me" src="assets/img/particle/particle-1.png" alt="particle Two" />
-                        <img className="particle-3 animate-zoominout" src="assets/img/particle/particle-4.png" alt="particle Three" />
-                        <img className="particle-4 animate-float-bob-y" src="assets/img/particle/particle-5.png" alt="particle Five" />
+                        <img className="particle-1 animate-rotate-me" src={particle_two} alt="particle One" />
+                        <img className="particle-2 animate-rotate-me" src={particle_one} alt="particle Two" />
+                        <img className="particle-3 animate-zoominout" src={particle_three} alt="particle Three" />
+                        <img className="particle-4 animate-float-bob-y" src={particle_four} alt="particle Five" />
                     </div>
                     <div className="row text-center justify-content-center">
                         <div className="col-xl-7 col-lg-10">

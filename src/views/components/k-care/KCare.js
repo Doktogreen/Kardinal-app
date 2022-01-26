@@ -1,9 +1,24 @@
 import React from "react";
+import hero_map from "../../../assets/general-assets/img/hero/hero-map-bg.png";
+import hero_4 from "../../../assets/general-assets/img/hero/hero-map-bg.png";
+import side_img1 from "../../../assets/general-assets/img/app/sideimage1.jpg";
+import side_img2 from "../../../assets/general-assets/img/app/sideimage2.jpg";
+import side_img3 from "../../../assets/general-assets/img/app/sideimage3.jpg";
+import simple_cta_bg from "../../../assets/general-assets/img/cta/simple-cta-bg.png";
+
+import { 
+    particle_one, 
+    particle_three, 
+    particle_two 
+} from "../car-rental/CarRental";
+import { faqimg } from "../hotel/Hotel";
+
+export let heromap = hero_map;
 
 function KCare(){
     return(
         <>
-            <section className="hero-area hero-v2 bg-contain bg-ocean-blue hero-padding" style="background-image:url(assets/img/hero/hero-map-bg.png);">
+            <section className="hero-area hero-v2 bg-contain bg-ocean-blue hero-padding" style={{backgrounIimage: `url(${hero_map})`}}>
                 <div className="container">
                 <div className="row align-items-center">
                 <div className="col-lg-6">
@@ -13,7 +28,7 @@ function KCare(){
                         <p className="wow fadeInUp pb-20" data-wow-delay="0.3s" data-wow-duration="1500ms">We provide comprehensive security, regulatory and safety support at every stage of your journey. Your travellers will be informed well before they board a plane with destination reports and automated risk alerts.</p>
                         <div className="section-button-wrapper section-dual-button wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1500ms">
                             <span>
-                                <a href="k-care.html" className="btn1">
+                                <a href="/k-care" className="btn1">
                                     Speak to an expert
                                 </a>
                             </span>
@@ -24,12 +39,12 @@ function KCare(){
                 <div className="col-lg-6">
                 <div className="blob-image-wrapper">
                     <div className="blob-shape-wrapper">
-                        <img src="assets/img/particle/particle-1.png" alt="white thumbs up" className="blob-shape blob-shape-1 animate-float-bob-y" />
-                        <img src="assets/img/particle/particle-2.png" alt="white announcement" className="blob-shape blob-shape-2 animate-float-bob-x" />
-                        <img src="assets/img/particle/particle-3.png" alt="white paper plane" className="blob-shape blob-shape-3 animate-float-bob-x" />
+                        <img src={particle_one} alt="white thumbs up" className="blob-shape blob-shape-1 animate-float-bob-y" />
+                        <img src={particle_two} alt="white announcement" className="blob-shape blob-shape-2 animate-float-bob-x" />
+                        <img src={particle_three} alt="white paper plane" className="blob-shape blob-shape-3 animate-float-bob-x" />
                     </div>
                     <div className="blob-main-image wow fadeInUp" data-wow-delay="500ms" data-wow-duration="2500ms">
-                        <img src="assets/img/hero/hero4.jpg" alt="hero blob" />
+                        <img src={hero_4} alt="hero blob" />
                     </div>
                 </div> 
                 {/* <!-- /.blob-image-wrapper --> */}
@@ -47,7 +62,7 @@ function KCare(){
                 <div className="row align-items-center">
                 <div className="col-lg-7">
                 <div className="app-preview-image text-center text-lg-left content-right-spacer oval-gradient animate-float-bob-x wow fadeInDown" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    <img src="assets/img/app/sideimage1.jpg" alt="promote your app" />
+                    <img src={side_img1} alt="promote your app" />
                 </div>
                 </div>
                 <div className="col-lg-5">
@@ -81,7 +96,7 @@ function KCare(){
                 </div>
                 <div className="col-lg-7">
                 <div className="app-preview-image content-left-spacer oval-gradient animate-float-bob-x wow fadeInDown" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    <img src="assets/img/app/sideimage2.jpg" alt="promote your app" />
+                    <img src={side_img2} alt="promote your app" />
                 </div>
                 </div>
                 </div> 
@@ -97,7 +112,7 @@ function KCare(){
                 <div className="row align-items-center">
                 <div className="col-lg-7">
                 <div className="app-preview-image text-center text-lg-left content-right-spacer oval-gradient animate-float-bob-x wow fadeInDown" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    <img src="assets/img/app/sideimage3.jpg" alt="promote your app" />
+                    <img src={side_img3} alt="promote your app" />
                 </div>
                 </div>
                 <div className="col-lg-5">
@@ -117,13 +132,13 @@ function KCare(){
                 {/* <!-- /.collaboration-area --> */}
                 {/* <!--====== End Collaboration Area 03 ======--> */}
                 {/* <!--====== Start Simple CTA Area ======--> */}
-                <section className="simple-cta-area bg-royal-blue" style="background-image: url(assets/img/cta/simple-cta-bg.png);">
+                <section className="simple-cta-area bg-royal-blue" style={{backgroundImage: `url(${simple_cta_bg})`}}>
                 <div className="container">
                 <div className="row justify-content-center">
                 <div className="col-xl-10">
                 <div className="simple-cta-content">
                     <h4>Start prioritizing your employees welfare</h4>
-                    <a href="#" className="filled-btn bg-filled button-radius btn-bordered btn-off-white">
+                    <a href="..." className="filled-btn bg-filled button-radius btn-bordered btn-off-white">
                         Sign up now 
                     </a>
                 </div>
@@ -216,8 +231,8 @@ function KCare(){
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div className="section-right-image faq-right-image animate-float-bob-y wow fadeInUp animated" data-wow-delay="0ms" data-wow-duration="2500ms" style="visibility: visible; animation-duration: 2500ms; animation-delay: 0ms; animation-name: float-bob-y;">
-                                        <img src="assets/img/faq/faq-image.png" alt="faq image" />
+                                    <div className="section-right-image faq-right-image animate-float-bob-y wow fadeInUp animated" data-wow-delay="0ms" data-wow-duration="2500ms" style={{visibility: "visible", animationDuration: "2500ms", animationDelay:"0ms", animationName: "float-bob-y"}}>
+                                        <img src={faqimg} alt="faq im" />
                                     </div>
                                 </div>
                             </div> 

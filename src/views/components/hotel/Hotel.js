@@ -1,23 +1,49 @@
 import React from "react";
+import hero_curve from "../../../assets/general-assets/img/hero/hero-curve-bg.png";
+import faq_img from "../../../assets/general-assets/img/faq/faq-image.png";
+import hero3 from "../../../assets/general-assets/img/hero/hero3.jpg";
+import hero2 from "../../../assets/general-assets/img/hero/hero2.jpg";
+import img5 from "../../../assets/general-assets/img/app/img5.jpg";
+import img1 from "../../../assets/general-assets/img/app/img1.jpg";
+import img6 from "../../../assets/general-assets/img/app/img6.jpg";
+import img4 from "../../../assets/general-assets/img/app/img4.jpg";
+import img7 from "../../../assets/general-assets/img/app/img7.jpg";
+import { 
+    newsletter, 
+    particle_five, 
+    particle_four, 
+    particle_one, 
+    particle_three, 
+    particle_two 
+} from "../car-rental/CarRental";
+
+export let faqimg = faq_img;
+export let images = {
+    img_1: img1,
+    img_5: img5,
+    img_6: img6,
+    img_4: img4,
+    img_7: img7,
+}
 
 function Hotel(){
     return(
         <>
-            <section className="hero-area hero-v4" style="background-image: url(assets/img/hero/hero-curve-bg.png);">
+            <section className="hero-area hero-v4" style={{backgroundImage: `url(${hero_curve})`}}>
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-6">
                         <div className="hero-content">
                             <div className="section-particle-effect d-none d-lg-block">
-                                <img className="particle-1 animate-rotate-me" src="assets/img/particle/particle-2.png" alt="particle One" />
-                                <img className="particle-2 animate-float-bob-y" src="assets/img/particle/particle-3.png" alt="particle Two" />
-                                <img className="particle-3 animate-zoominout" src="assets/img/particle/particle-4.png" alt="particle Three" />
-                                <img className="particle-4 animate-float-bob-y" src="assets/img/particle/particle-5.png" alt="particle Four" />
+                                <img className="particle-1 animate-rotate-me" src={particle_one} alt="particle One" />
+                                <img className="particle-2 animate-float-bob-y" src={particle_three} alt="particle Two" />
+                                <img className="particle-3 animate-zoominout" src={particle_four} alt="particle Three" />
+                                <img className="particle-4 animate-float-bob-y" src={particle_five} alt="particle Four" />
                             </div>
                             <div className="section-title section-title-mandy">
-                                <h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0.2s; animation-name: fadeInUp;">The Right Room In Over 800 Destinations</h1> 
+                                <h1 className="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"0.2s", animationName: "fadeInUp"}}>The Right Room In Over 800 Destinations</h1> 
                                 <p className="mb-4">Book hotels anywhere in the world, easily. Our global distribution channels provide the best reservation, ensuring steady availability and comfort when booking.</p>
-                                <div className="section-button-wrapper section-dual-button wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                <div className="section-button-wrapper section-dual-button wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"0.3s", animationName: "fadeInUp"}}>
                                     <span>
                                         <a href="demo.html" className="btn1">
                                             Request Demo 
@@ -29,9 +55,9 @@ function Hotel(){
                     </div>
                     <div className="col-lg-6">
                         <div className="chartboard-image-wrapper">
-                            <img src="assets/img/hero/hero3.jpg" alt="chartboard image one" className="chartboard-image chartboard-image-main wow fadeInDown animate-float-bob-x animated" data-wow-delay="100ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 100ms; animation-name: float-bob-x;" />
+                            <img src={hero3} alt="chartboard im one" className="chartboard-image chartboard-image-main wow fadeInDown animate-float-bob-x animated" data-wow-delay="100ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"100ms", animationName: "float-bob-x"}} />
                             <div className="chartboard-app-preview">
-                                <img src="assets/img/hero/hero2.jpg" alt="app preview three" className="chartboard-image chartboard-app-preview-3 wow fadeInDown" data-wow-delay="300ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: fadeInDown;" />
+                                <img src={hero2} alt="app preview three" className="chartboard-image chartboard-app-preview-3 wow fadeInDown" data-wow-delay="300ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"300ms", animationName: "fadeInDown"}}/>
                             </div>
                         </div> 
                         {/* <!-- /.chart-board-image-wrapper --> */}
@@ -49,11 +75,11 @@ function Hotel(){
                 <div className="row align-items-center">
                     <div className="col-lg-7">
                         <div className="app-preview-image oval-gradient content-right-spacer">
-                            <div className="app-feature-preview-main wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 200ms; animation-name: fadeInDown;">
-                                <img src="assets/img/app/img5.jpg" alt="live collaboration" />
+                            <div className="app-feature-preview-main wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"200ms", animationName: "fadeInDown"}}>
+                                <img src={img5} alt="live collaboration" />
                             </div>
-                            <div className="app-feature-preview-absolute animate-float-bob-x wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 600ms; animation-name: float-bob-x;">
-                                <img src="assets/img/app/img1.jpg" alt="chat onboard" />
+                            <div className="app-feature-preview-absolute animate-float-bob-x wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"600ms", animationName: "float-bob-x"}}>
+                                <img src={img1} alt="chat onboard" />
                             </div>
                         </div>
                     </div>
@@ -95,11 +121,11 @@ function Hotel(){
                     </div>
                     <div className="col-lg-7 order-1 order-lg-2">
                         <div className="app-preview-image text-center text-lg-right content-left-spacer oval-gradient">
-                            <div className="app-feature-preview-main animate-float-bob-y wow fadeInUp animated" data-wow-delay="100ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 100ms; animation-name: float-bob-y;">
-                                <img src="assets/img/app/img6.jpg" alt="connect team one" />
+                            <div className="app-feature-preview-main animate-float-bob-y wow fadeInUp animated" data-wow-delay="100ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"100ms", animationName: "float-bob-y"}}>
+                                <img src={img6} alt="connect team one" />
                             </div>
-                            <div className="app-feature-preview-absolute animate-float-bob-x wow fadeInDown animated" data-wow-delay="200ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 200ms; animation-name: float-bob-x;">
-                                <img src="assets/img/app/img4.jpg" alt="connect team two" />
+                            <div className="app-feature-preview-absolute animate-float-bob-x wow fadeInDown animated" data-wow-delay="200ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"200ms", animationName: "float-bob-x"}}>
+                                <img src={img4} alt="connect team two" />
                             </div>
                         </div>
                     </div>
@@ -113,11 +139,11 @@ function Hotel(){
                 <div className="row align-items-center">
                     <div className="col-lg-7">
                         <div className="app-preview-image oval-gradient content-right-spacer">
-                            <div className="app-feature-preview-main wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 200ms; animation-name: fadeInDown;">
-                                <img src="assets/img/app/img7.jpg" alt="live collaboration" />
+                            <div className="app-feature-preview-main wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"200ms", animationName: "fadeInDown"}}>
+                                <img src={img7} alt="live collaboration" />
                             </div>
-                            <div className="app-feature-preview-absolute animate-float-bob-x wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 600ms; animation-name: float-bob-x;">
-                                <img src="assets/img/app/img1.jpg" alt="chat onboard" />
+                            <div className="app-feature-preview-absolute animate-float-bob-x wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"600ms", animationName: "float-bob-x"}}>
+                                <img src={img1} alt="chat onboard" />
                             </div>
                         </div>
                     </div>
@@ -138,14 +164,14 @@ function Hotel(){
             </div> 
             {/* <!-- /.container --> */}
         </section>
-        <section className="subscribe-newsletter-area bg-white-lilac pt-80 pb-80" style="background-image: url(assets/img/particle/newsletter-bg.png);">
+        <section className="subscribe-newsletter-area bg-white-lilac pt-80 pb-80" style={{backgroundImage: `url(${newsletter})`}}>
             <div className="container">
                 <div className="section-internal">
                     <div className="section-particle-effect d-none d-md-block section-particle-effect-v4">
-                        <img className="particle-1 animate-rotate-me" src="assets/img/particle/particle-2.png" alt="particle One" />
-                        <img className="particle-2 animate-rotate-me" src="assets/img/particle/particle-1.png" alt="particle Two" />
-                        <img className="particle-3 animate-zoominout" src="assets/img/particle/particle-4.png" alt="particle Three" />
-                        <img className="particle-4 animate-float-bob-y" src="assets/img/particle/particle-5.png" alt="particle Five" />
+                        <img className="particle-1 animate-rotate-me" src={particle_two} alt="particle One" />
+                        <img className="particle-2 animate-rotate-me" src={particle_one} alt="particle Two" />
+                        <img className="particle-3 animate-zoominout" src={particle_four} alt="particle Three" />
+                        <img className="particle-4 animate-float-bob-y" src={particle_five} alt="particle Five" />
                     </div>
                     <div className="row text-center justify-content-center">
                         <div className="col-xl-7 col-lg-10">
@@ -233,7 +259,7 @@ function Hotel(){
                         </div>
                         <div className="col-lg-6">
                             <div className="section-right-image faq-right-image animate-float-bob-y wow fadeInUp" data-wow-delay="0ms" data-wow-duration="2500ms">
-                                <img src="assets/img/faq/faq-image.png" alt="faq image" />
+                                <img src={faq_img} alt="faq im" />
                             </div>
                         </div>
                     </div> 

@@ -15,9 +15,30 @@ import company_12 from "../../../assets/general-assets/img/brand/company-12.png"
 import company_13 from "../../../assets/general-assets/img/brand/company-13.png";
 import company_14 from "../../../assets/general-assets/img/brand/company-14.png";
 import company_15 from "../../../assets/general-assets/img/brand/company-15.png";
-// import company_16 from "../../../assets/general-assets/img/brand/company-16.png";
-// import company_17 from "../../../assets/general-assets/img/brand/company-17.png";
-// import company_18 from "../../../assets/general-assets/img/brand/company-18.png";
+import company_16 from "../../../assets/general-assets/img/brand/company-16.png";
+import company_17 from "../../../assets/general-assets/img/brand/company-17.png";
+import company_18 from "../../../assets/general-assets/img/brand/company-18.png";
+
+export let companies = {
+    company1: company_1,
+    company2: company_2,
+    company3: company_3,
+    company4: company_4,
+    company5: company_5,
+    company6: company_6,
+    company7: company_7,
+    company8: company_8,
+    company9: company_9,
+    company10: company_10,
+    company11: company_11,
+    company12: company_12,
+    company13: company_13,
+    company14: company_14,
+    company15: company_15,
+    company16: company_16,
+    company17: company_17,
+    company18: company_18,
+};
 
 function TeamServiceArea(){
     return(

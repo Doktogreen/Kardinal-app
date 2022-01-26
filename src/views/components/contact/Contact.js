@@ -1,4 +1,11 @@
 import React from "react";
+import { 
+    particle_five, 
+    particle_four, 
+    particle_one, 
+    particle_three, 
+    particle_two 
+} from "../car-rental/CarRental";
 
 function Contact(){
     return(
@@ -7,19 +14,19 @@ function Contact(){
             <div className="container">
                 <div className="section-internal">
                     <div className="section-particle-effect d-none d-md-block section-particle-effect-v3">
-                        <img className="particle-1 animate-zoom-fade" src="assets/img/particle/particle-1.png" alt="particle One" />
-                        <img className="particle-2 animate-rotate-me" src="assets/img/particle/particle-2.png" alt="particle Two" />
-                        <img className="particle-3 animate-float-bob-x" src="assets/img/particle/particle-3.png" alt="particle Three" />
-                        <img className="particle-4 animate-float-bob-y" src="assets/img/particle/particle-4.png" alt="particle Four" />
-                        <img className="particle-5 animate-float-bob-y" src="assets/img/particle/particle-5.png" alt="particle Five" />
+                        <img className="particle-1 animate-zoom-fade" src={particle_one} alt="particle One" />
+                        <img className="particle-2 animate-rotate-me" src={particle_two} alt="particle Two" />
+                        <img className="particle-3 animate-float-bob-x" src={particle_three} alt="particle Three" />
+                        <img className="particle-4 animate-float-bob-y" src={particle_four} alt="particle Four" />
+                        <img className="particle-5 animate-float-bob-y" src={particle_five} alt="particle Five" />
                     </div>
                     <div className="row align-items-center">
                         <div className="col-12">
                             <div className="breadcrumb-content text-center">
-                                <div className="page-title wow fadeInDown" data-wow-delay="0.1s" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0.1s; animation-name: fadeInDown;">
+                                <div className="page-title wow fadeInDown" data-wow-delay="0.1s" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"0.1s", animationName: "fadeInDown"}}>
                                     <h2>Contact Us</h2>
                                 </div>
-                                <div className="page-breadcrumb wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                <div className="page-breadcrumb wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"0.2ms", animationName: "fadeInUp"}}>
                                     <ul className="breadcrumb">
                                         <span>We would love to hear from you. Have any questions? Do reach out.</span>
                                     </ul>
@@ -34,8 +41,8 @@ function Contact(){
             {/* <!-- /.container --> */}
         </section>
       
-        //  {/* <!--====== End Breadcrumb Area ======--> */}
-        // {/* <!--====== Start Contact Area ======--> */}
+        {/* <!--====== End Breadcrumb Area ======--> */}
+        {/* <!--====== Start Contact Area ======--> */}
         <section className="contact-area pt-130 pb-130">
             <div className="container">
                 <div className="row align-items-center">

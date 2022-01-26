@@ -1,6 +1,8 @@
 import React from "react";
+import { Particles } from "../home/FAQ";
 import HomeLoader from "../home/HomeLoader";
 import HomeSearch from "../home/HomeSearch";
+import BlogFooter from "./BlogFooter";
 import BlogHeader from "./BlogHeader";
 import BlogMoneyChronicle from "./BlogMoneyChronicle";
 import BlogNews from "./BlogNews";
@@ -25,19 +27,15 @@ function Blog(){
                 <div class="container">
                     <div class="section-internal">
                         <div class="section-particle-effect d-none d-md-block section-particle-effect-v3">
-                            <img class="particle-1 animate-zoom-fade" src="assets/img/particle/particle-1.png" alt="particle One" />
-                            <img class="particle-2 animate-rotate-me" src="assets/img/particle/particle-2.png" alt="particle Two" />
-                            <img class="particle-3 animate-float-bob-x" src="assets/img/particle/particle-3.png" alt="particle Three" />
-                            <img class="particle-4 animate-float-bob-y" src="assets/img/particle/particle-4.png" alt="particle Four" />
-                            <img class="particle-5 animate-float-bob-y" src="assets/img/particle/particle-5.png" alt="particle Five" />
+                            <Particles />
                         </div>
                         <div class="row align-items-center">
                             <div class="col-12">
                                 <div class="breadcrumb-content text-center">
-                                    <div class="page-title wow fadeInDown" data-wow-delay="0.1s" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0.1s; animation-name: fadeInDown;">
+                                    <div class="page-title wow fadeInDown" data-wow-delay="0.1s" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay: "0.1s", animationName: "fadeInDown"}}>
                                         <h1>Our Blogs</h1>
                                     </div>
-                                    <div class="page-breadcrumb wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                    <div class="page-breadcrumb wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay: "0.2s", animationName: "fadeUp"}}>
                                         <ul class="breadcrumb">
                                             <span>Resources library</span>
                                         </ul>
@@ -72,7 +70,7 @@ function Blog(){
         
         
         {/* <!--====== Start Footer Area ======--> */}
-        
+            <BlogFooter />
         {/* <!-- /.footer-area --> */}
         {/* <!--====== End Footer Area ======--></img> */}
         </body>

@@ -1,12 +1,11 @@
 import React from "react";
 
-const Users = React.lazy(() => import('./views/users/Users'));
-const User = React.lazy(() => import('./views/users/User'));
+const Blog = React.lazy(() => import('./views/pages/LandingPages/blog-page'));
+const Home = React.lazy(() => import('./layout/web-app'));
 
 const routes = [
-  { path: '/', exact: true, name: 'Home' },
-  { path: '/business', name: 'form', component: Users },
-  { path: '/business', name: 'form', component: User }
+  { path: '/', exact: true, name: 'Home', component: Home  },
+  { path: '/blog', name: 'blog', component: Blog },
 ]
 
 export default routes;

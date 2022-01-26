@@ -1,26 +1,38 @@
 import React from "react";
+import { 
+    particle_five, 
+    particle_four, 
+    particle_one, 
+    particle_three, 
+    particle_two 
+} from "../car-rental/CarRental";
+import { dotpattern } from "../career/Career";
+import { announcement_orange, particlleblue, plane_orange } from "../ebook/Ebook";
+import hero_blob_2 from "../../../assets/general-assets/img/hero/hero-blob-2.png";
+import webinar_stepup from "../../../assets/general-assets/img/webinar-step-up-your-business.png";
+import webinar_improve from "../../../assets/general-assets/img/webinar-improve-employee-engagement.png";
 
 function Webinar(){
     return(
         <>
-            <section class="breadcrumb-area">
-            <div class="container">
-                <div class="section-internal">
-                    <div class="section-particle-effect d-none d-md-block section-particle-effect-v3">
-                        <img class="particle-1 animate-zoom-fade" src="assets/img/particle/particle-1.png" alt="particle One" />
-                        <img class="particle-2 animate-rotate-me" src="assets/img/particle/particle-2.png" alt="particle Two" />
-                        <img class="particle-3 animate-float-bob-x" src="assets/img/particle/particle-3.png" alt="particle Three" />
-                        <img class="particle-4 animate-float-bob-y" src="assets/img/particle/particle-4.png" alt="particle Four" />
-                        <img class="particle-5 animate-float-bob-y" src="assets/img/particle/particle-5.png" alt="particle Five" />
+            <section className="breadcrumb-area">
+            <div className="container">
+                <div className="section-internal">
+                    <div className="section-particle-effect d-none d-md-block section-particle-effect-v3">
+                        <img className="particle-1 animate-zoom-fade" src={particle_one} alt="particle One" />
+                        <img className="particle-2 animate-rotate-me" src={particle_two} alt="particle Two" />
+                        <img className="particle-3 animate-float-bob-x" src={particle_three} alt="particle Three" />
+                        <img className="particle-4 animate-float-bob-y" src={particle_four} alt="particle Four" />
+                        <img className="particle-5 animate-float-bob-y" src={particle_five} alt="particle Five" />
                     </div>
-                    <div class="row align-items-center">
-                        <div class="col-12">
-                            <div class="breadcrumb-content text-center">
-                                <div class="page-title wow fadeInDown" data-wow-delay="0.1s" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0.1s; animation-name: fadeInDown;">
+                    <div className="row align-items-center">
+                        <div className="col-12">
+                            <div className="breadcrumb-content text-center">
+                                <div className="page-title wow fadeInDown" data-wow-delay="0.1s" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"0.1s", animationName: "fadeInDown"}}>
                                     <h2>The Corporate Live Series</h2>
                                 </div>
-                                <div class="page-breadcrumb wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0.2s; animation-name: fadeInUp;">
-                                    <ul class="breadcrumb">
+                                <div className="page-breadcrumb wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"0.2s", animationName: "fadeInUp"}}>
+                                    <ul className="breadcrumb">
                                         <span>The best online resources you can find on corporate travel, hospitality and everything in between. <br />Check out your favourite topics and dig in!</span>
                                     </ul>
                                 </div>
@@ -35,35 +47,39 @@ function Webinar(){
         </section>
         {/* <!--====== End Breadcrumb Area ======--> */}
         {/* <!--====== Start About Us Area ======--> */}
-        <section class="about-us-area pt-130 pb-150">
-            <div class="container">
-                <div class="row align-items-center align-items-center">
-                    <div class="col-lg-7">
-                        <div class="blob-image-wrapper content-right-spacer">
-                            <div class="blob-shape-wrapper">
-                                <img src="assets/img/particle/thumbs-up-particle-blue.png" alt="blue thumbs up" class="blob-shape blob-shape-1 animate-float-bob-y" />
-                                <img src="assets/img/particle/announcement-particle-orange.png" alt="orange announcement" class="blob-shape blob-shape-2 animate-float-bob-x" />
-                                <img src="assets/img/particle/paper-plane-particle-orange.png" alt="orange paper plane" class="blob-shape blob-shape-3 animate-float-bob-x" />
+        <section className="about-us-area pt-130 pb-150">
+            <div className="container">
+                <div className="row align-items-center align-items-center">
+                    <div className="col-lg-7">
+                        <div className="blob-image-wrapper content-right-spacer">
+                            <div className="blob-shape-wrapper">
+                                <img src={particlleblue} alt="blue thumbs up" className="blob-shape blob-shape-1 animate-float-bob-y" />
+                                <img src={announcement_orange} alt="orange announcement" className="blob-shape blob-shape-2 animate-float-bob-x" />
+                                <img src={plane_orange} alt="orange paper plane" className="blob-shape blob-shape-3 animate-float-bob-x" />
                             </div>
-                            <div class="blob-main-image wow fadeInUp" data-wow-delay="00ms" data-wow-duration="2500ms">
-                                <img src="assets/img/hero/hero-blob-2.png" alt="about blob" />
+                            <div className="blob-main-image wow fadeInUp" data-wow-delay="00ms" data-wow-duration="2500ms">
+                                <img src={hero_blob_2} alt="about blob" />
                             </div>
                         </div> 
                         {/* <!-- /.blob-image-wrapper --> */}
                     </div>
-                    <div class="col-lg-5">
-                        <div class="section-title section-title-ocean-blue">
-                            <div class="section-heading-tag">
-                                <span class="single-heading-tag">Current Webinar </span>
+                    <div className="col-lg-5">
+                        <div className="section-title section-title-ocean-blue">
+                            <div className="section-heading-tag">
+                                <span className="single-heading-tag">Current Webinar </span>
                             </div>
                             <h2>Leveraging The Right Tool For Your <span>Business</span> Travel  </h2>
-                            <div class="section-title-quote">
-                                <p><i class="far fa-calendar-alt"></i>Janaury 02, 2022 | 3pm</p>
+                            <div className="section-title-quote">
+                                <p><i className="far fa-calendar-alt"></i>Janaury 02, 2022 | 3pm</p>
                             </div>
-                            <div class="section-title-description">
-                                <p>The Kardinal Corporate Live Series offers a platform for discussing the external services that companies require and how sustainable solutions can be applied to them. As part of this discussion, we will examine innovative solutions that can be applied to existing ones in order to help organizations maximize their output.</p>
+                            <div className="section-title-description">
+                                <p>The Kardinal Corporate Live Series offers a platform for discussing the external services 
+                                    that companies require and how sustainable solutions can be applied to them. As part of 
+                                    this discussion, we will examine innovative solutions that can be applied to existing ones 
+                                    in order to help organizations maximize their output.
+                                </p>
                             </div>
-                            <a class="btn-secondary-custom-a" href="#">Register</a>
+                            <a className="btn-secondary-custom-a" href="...">Register</a>
                         </div>
                     </div>
                 </div> 
@@ -73,55 +89,55 @@ function Webinar(){
         </section> 
         {/* <!-- /.about-us-area --> */}
         {/* <!--====== End About Us Area ======--> */}
-        <section class="blog-and-news-area  bg-magnolia pt-130 pb-100" style="background-image: url(assets/img/services/dots-pattern-bg.png);" >
-            <div class="container">
-                <div class="section-internal">
-                    <div class="section-particle-effect d-none d-md-block section-particle-effect-v2">
-                        <img class="particle-1 animate-zoom-fade" src="assets/img/particle/particle-1.png" alt="particle One" />
-                        <img class="particle-2 animate-rotate-me" src="assets/img/particle/particle-2.png" alt="particle Two" />
-                        <img class="particle-3 animate-float-bob-y" src="assets/img/particle/particle-3.png" alt="particle Three" />
-                        <img class="particle-4 animate-zoominout" src="assets/img/particle/particle-4.png" alt="particle Four" />
-                        <img class="particle-5 animate-zoominout" src="assets/img/particle/particle-5.png" alt="particle Five" />
-                        <img class="particle-7 animate-float-bob-x" src="assets/img/particle/particle-7.png" alt="particle Seven" />
+        <section className="blog-and-news-area  bg-magnolia pt-130 pb-100" style={{backgroundImage: `url(${dotpattern})`}} >
+            <div className="container">
+                <div className="section-internal">
+                    <div className="section-particle-effect d-none d-md-block section-particle-effect-v2">
+                        <img className="particle-1 animate-zoom-fade" src={particle_one} alt="particle One" />
+                        <img className="particle-2 animate-rotate-me" src={particle_two} alt="particle Two" />
+                        <img className="particle-3 animate-float-bob-y" src={particle_three} alt="particle Three" />
+                        <img className="particle-4 animate-zoominout" src={particle_four} alt="particle Four" />
+                        <img className="particle-5 animate-zoominout" src={particle_five} alt="particle Five" />
+                        <img className="particle-7 animate-float-bob-x" src={particle_three} alt="particle Seven" />
                     </div>
-                    <div class="row justify-content-center">
-                    <div class="col">
-                        <div class="section-title text-center mb-105 section-title-ocean-blue">
-                            <div class="section-heading-tag">
-                                <span class="single-heading-tag">Our previous webinars</span>
+                    <div className="row justify-content-center">
+                    <div className="col">
+                        <div className="section-title text-center mb-105 section-title-ocean-blue">
+                            <div className="section-heading-tag">
+                                <span className="single-heading-tag">Our previous webinars</span>
                             </div>
                             <h3>Catch all the highlights on our corporate live series</h3>
                         </div>
                     </div>
                 </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="row">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="row">
                                 {/* <!-- Single Blog Post --> */}
-                                <div class="col-sm-12 col-lg-4">
-                                    <div class="blog-post-item webinar-post-item wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
-                                        <div class="post-thumbnail">
-                                            <a href="#">
-                                                <img src="assets/img/webinar-step-up-your-business.png" alt="webinar thumbnail one" />
+                                <div className="col-sm-12 col-lg-4">
+                                    <div className="blog-post-item webinar-post-item wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"0ms", animationName: "fadeInUp"}}>
+                                        <div className="post-thumbnail">
+                                            <a href="...">
+                                                <img src={webinar_stepup} alt="webinar thumbnail one" />
                                             </a>
                                            
                                         </div>
-                                        <div class="blog-post-entry-content">
-                                            <div class="post-meta-wrapper">
+                                        <div className="blog-post-entry-content">
+                                            <div className="post-meta-wrapper">
                                                 <ul>
-                                                    <li><a href="#" class="post-meta"><i class="far fa-calendar-alt"></i> November 17, 2021 | 11:00 AM</a></li>
+                                                    <li><a href="..." className="post-meta"><i className="far fa-calendar-alt"></i> November 17, 2021 | 11:00 AM</a></li>
                                                     
                                                 </ul>
                                             </div>
-                                            <h4 class="post-title"><a href="#">Step up your business using bleisure programs with Oluchi Obiejesi and Yyvonne Joseph. </a></h4>
-                                                <a class="btn-secondary-custom-a" target="_blank" href="https://www.youtube.com/watch?v=qgggwwTyrMk&t=976s">View Recording</a>
-                                            <div class="team-member-bio" style="margin-top: 20px; text-align: right;">
-                                                <div class="social-links">
+                                            <h4 className="post-title"><a href="...">Step up your business using bleisure programs with Oluchi Obiejesi and Yyvonne Joseph. </a></h4>
+                                                <a className="btn-secondary-custom-a" target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=qgggwwTyrMk&t=976s">View Recording</a>
+                                            <div className="team-member-bio" style={{marginTop: "20px", textAlign: "right"}}>
+                                                <div className="social-links">
                                                     <ul>
-                                                        <li><a href="https://open.spotify.com/episode/2XaIc8LTCCfcLPjyO01YHK?si=QvEbgCqqSY2mgEyjGZ_xKA" target="_blank"><i class="fab fa-spotify"></i></a></li>
-                                                        <li><a href="https://podcasts.apple.com/ng/podcast/the-corporate-live-series/id1586156609?i=1000542334923" target="_blank"><i class="fa fa-podcast"></i></a></li>
-                                                        <li><a href="https://anchor.fm/kardinal/episodes/Improving-Employee-Engagement-and-Experience-with-Modupe-Bankole-and-Temitope-Aina-e173ub0" target="_blank"><i class="fa fa-anchor"></i></a></li>
-                                                        <li><a href="https://podcasts.google.com?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy82YWQ5MjUxNC9wb2RjYXN0L3Jzcw%3D%3D&episode=ZGQzNTQzMjItYWQyMC00NGFjLTlhMjUtMTUxYmQ3MDlkZjdl" target="_blank"><i class="fa fa-podcast"></i></a></li>
+                                                        <li><a href="https://open.spotify.com/episode/2XaIc8LTCCfcLPjyO01YHK?si=QvEbgCqqSY2mgEyjGZ_xKA" target="_blank" rel="noreferrer"><i className="fab fa-spotify"></i></a></li>
+                                                        <li><a href="https://podcasts.apple.com/ng/podcast/the-corporate-live-series/id1586156609?i=1000542334923" target="_blank" rel="noreferrer"><i className="fa fa-podcast"></i></a></li>
+                                                        <li><a href="https://anchor.fm/kardinal/episodes/Improving-Employee-Engagement-and-Experience-with-Modupe-Bankole-and-Temitope-Aina-e173ub0" target="_blank" rel="noreferrer"><i className="fa fa-anchor"></i></a></li>
+                                                        <li><a href="https://podcasts.google.com?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy82YWQ5MjUxNC9wb2RjYXN0L3Jzcw%3D%3D&episode=ZGQzNTQzMjItYWQyMC00NGFjLTlhMjUtMTUxYmQ3MDlkZjdl" target="_blank" rel="noreferrer"><i className="fa fa-podcast"></i></a></li>
                                                     </ul>
                                                 </div>  
                                             </div>
@@ -129,29 +145,29 @@ function Webinar(){
                                     </div>
                                 </div>
                                 {/* <!-- Single Blog Post --> */}
-                                <div class="col-sm-12 col-lg-4">
-                                    <div class="blog-post-item webinar-post-item wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
-                                        <div class="post-thumbnail">
-                                            <a href="#">
-                                                <img src="assets/img/webinar-improve-employee-engagement.png" alt="webinar thumbnail one" />
+                                <div className="col-sm-12 col-lg-4">
+                                    <div className="blog-post-item webinar-post-item wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"0ms", animationName: "fadeInUp"}}>
+                                        <div className="post-thumbnail">
+                                            <a href="...">
+                                                <img src={webinar_improve} alt="webinar thumbnail one" />
                                             </a>
                                         </div>
-                                        <div class="blog-post-entry-content">
-                                            <div class="post-meta-wrapper">
+                                        <div className="blog-post-entry-content">
+                                            <div className="post-meta-wrapper">
                                                 <ul>
-                                                    <li><a href="#" class="post-meta"><i class="far fa-calendar-alt"></i> September 8, 2021 | 11:00 AM</a></li>
+                                                    <li><a href="..." className="post-meta"><i className="far fa-calendar-alt"></i> September 8, 2021 | 11:00 AM</a></li>
                                                     
                                                 </ul>
                                             </div>
-                                            <h4 class="post-title"><a href="#">Improving employee engagement and experience with Modupe Bankole and Temitope Aina</a></h4>
-                                            <a class="btn-secondary-custom-a" target="_blank" href="https://www.youtube.com/watch?v=BNjj6Y-4HF0">View Recording</a>
-                                            <div class="team-member-bio" style="margin-top: 20px; text-align: right;">
-                                                <div class="social-links">
+                                            <h4 className="post-title"><a href="...">Improving employee engagement and experience with Modupe Bankole and Temitope Aina</a></h4>
+                                            <a className="btn-secondary-custom-a" target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=BNjj6Y-4HF0">View Recording</a>
+                                            <div className="team-member-bio" style={{marginTop: "20px", textAlign: "right"}}>
+                                                <div className="social-links">
                                                     <ul>
-                                                        <li><a href="https://open.spotify.com/episode/4TWWzEXa9rtjzSRGzHoFll?si=HCkN_Ea6SAOCgJG80fmLgQ" target="_blank"><i class="fab fa-spotify"></i></a></li>
-                                                        <li><a href="https://podcasts.apple.com/ng/podcast/the-corporate-live-series/id1586156609?i=1000535541989" target="_blank"><i class="fa fa-podcast"></i></a></li>
-                                                        <li><a href="https://anchor.fm/kardinal/episodes/Improving-Employee-Engagement-and-Experience-with-Modupe-Bankole-and-Temitope-Aina-e173ub0" target="_blank"><i class="fa fa-anchor"></i></a></li>
-                                                        <li><a href="https://podcasts.google.com?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy82YWQ5MjUxNC9wb2RjYXN0L3Jzcw%3D%3D&episode=NDNlMjMxMzQtY2RlYS00NDRiLThlNjMtMjUzZjJlZDY3Yjky" target="_blank"><i class="fa fa-podcast"></i></a></li>
+                                                        <li><a href="https://open.spotify.com/episode/4TWWzEXa9rtjzSRGzHoFll?si=HCkN_Ea6SAOCgJG80fmLgQ" target="_blank" rel="noreferrer"><i className="fab fa-spotify"></i></a></li>
+                                                        <li><a href="https://podcasts.apple.com/ng/podcast/the-corporate-live-series/id1586156609?i=1000535541989" target="_blank" rel="noreferrer"><i className="fa fa-podcast"></i></a></li>
+                                                        <li><a href="https://anchor.fm/kardinal/episodes/Improving-Employee-Engagement-and-Experience-with-Modupe-Bankole-and-Temitope-Aina-e173ub0" target="_blank" rel="noreferrer"><i className="fa fa-anchor"></i></a></li>
+                                                        <li><a href="https://podcasts.google.com?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy82YWQ5MjUxNC9wb2RjYXN0L3Jzcw%3D%3D&episode=NDNlMjMxMzQtY2RlYS00NDRiLThlNjMtMjUzZjJlZDY3Yjky" target="_blank" rel="noreferrer"><i className="fa fa-podcast"></i></a></li>
                                                     </ul>
                                                 </div>  
                                             </div>
@@ -168,53 +184,53 @@ function Webinar(){
             {/* <!-- /.container --> */}
         </section>
         {/* <!--====== Start Contact Area ======--> */}
-        <section class="contact-area pt-120 pb-130">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section-title text-center mb-75">
+        <section className="contact-area pt-120 pb-130">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="section-title text-center mb-75">
                             <h2>Get front seats to our next webinar.</h2>
                             <p>Sign up and you will be the first to know when we host our next Corporate Live Series</p>
                         </div>
                     </div>
                 </div> 
                 {/* <!-- /.row --> */}
-                <div class="row align-items-center">
-                    <div class="col-lg-7">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="contact-box-wrapper">
-                                    <div class="single-contact-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms">
+                <div className="row align-items-center">
+                    <div className="col-lg-7">
+                        <div className="row justify-content-center">
+                            <div className="col-lg-8">
+                                <div className="contact-box-wrapper">
+                                    <div className="single-contact-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms">
                                         <h4>Ready to work together for better solutions?</h4>
-                                        <a href="#" class="filled-btn btn-bordered bg-royal-blue">
-                                            Join Us <i class="fas fa-arrow-right"></i>
+                                        <a href="..." className="filled-btn btn-bordered bg-royal-blue">
+                                            Join Us <i className="fas fa-arrow-right"></i>
                                         </a>
                                     </div>
-                                    <div class="single-contact-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1500ms">
-                                        <h4>Request a  <br class="d-none d-xl-block" /> <span>demo </span> here.</h4>
-                                        <a href="demo.html" class="filled-btn btn-bordered bg-royal-blue">
-                                            Request Demo <i class="fas fa-arrow-right"></i>
+                                    <div className="single-contact-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1500ms">
+                                        <h4>Request a  <br className="d-none d-xl-block" /> <span>demo </span> here.</h4>
+                                        <a href="/demo" className="filled-btn btn-bordered bg-royal-blue">
+                                            Request Demo <i className="fas fa-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5">
-                        <div class="contact-form-area contact-form-area-v2 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1500ms">
-                            <div class="contact-respond">
+                    <div className="col-lg-5">
+                        <div className="contact-form-area contact-form-area-v2 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1500ms">
+                            <div className="contact-respond">
                                 <form>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="fullName" placeholder="Your Full Name" name="name" required="" />
+                                    <div className="input-group">
+                                        <input type="text" className="form-control" id="fullName" placeholder="Your Full Name" name="name" required="" />
                                         <label for="fullName">Name</label>
                                     </div>
-                                    <div class="input-group">
-                                        <input type="email" class="form-control" id="yourEmail" placeholder="Email Address" name="email" required="" />
+                                    <div className="input-group">
+                                        <input type="email" className="form-control" id="yourEmail" placeholder="Email Address" name="email" required="" />
                                         <label for="emailAddress">Email</label>
                                     </div>
-                                    {/* <!--<div class="input-group">-->
-                                    <!--    <div class="subject-dropdown">-->
-                                    <!--        <select class="nice-select" name="subject">-->
+                                    {/* <!--<div className="input-group">-->
+                                    <!--    <div className="subject-dropdown">-->
+                                    <!--        <select className="nice-select" name="subject">-->
                                     <!--            <option>Subject You Like</option>-->
                                     <!--            <option value="knowsomething">About Us</option>-->
                                     <!--            <option value="sayhello">Say Hello</option>-->
@@ -222,12 +238,12 @@ function Webinar(){
                                     <!--        </select>-->
                                     <!--    </div>-->
                                     <!--</div>-->
-                                    <!--<div class="input-group form-textarea">-->
-                                    <!--    <textarea class="form-control" id="message" placeholder="Write Message" name="message"></textarea>-->
+                                    <!--<div className="input-group form-textarea">-->
+                                    <!--    <textarea className="form-control" id="message" placeholder="Write Message" name="message"></textarea>-->
                                     <!--    <label for="message">Message</label>-->
                                     <!--</div>--> */}
-                                    <div class="input-group">
-                                        <button type="submit" class="filled-btn">Register <i class="fas fa-arrow-right"></i></button>
+                                    <div className="input-group">
+                                        <button type="submit" className="filled-btn">Register <i className="fas fa-arrow-right"></i></button>
                                     </div>
                                 </form>
                             </div>
