@@ -15,14 +15,14 @@ function Invoice(){
                     </div>
                     <div className="row layout-spacing">
                         <div className="col-lg-12">
-                            <div className="widget box box-shadow  widget-chart-three" style="padding: 0px 20px;">
-                                <div className="widget-heading" style="padding: 20px 0px;">
+                            <div className="widget box-shadow  widget-chart-three" style={{padding: "0px 20px"}}>
+                                <div className="widget-heading" style={{padding: "20px 0px"}}>
                                     <div>
                                         <h5>Invoices</h5>
                                     </div>
                                 </div>
                                 <div className="widget-header">
-                                    <div className="row mt-3" style="padding: 0px 5%;">
+                                    <div className="row mt-3" style={{padding: "0px 5%"}}>
                                         <div className="card component-card_1 col-md-5">     
                                             <div className="card-body">
                                                 <p className="card-text">Overdue</p>
@@ -70,7 +70,7 @@ function Invoice(){
                                             <div className="input-group col-md-5">
                                                 <input type="text" className="form-control" placeholder="Enter invoice#" />
                                                 <div className="input-group-append">
-                                                <button className="btn btn-primary" style="margin-bottom: 15px;">
+                                                <button className="btn btn-primary" style={{marginBottom: "15px"}}>
                                                     <i className="fa fa-search"></i>
                                                 </button>
                                                 </div>
@@ -120,9 +120,9 @@ function Invoice(){
                                                                     <polyline points="6 9 12 15 18 9"></polyline>
                                                                 </svg>
                                                             </button>
-                                                            <div className="dropdown-menu" aria-labelledby="dropdownMenuReference1" style="will-change: transform;">
-                                                                <a className="dropdown-item" href="#">Download</a>
-                                                                <a className="dropdown-item" href="#">Pay</a>     
+                                                            <div className="dropdown-menu" aria-labelledby="dropdownMenuReference1" style={{willChange: "transform"}}>
+                                                                <a className="dropdown-item" href="...">Download</a>
+                                                                <a className="dropdown-item" href="...">Pay</a>     
                                                             </div>
                                                         </div>     
                                                     </td>        
@@ -142,8 +142,8 @@ function Invoice(){
                                                                 </svg>
                                                             </button>
                                                             <div className="dropdown-menu" aria-labelledby="dropdownMenuReference2" >
-                                                            <a className="dropdown-item" href="#">Download</a>
-                                                            <a className="dropdown-item" href="#">Pay</a>     
+                                                            <a className="dropdown-item" href="...">Download</a>
+                                                            <a className="dropdown-item" href="...">Pay</a>     
                                                             </div>
                                                         </div>     
                                                     </td>  
@@ -160,9 +160,9 @@ function Invoice(){
                                                                 <button type="button" className="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
                                                                 </button>
-                                                            <div className="dropdown-menu" aria-labelledby="dropdownMenuReference3" style="will-change: transform;">
-                                                                <a className="dropdown-item" href="#">Download</a>
-                                                                <a className="dropdown-item" href="#">Pay</a>     
+                                                            <div className="dropdown-menu" aria-labelledby="dropdownMenuReference3" style={{willChange: "transform"}}>
+                                                                <a className="dropdown-item" href="...">Download</a>
+                                                                <a className="dropdown-item" href="...">Pay</a>     
                                                             </div>
                                                         </div>     
                                                     </td> 
@@ -181,9 +181,9 @@ function Invoice(){
                                                                     <polyline points="6 9 12 15 18 9"></polyline>
                                                                 </svg>
                                                             </button>
-                                                            <div className="dropdown-menu" aria-labelledby="dropdownMenuReference4" style="will-change: transform;">
-                                                                <a className="dropdown-item" href="#">Download</a>
-                                                                <a className="dropdown-item" href="#">Pay</a>     
+                                                            <div className="dropdown-menu" aria-labelledby="dropdownMenuReference4" style={{willChange: "transform"}}>
+                                                                <a className="dropdown-item" href="...">Download</a>
+                                                                <a className="dropdown-item" href="...">Pay</a>     
                                                             </div>
                                                         </div>     
                                                     </td> 
@@ -202,9 +202,9 @@ function Invoice(){
                                                                 <polyline points="6 9 12 15 18 9"></polyline>
                                                             </svg>
                                                             </button>
-                                                            <div className="dropdown-menu" aria-labelledby="dropdownMenuReference5" style="will-change: transform;">
-                                                                <a className="dropdown-item" href="#">Download</a>
-                                                                <a className="dropdown-item" href="#">Pay</a>     
+                                                            <div className="dropdown-menu" aria-labelledby="dropdownMenuReference5" style={{willChange: "transform"}}>
+                                                                <a className="dropdown-item" href="...">Download</a>
+                                                                <a className="dropdown-item" href="...">Pay</a>     
                                                             </div>
                                                         </div>     
                                                     </td>  
@@ -223,9 +223,9 @@ function Invoice(){
                                                                     <polyline points="6 9 12 15 18 9"></polyline>
                                                                 </svg>
                                                             </button>
-                                                            <div className="dropdown-menu" aria-labelledby="dropdownMenuReference6" style="will-change: transform;">
-                                                                <a className="dropdown-item" href="#">Download</a>
-                                                                <a className="dropdown-item" href="#">Pay</a>     
+                                                            <div className="dropdown-menu" aria-labelledby="dropdownMenuReference6" style={{willChange: "transform"}}>
+                                                                <a className="dropdown-item" href="...">Download</a>
+                                                                <a className="dropdown-item" href="...">Pay</a>     
                                                             </div>
                                                         </div>     
                                                     </td>  
@@ -233,7 +233,39 @@ function Invoice(){
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div className="row"><div className="col-sm-12 col-md-5"><div className="dataTables_info" id="DataTables_Table_1_info" role="status" aria-live="polite">Showing page 1 of 2</div></div><div className="col-sm-12 col-md-7"><div className="dataTables_paginate paging_simple_numbers" id="DataTables_Table_1_paginate"><ul className="pagination"><li className="paginate_button page-item previous disabled" id="DataTables_Table_1_previous"><a href="#" aria-controls="DataTables_Table_1" data-dt-idx="0" tabindex="0" className="page-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></a></li><li className="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_1" data-dt-idx="1" tabindex="0" className="page-link">1</a></li><li className="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_1" data-dt-idx="2" tabindex="0" className="page-link">2</a></li><li className="paginate_button page-item next" id="DataTables_Table_1_next"><a href="#" aria-controls="DataTables_Table_1" data-dt-idx="3" tabindex="0" className="page-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a></li></ul></div></div></div>
+                                    <div className="row">
+                                        <div className="col-sm-12 col-md-5">
+                                            <div className="dataTables_info" id="DataTables_Table_1_info" role="status" aria-live="polite">Showing page 1 of 2</div>
+                                        </div>
+                                    <div className="col-sm-12 col-md-7">
+                                        <div className="dataTables_paginate paging_simple_numbers" id="DataTables_Table_1_paginate">
+                                            <ul className="pagination">
+                                                <li className="paginate_button page-item previous disabled" id="DataTables_Table_1_previous">
+                                                    <a href="..." aria-controls="DataTables_Table_1" data-dt-idx="0" tabindex="0" className="page-link">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-arrow-left">
+                                                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                                                            <polyline points="12 19 5 12 12 5"></polyline>
+                                                        </svg>
+                                                    </a>
+                                                </li>
+                                                <li className="paginate_button page-item active">
+                                                    <a href="..." aria-controls="DataTables_Table_1" data-dt-idx="1" tabindex="0" className="page-link">1</a>
+                                                </li>
+                                                <li className="paginate_button page-item ">
+                                                    <a href="..." aria-controls="DataTables_Table_1" data-dt-idx="2" tabindex="0" className="page-link">2</a>
+                                                </li>
+                                                <li className="paginate_button page-item next" id="DataTables_Table_1_next">
+                                                    <a href="..." aria-controls="DataTables_Table_1" data-dt-idx="3" tabindex="0" className="page-link">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-arrow-right">
+                                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                            <polyline points="12 5 19 12 12 19"></polyline>
+                                                        </svg>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
                         </div>

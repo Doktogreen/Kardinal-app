@@ -1,9 +1,9 @@
 import React from "react";
-import Dashboard from "../../../components/user/dashboard/Dashboard";
+import DashboardComponent from "../../../components/user/dashboard";
 
 function DashboardPage(){
     return(
-        <Dashboard />
+        <DashboardComponent />
     )
 }
 

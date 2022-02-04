@@ -1,5 +1,11 @@
 import React from "react";
-import { newsletter, particle_five, particle_one, particle_three, particle_two } from "../car-rental/CarRental";
+import { 
+    newsletter, 
+    particle_five, 
+    particle_one, 
+    particle_three, 
+    particle_two 
+} from "../car-rental/CarRental";
 import { companies } from "../home/TeamServiceArea";
 
 function Demo(){
@@ -25,9 +31,9 @@ function Demo(){
                                 </div>
                                 <div className="newsletter-form newsletter-form-v2 wow fadeInUp mb-100" data-wow-delay="0.5s" data-wow-duration="1500ms">
                                     <form>
-                                        <div className="form-group flex-demo-items" style="">
-                                            <input type="text" style="padding-right:0px; height: 75px;" name="text" id="emailAddress" className="form-control" placeholder="First Name" />
-                                            <input type="email" style="padding-right:0px; height: 75px;" name="email" id="emailAddress" className="form-control" placeholder="Work Email Address" />
+                                        <div className="form-group flex-demo-items" style={{}}>
+                                            <input type="text" style={{paddingRight:"0px", height: "75px"}} name="text" id="emailAddress" className="form-control" placeholder="First Name" />
+                                            <input type="email" style={{paddingRight:"0px", height: "75px"}} name="email" id="emailAddress" className="form-control" placeholder="Work Email Address" />
                                         </div>
                                         <div className="form-group">
                                             <button type="submit" name="submit" value="Go" className="filled-btn bg-filled button-radius btn-bordered">Request Demo</button>
@@ -78,7 +84,7 @@ function Demo(){
                     </div>
                 </div>
                 {/* <!-- Single Team Member --> */}
-                <div className="col-lg-3 col-sm-6" style="padding-top: 5%">
+                <div className="col-lg-3 col-sm-6" style={{paddingTop: "5%"}}>
                     <div className="single-team-member wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"0ms", animationName: "fadeInUp"}}>
                         <div className="team-member-thumb">
                             <img src={companies.company3} alt="team member one" />
@@ -112,7 +118,7 @@ function Demo(){
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-sm-6" style="padding-top: 5%">
+                <div className="col-lg-3 col-sm-6" style={{paddingTop: "5%"}}>
                     <div className="single-team-member wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"0ms", animationName: "fadeInUp"}}>
                         <div className="team-member-thumb">
                             <img src={companies.company7} alt="team member one" />
@@ -218,7 +224,7 @@ function Demo(){
                                 <img src={companies.company1} alt="team member four" />
                             </div>
                         </div>
-                        <div className="single-team-member wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay:"300ms", animationName: "fadeInUp"}}>
+                        <div className="single-team-member wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms"  >
                             <div className="team-member-thumb">
                                 <img src={companies.company11} alt="team member four" />
                             </div>

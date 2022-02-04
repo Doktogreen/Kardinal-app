@@ -14,8 +14,8 @@ function Trip(){
                             </div>   
                         </div>
                         <div className="col-lg-12 col-12 layout-spacing">
-                            <div className="widget widget-content widget-content-area border-tab widget-account-invoice-one widget-chart-three"  style="padding: 0px 20px;">
-                                <div className="widget-heading" style="padding: 20px 0px;">
+                            <div className="widget widget-content widget-content-area border-tab widget-account-invoice-one widget-chart-three"  style={{padding: "0px 20px"}}>
+                                <div className="widget-heading" style={{padding: "20px 0px"}}>
                                     <div>
                                         <h5>Trips</h5>
                                     </div>
@@ -107,7 +107,7 @@ function Trip(){
                                                 </label>
                                             </div>
                                             <div className="form-group col-md-12">
-                                                <button type="submit" className="btn btn-primary mt-3" style="float: right;">Find Flights</button>
+                                                <button type="submit" className="btn btn-primary mt-3" style={{float: "right"}}>Find Flights</button>
                                             </div>
                                         </div>  
                                         </div>
@@ -126,7 +126,7 @@ function Trip(){
                                                     <input type="date" className="form-control" id="inputdd" placeholder=" Check-out" />
                                                 </div>
                                                 <div className="form-group col-md-12">
-                                                    <button type="submit" className="btn btn-primary mt-3" style="float: right;">Find Hotels</button>
+                                                    <button type="submit" className="btn btn-primary mt-3" style={{float: "right"}}>Find Hotels</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -166,7 +166,7 @@ function Trip(){
                                                         <input type="time" className="form-control" id="inputf" placeholder=" Drop off time" />
                                                     </div>
                                                     <div className="form-group col-md-12">
-                                                        <button type="submit" className="btn btn-primary mt-3" style="float: right;">Find Cars</button>
+                                                        <button type="submit" className="btn btn-primary mt-3" style={{float: "right"}}>Find Cars</button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -200,7 +200,7 @@ function Trip(){
                                                         <input type="time" className="form-control" id="inputf" placeholder=" Drop off time" />
                                                     </div>
                                                     <div className="form-group col-md-12">
-                                                        <button type="submit" className="btn btn-primary mt-3" style="float: right;">Find Cars</button>
+                                                        <button type="submit" className="btn btn-primary mt-3" style={{float: "right"}}>Find Cars</button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -219,3 +219,5 @@ function Trip(){
             </div>
     )
 }
+
+export default Trip;

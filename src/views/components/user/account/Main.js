@@ -15,7 +15,7 @@ function Main(){
                                 <h3>Kardinal</h3>
                             </div>
                             <ol className="breadcrumb">
-                                <li className="breadcrumb-item"><a href="javascript:void(0);">Satement of Accounts</a></li>
+                                <li className="breadcrumb-item"><a href={{javascript:void(0)}}>Satement of Accounts</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -225,3 +225,5 @@ function Main(){
         </div>
     )
 }
+
+export default Main;

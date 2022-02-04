@@ -15,8 +15,8 @@ function Setting(){
                 </div>
                 <div className="row layout-spacing">
                     <div className="col-lg-12">
-                        <div className="statbox widget box box-shadow widget-chart-three" style="padding: 0px 20px;"> 
-                            <div className="widget-heading" style="padding: 20px 0px;">
+                        <div className="statbox widget box-shadow widget-chart-three" style={{padding: "0px 20px"}}> 
+                            <div className="widget-heading" style={{padding: "20px 0px"}}>
                                 <div>
                                     <h5>Settings</h5>
                                 </div>
@@ -24,30 +24,30 @@ function Setting(){
                             <div className="widget-content widget-content-area border-top-tab">
                                 <ul className="nav nav-tabs mb-3 mt-3" id="borderTop" role="tablist">
                                     <li className="nav-item">
-                                        <a className="nav-link active" id="border-top-security-tab" data-toggle="tab" style="padding: 12px 100px;" href="#border-top-security" role="tab" aria-controls="border-top-security" aria-selected="true">Security</a>
+                                        <a className="nav-link active" id="border-top-security-tab" data-toggle="tab" style={{padding: "12px 100px"}} href="#border-top-security" role="tab" aria-controls="border-top-security" aria-selected="true">Security</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" id="border-top-company-tab" data-toggle="tab" style="padding: 12px 100px;" href="#border-top-company" role="tab" aria-controls="border-top-company" aria-selected="false">Company</a>
+                                        <a className="nav-link" id="border-top-company-tab" data-toggle="tab" style={{padding: "12px 100px"}} href="#border-top-company" role="tab" aria-controls="border-top-company" aria-selected="false">Company</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" id="border-top-travelers-tab" data-toggle="tab" style="padding: 12px 100px;" href="#border-top-travelers" role="tab" aria-controls="border-top-travelers" aria-selected="false">Travelers</a>
+                                        <a className="nav-link" id="border-top-travelers-tab" data-toggle="tab" style={{padding: "12px 100px"}} href="#border-top-travelers" role="tab" aria-controls="border-top-travelers" aria-selected="false">Travelers</a>
                                     </li>  
                                 </ul>    
                                 <div className="tab-content" id="borderTopContent">
                                     <div className="tab-pane fade show active" id="border-top-security" role="tabpanel" aria-labelledby="border-top-security-tab"> 
                                         <div className="row">  
                                             <div id="flRegistrationForm" className="col-lg-12 layout-spacing">
-                                                <div className="statbox widget box box-shadow">
+                                                <div className="statbox widget box-shadow">
                                                     <div className="widget-header">                                
                                                         <div className="row">
                                                             <div className="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                                <h4></h4>
+                                                                <h4>...</h4>
                                                             </div>                                                                        
                                                         </div>
                                                     </div>
                                                     <div className="widget-content widget-content-area ">
                                                         <form>
-                                                            <div className="row" style="padding: 0 20px;">
+                                                            <div className="row" tyle={{padding: "0px 20px"}}>
                                                                 <div className="col-md-6">
                                                                     <h5>Change Password</h5>
                                                                     <p>Password must be 8 characters long</p>
@@ -65,7 +65,7 @@ function Setting(){
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div className="mb-3" style="padding: 0 20px; text-align:right" >
+                                                            <div className="mb-3" style={{padding: "0 20px", textAlign: "right"}}>
                                                                 <button type="submit" className="btn btn-primary mt-3">Change Password</button>
                                                             </div>  
                                                         </form>
@@ -73,17 +73,17 @@ function Setting(){
                                                 </div>
                                             </div>
                                             <div className="col-lg-12 layout-spacing">
-                                                <div className="statbox widget box box-shadow">
+                                                <div className="statbox widget box-shadow">
                                                     <div className="widget-header">                                
                                                         <div className="row">
                                                             <div className="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                                <h4></h4>
+                                                                <h4>...</h4>
                                                             </div>                                                                        
                                                         </div>
                                                     </div>
                                                     <div className="widget-content widget-content-area ">
                                                         <form>
-                                                            <div className="row" style="padding: 0 20px;">
+                                                            <div className="row" style={{padding: "0 20px"}}>
                                                                 <div className="col-md-6">
                                                                     <h5>Two-Factor authenication(2FA)</h5>
                                                                     <p>Decide your prefered method of receiving one time password(OTP)</p>
@@ -112,17 +112,17 @@ function Setting(){
                                     <div className="tab-pane fade" id="border-top-company" role="tabpanel" aria-labelledby="border-top-company-tab">
                                         <div className="row">
                                             <div id="flRegistrationForm" className="col-lg-12 layout-spacing">
-                                                <div className="statbox widget box box-shadow">
+                                                <div className="statbox widget box-shadow">
                                                     <div className="widget-header">                                
                                                         <div className="row">
                                                             <div className="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                                <h4></h4>
+                                                                <h4>...</h4>
                                                             </div>                                                                        
                                                         </div>
                                                     </div>
                                                     <div className="widget-content widget-content-area ">
                                                         <form>
-                                                            <div className="row mb-5" style="padding: 0 20px;">
+                                                            <div className="row mb-5" tyle={{padding: "0px 20px"}}>
                                                                 <div className="col-md-6">
                                                                     <h5>Company Logo</h5>
                                                                     <p>Please upload a valid (500*500) PNG format of your logo</p>
@@ -138,7 +138,7 @@ function Setting(){
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div className="row mb-5" style="padding: 0 20px;">
+                                                            <div className="row mb-5" tyle={{padding: "0px 20px"}}>
                                                                 <div className="col-md-6">
                                                                     <h5>Business Name</h5>
                                                                     <p>You can change your name after your account has been created</p>
@@ -149,7 +149,7 @@ function Setting(){
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div className="row mb-5" style="padding: 0 20px;">
+                                                            <div className="row mb-5" tyle={{padding: "0px 20px"}}>
                                                                 <div className="col-md-6">
                                                                     <h5>Company bio</h5>
                                                                     <p>Tell us a little about your business</p>
@@ -162,7 +162,7 @@ function Setting(){
                                                                 </div>
                                                             </div>
                                                             
-                                                            <div className="row mb-5" style="padding: 0 20px;">
+                                                            <div className="row mb-5" tyle={{padding: "0px 20px"}}>
                                                                 <div className="col-md-6">
                                                                     <h5>Business Industry</h5>
                                                                     <p>The industry closest to the one in which your company operates</p>
@@ -179,7 +179,7 @@ function Setting(){
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div className="row mb-5" style="padding: 0 20px;">
+                                                            <div className="row mb-5" tyle={{padding: "0px 20px"}}>
                                                                 <div className="col-md-6">
                                                                     <h5>Business address</h5>
                                                                     <p>This is where your business is located</p>
@@ -196,7 +196,7 @@ function Setting(){
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div className="mb-3" style="padding: 0 20px; text-align:right" >
+                                                            <div className="mb-3" style={{padding: "0 20px", textAlign: "right"}}>
                                                                 <button type="submit" className="btn btn-primary mt-3">Save Changes</button>
                                                             </div>
                                                         </form>
@@ -208,16 +208,16 @@ function Setting(){
                                     <div className="tab-pane fade" id="border-top-travelers" role="tabpanel" aria-labelledby="border-top-travelers-tab">
                                         <div className="row">
                                             <div className="col-lg-12 layout-spacing">
-                                                <div className="statbox box box-shadow">
+                                                <div className="statbox box-shadow">
                                                     <div className="widget-header">                                
                                                         <div className="row">
                                                             <div className="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                                <h4></h4>
+                                                                <h4>...</h4>
                                                             </div>                                                                        
                                                         </div>
                                                     </div>
                                                     <div className="widget-content widget-content-area ">
-                                                            <div className="row mb-5" style="padding: 0 20px;">
+                                                            <div className="row mb-5" tyle={{padding: "0px 20px"}}>
                                                                 <div className="col-md-6">
                                                                     <h5>Travelers List</h5>
                                                                     <p>Click to view list of travellers</p>
@@ -226,11 +226,11 @@ function Setting(){
                                                                     <div className="row">
                                                                         <div className="col-lg-6">
                                                                             {/* <!--<p className="mb-4"><code>To view all</code></p>--> */}
-                                                                            <a href="#" className="btn btn-primary mb-2">View all</a>
+                                                                            <a href="..." className="btn btn-primary mb-2">View all</a>
                                                                         </div>
                                                                         <div className="col-lg-6">
                                                                             {/* <!--<p className="mb-4"><code>To add new travlers</code></p>--> */}
-                                                                            <button href="#" className="btn btn-outline-primary mb-2"  data-toggle="modal" data-target="#addNewTraveler">Add Traveler</button>
+                                                                            <button href="..." className="btn btn-outline-primary mb-2"  data-toggle="modal" data-target="#addNewTraveler">Add Traveler</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>

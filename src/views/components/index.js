@@ -1,10 +1,10 @@
 import React from "react";
 import Dashboard from "../user/dashboard/Dashboard";
 
-function DashboardComponent(){
+function UserComponent(){
     return(
         <Dashboard />
     )
 }
 
-export default DashboardComponent;
+export default UserComponent;

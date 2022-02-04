@@ -63,7 +63,6 @@ function Blog(){
         {/* <!-- /.blog-and-news-area --> */}
         {/* <!--====== End Blog or News Area ======--> */}
 
-
         {/* <!--====== Start Money Chronicles Area ======--> */}
         <BlogMoneyChronicle />
         {/* <!--====== End Money Chronicles Area ======--> */}

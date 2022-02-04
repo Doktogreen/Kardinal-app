@@ -1,4 +1,10 @@
 import React from "react";
+import { 
+    particle_one, 
+    particle_three, 
+    particle_two 
+} from "../car-rental/CarRental";
+import home_business from "../../../assets/general-assets/img/home/home_business.png";
 
 function StartHeroSection(){
     return(
@@ -24,12 +30,12 @@ function StartHeroSection(){
                         <div className="col-lg-6">
                         <div className="blob-image-wrapper">
                             <div className="blob-shape-wrapper">
-                                <img src="assets/img/particle/particle-1.png" alt="white thumbs up" className="blob-shape blob-shape-1 animate-float-bob-y" />
-                                <img src="assets/img/particle/particle-2.png" alt="white announcement" className="blob-shape blob-shape-2 animate-float-bob-x" />
-                                <img src="assets/img/particle/particle-3.png" alt="white paper plane" className="blob-shape blob-shape-3 animate-float-bob-x" />
+                                <img src={particle_one} alt="white thumbs up" className="blob-shape blob-shape-1 animate-float-bob-y" />
+                                <img src={particle_two} alt="white announcement" className="blob-shape blob-shape-2 animate-float-bob-x" />
+                                <img src={particle_three} alt="white paper plane" className="blob-shape blob-shape-3 animate-float-bob-x" />
                             </div>
                             <div className="blob-main-image wow fadeInUp" data-wow-delay="500ms" data-wow-duration="2500ms">
-                                <img src="assets/img/hero/hero-blob.png" alt="hero blob" />
+                                <img src={home_business} alt="hero blob" />
                             </div>
                         </div> 
                     {/* /.blob-image-wrapper */}

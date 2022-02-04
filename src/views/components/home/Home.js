@@ -1,8 +1,6 @@
 import React from "react";
 import CollaborationArea from "./CollaborationArea";
 import FAQ from "./FAQ";
-import HomeFooter from "./HomeFooter";
-import HomeHeader from "./HomeHeader";
 import HomeLoader from "./HomeLoader";
 import HomeSearch from "./HomeSearch";
 import ServicesArea from "./ServicesArea";
@@ -21,10 +19,6 @@ function Home(){
         {/* ====== Start Search From ====== */}
             <HomeSearch />
         {/* ====== End Search From ====== */}
-
-        {/* ====== Start Header Area ====== */}
-            <HomeHeader />
-        {/* ====== End Header Area ====== */}
 
         {/* ====== Start Hero Area ====== */}
             <StartHeroSection />
@@ -101,8 +95,6 @@ function Home(){
             <Testimonial />
         {/* <!-- /.cta-area --> */}
         {/* <!--====== End Call to Action Area ======--> */}
-        {/* <!--====== Start Footer Area ======--> */}
-            <HomeFooter />
         {/* <!-- /.footer-area --> */}
         {/* <!--====== End Footer Area ======--> */}
         {/* <!--======= Scroll To Top =======--> */}

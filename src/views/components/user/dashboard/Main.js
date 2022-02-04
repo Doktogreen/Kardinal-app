@@ -1,6 +1,7 @@
 import React from 'react';
-import Footer from '../Footer';
 import Modal from './Modal';
+import ReactApexChart from 'react-apexcharts';
+import { optionVisitors } from '../../../../utilities/scripts';
 
 function Main(){
     return(
@@ -15,10 +16,13 @@ function Main(){
                                 <h3>Dashboard</h3>
                             </div>
                             <div className="toggle-switch">
-                                <button type="button" className="btn btn-primary mb-2 mr-2" data-toggle="modal" data-target="#fundYourAccountModal">
-                                    Fund your account
+                                <button type="button" className="btn btn-primary mb-2 mr-2" data-toggle="modal" href="#fundYourAccount">
+                                    Travel Now !
                                 </button>
                             </div>
+                            {/* <!-- Modal --> */}
+                            <Modal />
+                        {/* <!-- Modal End--> */}
                         </div>
                         <div className="row layout-top-spacing">
                             <div className="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
@@ -43,8 +47,12 @@ function Main(){
                                     </div>
                                     <div className="widget-content" style={{padding: "10px 20px"}}>
                                         <div className="tabs tab-content">
-                                            <div id="content_1" className="tabcontent"> 
-                                                <div id="visitsMonthly"></div>
+                                            <div className="tabcontent"> 
+                                                <ReactApexChart
+                                                    options={optionVisitors}
+                                                    series={optionVisitors.series}
+                                                    type="line"
+                                                />
                                             </div>
                                         </div>
                                     </div>
@@ -249,13 +257,7 @@ function Main(){
                                     </div>
                                 </div>
                             </div>
-                            {/* FUnd Your Account Modal */}
-                                <Modal />
-                            {/* FUnd Your Account Modal End */}
                         </div>
-                            {/* Dashboard Footer starts*/}
-                                <Footer />
-                            {/* Dashboard Footer ends*/}   
                     </div>
                     {/* END CONTENT PART */}
                 </div>

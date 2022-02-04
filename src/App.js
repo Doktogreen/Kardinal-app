@@ -6,8 +6,8 @@ import {  Route, Routes, BrowserRouter } from "react-router-dom";
 // import AppLayout from './layout';
 import Website from './layout/website';
 import Company from './views/components/company';
-import Login from './views/components/authentication';
-import Register from './views/components/authentication/Registration';
+// import Login from './views/components/authentication';
+// import Register from './views/components/authentication/Registration';
 import CarRental from './views/components/car-rental';
 import Career from './views/components/career';
 import Contact from './views/components/contact';
@@ -23,11 +23,24 @@ import Team from './views/components/team';
 import Travel from './views/components/travel';
 import Vendor from './views/components/vendor';
 import Webinar from './views/components/webinar';
+// import AppPages from './views/pages/AppPages';
+// import AccountPage from './views/pages/AppPages/accounting-page';
+// import InvoicePage from './views/pages/AppPages/invoice-page';
+// import TripPage from './views/pages/AppPages/trip-page';
+// import NavBar from './views/components/user/NavBar';
+// import Footer from './views/components/user/Footer';
+// import ReportingPage from './views/pages/AppPages/reporting-page';
+// import TripHistoryPage from './views/pages/AppPages/trip-history-page';
+// import SettingPage from './views/pages/AppPages/setting-page';
+// import WalletPage from './views/pages/AppPages/wallet-page';
+import HomeHeader from './views/components/home/HomeHeader';
+import HomeFooter from './views/components/home/HomeFooter';
 // const AppLayout = React.lazy(() => import('./layout'));
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
+            <HomeHeader />
       <Routes>
       <Route 
             exact 
@@ -104,16 +117,6 @@ function App() {
             path={"/car-rental"} 
             name="CarRental" 
             element={<CarRental />}/>
-      <Route 
-            exact 
-            path={"/register"} 
-            name="Register" 
-            element={<Register />}/>
-      <Route 
-            exact 
-            path={"/login"} 
-            name="Login" 
-            element={<Login />}/>
         <Route 
             exact 
             path={"/company"} 
@@ -131,8 +134,9 @@ function App() {
           element={<Blog />}
         />
       </Routes>
+      <HomeFooter />
       </div>
-    </BrowserRouter>
+      </BrowserRouter>
   );
 }
 

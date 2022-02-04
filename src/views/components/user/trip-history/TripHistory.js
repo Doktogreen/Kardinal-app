@@ -15,8 +15,8 @@ function TripHistory(){
                 </div>
                 <div className="row layout-spacing">
                     <div className="col-lg-12">
-                        <div className="statbox widget box box-shadow widget-chart-three" style="padding: 0px 20px;">
-                            <div className="widget-heading" style="padding: 20px 0px;">
+                        <div className="statbox widget box-shadow widget-chart-three" style={{padding: "0px 20px"}}>
+                            <div className="widget-heading" style={{padding: "20px 0px"}}>
                                 <div>
                                     <h5>All trips</h5>
                                 </div>
@@ -41,7 +41,7 @@ function TripHistory(){
                                 </ul>  
                                 <div className="tab-content" id="borderTopContent">
                                     <div className="tab-pane fade show active" id="border-top-all" role="tabpanel" aria-labelledby="border-top-all-tab">    
-                                        <div className="dt-buttons" style="text-align:right"> 
+                                        <div className="dt-buttons" style={{textAlign: "right"}}> 
                                             <button className="dt-button1 buttons-copy buttons-html5 btn" tabindex="0" aria-controls="html5-extension"><span>Copy</span></button>
                                             <button className="dt-button1 buttons-csv buttons-html5 btn" tabindex="0" aria-controls="html5-extension"><span>CSV</span></button>
                                             <button className="dt-button1 buttons-excel buttons-html5 btn" tabindex="0" aria-controls="html5-extension"><span>Excel</span></button>
@@ -121,13 +121,13 @@ function TripHistory(){
                                     </div>
                                     <div className="tab-pane fade" id="border-top-upcoming" role="tabpanel" aria-labelledby="border-top-upcoming-tab">
                                         <div className="table-responsive mb-4">
-                                            <div className="dt-buttons" style="text-align:right"> 
+                                            <div className="dt-buttons" style={{textAlign: "right"}}> 
                                                 <button className="dt-button1 buttons-copy buttons-html5 btn" tabindex="0" aria-controls="html5-extension"><span>Copy</span></button>
                                                 <button className="dt-button1 buttons-csv buttons-html5 btn" tabindex="0" aria-controls="html5-extension"><span>CSV</span></button>
                                                 <button className="dt-button1 buttons-excel buttons-html5 btn" tabindex="0" aria-controls="html5-extension"><span>Excel</span></button>
                                                 <button className="dt-button1 buttons-print btn" tabindex="0" aria-controls="html5-extension"><span>Print</span></button>
                                             </div>
-                                            <table className="table style-3  table-hover">
+                                            <table className="table style style-3  table-hover">
                                                 <thead>
                                                     <tr>
                                                         <th className="checkbox-column text-center"> Depart </th>
@@ -200,7 +200,7 @@ function TripHistory(){
                                     </div>
                                     <div className="tab-pane fade" id="border-top-current" role="tabpanel" aria-labelledby="border-top-current-tab">
                                         <div className="table-responsive mb-4">
-                                            <div className="dt-buttons" style="text-align:right"> 
+                                            <div className="dt-buttons" style={{textAlign: "right"}}> 
                                                 <button className="dt-button1 buttons-copy buttons-html5 btn" tabindex="0" aria-controls="html5-extension"><span>Copy</span></button>
                                                 <button className="dt-button1 buttons-csv buttons-html5 btn" tabindex="0" aria-controls="html5-extension"><span>CSV</span></button>
                                                 <button className="dt-button1 buttons-excel buttons-html5 btn" tabindex="0" aria-controls="html5-extension"><span>Excel</span></button>
@@ -279,7 +279,7 @@ function TripHistory(){
                                     </div>
                                     <div className="tab-pane fade" id="border-top-past" role="tabpanel" aria-labelledby="border-top-past-tab">
                                         <div className="table-responsive mb-4">
-                                            <div className="dt-buttons" style="text-align:right"> 
+                                            <div className="dt-buttons" style={{textAlign: "right"}}> 
                                                 <button className="dt-button1 buttons-copy buttons-html5 btn" tabindex="0" aria-controls="html5-extension"><span>Copy</span></button>
                                                 <button className="dt-button1 buttons-csv buttons-html5 btn" tabindex="0" aria-controls="html5-extension"><span>CSV</span></button>
                                                 <button className="dt-button1 buttons-excel buttons-html5 btn" tabindex="0" aria-controls="html5-extension"><span>Excel</span></button>
@@ -358,7 +358,7 @@ function TripHistory(){
                                     </div>
                                     <div className="tab-pane fade" id="border-top-tickets" role="tabpanel" aria-labelledby="border-top-tickets-tab">
                                         <div className="table-responsive mb-4">
-                                            <div className="dt-buttons" style="text-align:right"> 
+                                            <div className="dt-buttons" style={{textAlign: "right"}}> 
                                                 <button className="dt-button1 buttons-copy buttons-html5 btn" tabindex="0" aria-controls="html5-extension"><span>Copy</span></button>
                                                 <button className="dt-button1 buttons-csv buttons-html5 btn" tabindex="0" aria-controls="html5-extension"><span>CSV</span></button>
                                                 <button className="dt-button1 buttons-excel buttons-html5 btn" tabindex="0" aria-controls="html5-extension"><span>Excel</span></button>
