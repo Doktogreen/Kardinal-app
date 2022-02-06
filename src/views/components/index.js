@@ -1,9 +1,9 @@
 import React from "react";
-import Dashboard from "../user/dashboard/Dashboard";
+import Home from "./home/Home";
 
 function UserComponent(){
     return(
-        <Dashboard />
+        <Home />
     )
 }
 

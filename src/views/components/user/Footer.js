@@ -1,13 +1,14 @@
 import React from 'react';
+import './dashboard/dashboard.css';
 
 function Footer() {
     return(
         <div className="footer-wrapper">
-            <div className="footer-section f-section-1">
+            {/* <div className="footer-section f-section-1">
                 <p className="">Copyright © 2021 <a target="_blank" rel='noreferrer' href="https://elabdisb.com">Abbas</a>, All rights reserved.</p>
-            </div>
+            </div> */}
             <div className="footer-section f-section-2">
-                <p className="">
+                <p className="align-self-right">
                     Coded with 
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" 
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-heart">

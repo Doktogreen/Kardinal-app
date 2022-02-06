@@ -1,4 +1,5 @@
 import React from "react";
+import Pagination from "../../../../utilities/pagination";
 
 function Profile(){
     return(
@@ -52,16 +53,16 @@ function Profile(){
                     <div className="col-xl-8 col-lg-6 col-md-7 col-sm-12 layout-top-spacing">
                         <div className="bio layout-spacing ">
                             <div className="widget-content widget-content-area">
-                                <h3 className="">Travel documents <div className="text-right" style="margin-top: -30px;"><button id="add-travel-documents" className="btn btn-primary"  data-toggle="modal" data-target="#addTravelDocument">Add</button></div></h3>
+                                <h3 className="">Travel documents <div className="text-right" style={{marginTop: "-30px"}}><button id="add-travel-documents" className="btn btn-primary"  data-toggle="modal" data-target="#addTravelDocument">Add</button></div></h3>
                                 <div className="bio-skill-box">
                                     <div className="row">
                                         <div className="col-12 col-xl-6 col-lg-12 mb-xl-5 mb-5 "> 
                                             <div className="b-skills">
                                                 <h5>Passport (Andorra)</h5>
                                                 <div className="text-right">
-                                                    <div className="task-action" style="margin-top: -32px;">
+                                                    <div className="task-action" style={{marginTop: "-32px"}}>
                                                         <div className="dropdown  custom-dropdown">
-                                                            <a className="dropdown-toggle" href="#" role="button" id="pendingTask" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <a className="dropdown-toggle" href="..." role="button" id="pendingTask" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
                                                             </a>
                                                             <div className="dropdown-menu dropdown-menu-right" aria-labelledby="pendingTask">
@@ -84,7 +85,7 @@ function Profile(){
                         </div>
                         <div className="bio layout-spacing ">
                             <div className="widget-content widget-content-area">
-                                <h3 className="">Loyalty programs <div className="text-right" style="margin-top: -30px;"><button id="add-travel-documents" className="btn btn-primary"  data-toggle="modal" data-target="#addLoyaltyProgram">Add</button></div></h3>
+                                <h3 className="">Loyalty programs <div className="text-right" style={{marginTop: "-30px"}}><button id="add-travel-documents" className="btn btn-primary"  data-toggle="modal" data-target="#addLoyaltyProgram">Add</button></div></h3>
                                 <div className="bio-skill-box">
                                     <div className="row">
                                         <div className="col-12 col-xl-6 col-lg-12 mb-xl-5 mb-5">
@@ -98,8 +99,9 @@ function Profile(){
                 </div>
             </div>
         <div className="footer-wrapper">
+            <Pagination />
                 <div className="footer-section f-section-1">
-                    <p className="">Copyright © 2021 <a target="_blank" href="https://elabdisb.com">Abbas</a>, All rights reserved.</p>
+                    <p className="">Copyright © 2021 <a target="_blank" href="https://elabdisb.com" rel="noreferrer">Abbas</a>, All rights reserved.</p>
                 </div>
                 <div className="footer-section f-section-2">
                     <p className="">Coded with <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></p>

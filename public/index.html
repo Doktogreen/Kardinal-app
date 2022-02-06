@@ -255,6 +255,38 @@
 
             multiCheck(c3);
         </script>
+        function checkCreditFacility(){
+        var value_selected = $('#credit_facility').find(":selected").val();
+        //alert(value_selected);
+        if(value_selected == 1){
+            $('#addCreditFacilityModal').modal('show');
+        }
+    }
+    </script>
+    
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+    <script class="dark-theme">
+        Apex.tooltip = {
+            theme: 'dark'
+        }
+    </script>
+    <!-- <script>
+    function checkCreditFacility(){
+        var value_selected = $('#credit_facility').find(":selected").val();
+        //alert(value_selected);
+        if(value_selected == 1){
+            $('#addCreditFacilityModal').modal('show');
+        }
+    }
+    </script> -->
+    <script src="assets/user-assets/assets/js/custom.js"></script>
+    <script src="assets/user-assets/assets/js/widgets/modules-widgets.js"></script>
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+    <script class="dark-theme">
+        Apex.tooltip = {
+            theme: 'dark'
+        }
+    </script>
           <!-- NOTE TO Use Copy CSV Excel PDF Print Options You Must Include These Files  -->
           <script src="./assets/user-assets/plugins/table/datatable/button-ext/dataTables.buttons.min.js"></script>
           <script src="./assets/user-assets/plugins/table/datatable/button-ext/jszip.min.js"></script>    

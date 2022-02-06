@@ -1,10 +1,14 @@
-import React from "react";
-import LandingPages from "../../views/pages";
+import React from 'react';
+import LandingPage from '../../views/pages/LandingPages';
+import HomeHeader from '../../views/components/home/HomeHeader';
+import HomeFooter from '../../views/components/home/HomeFooter';
 
 function Website(){
     return(
         <>
-            <LandingPages />
+            <HomeHeader />
+                  <LandingPage />
+            <HomeFooter/>
         </>
     )
 }
