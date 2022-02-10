@@ -1460,6 +1460,18 @@
 
 /* Mobile Devices, Tablets */
 @media only screen and (max-width: 575px){
+    
+    .brands-class{
+        display: none;
+    }
+    .blog-post-item.blog-post-item-v2 {
+        padding: 0;
+        height: 100%;
+        border-radius: 0;
+    }
+    .blog-post-item.blog-post-item-v2 .blog-post-entry-content .post-author .post-author-name {
+        position: inherit;
+    }
     .header-navigation .language-selection {
         display: none;
     }

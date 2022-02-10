@@ -4,12 +4,13 @@ import FAQ from "./FAQ";
 import HomeLoader from "./HomeLoader";
 import HomeSearch from "./HomeSearch";
 import ServicesArea from "./ServicesArea";
+import SideBar from "./SideBar";
 import SimpleCTA from "./SimpleCTA";
 import StartHeroSection from "./StartHeroSection";
 import TeamServiceArea from "./TeamServiceArea";
 import Testimonial from "./Testimonial";
 
-function Home(){
+function HomeComponent(){
     return(
         <body>
         {/* ======= Start Preloader =======*/}
@@ -26,6 +27,7 @@ function Home(){
         
         {/* ====== Start Our Services Area ====== */}
             <TeamServiceArea />
+            <SideBar />
         {/* <!--====== End Our Services Area ======--> */}
 
         {/* ====== Start Services Area ====== */}
@@ -106,4 +108,4 @@ function Home(){
     )
 }
 
-export default Home;
+export default HomeComponent;

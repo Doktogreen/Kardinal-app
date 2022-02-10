@@ -235,6 +235,10 @@ button {
     border: none;
 }
 
+svg{
+    padding: 5px;
+}
+
 /* Utility CSS */
 .bg-ocean-blue {
     background-color: #f4f7fa;
@@ -727,7 +731,7 @@ button {
     color: #fff;
 }
 .section-title .section-heading-tag .single-heading-tag.text-old-lavender {
-    color: #6f667b;
+    color: #243256;
 }
 .section-title.section-title-ocean-blue .section-heading-tag .single-heading-tag {
     background-color: #E5ECFC;
@@ -782,7 +786,7 @@ button {
     margin-bottom: 48px;
 }
 .section-title.section-title-tuna .section-title-description p{
-    color: #6f667b;
+    color: #243256;
 }
 .section-title.section-title-ocean-blue .section-button-wrapper .filled-btn {
     background: #243256;
@@ -799,6 +803,7 @@ button {
 }
 .section-title.section-title-mirage {
     color: #243256;
+    max-width: 750px;
 }
 .section-title.section-title-mirage .section-heading-tag,
 .section-title.section-title-white .section-heading-tag{
@@ -1541,7 +1546,7 @@ button {
     position: absolute;
     left: 0;
     top: 120%;
-    width: 200px;
+    width: 600px;
     background-color: #fff;
     opacity: 0;
     visibility: hidden;
@@ -6452,7 +6457,7 @@ button {
 /* Blog Post Item V2 */
 .blog-post-item.blog-post-item-v2 {
     padding: 0;
-    height: 100%;
+    height: 750px;
     border-radius: 0;
 }
 .blog-post-item.blog-post-item-v2 .blog-post-entry-content {
@@ -6468,6 +6473,7 @@ button {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
+    height: 100%;
 }
 .blog-post-item.blog-post-item-v2 .post-thumbnail a {
     display: block;
@@ -6477,8 +6483,10 @@ button {
     border-radius: 7px;
 }
 .blog-post-item.blog-post-item-v2 .blog-post-entry-content .post-title {
-    font-size: 21px;
+    font-size: 14px;
     margin-bottom: 15px;
+    color: #252627;
+    font-family: 'CircularStdBook';
 }
 .blog-post-item.blog-post-item-v2 .blog-post-entry-content .post-title a:hover,
 .blog-post-item.blog-post-item-v2 .blog-post-entry-content .post-meta-wrapper ul li a:hover {
@@ -6499,8 +6507,10 @@ button {
 }
 .blog-post-item.blog-post-item-v2 .blog-post-entry-content .post-author .post-author-name {
     font-size: 18px;
-    color: #87888b;
-    font-family: 'CircularStdMedium';
+    color: #243256;
+    font-family: 'CircularStdBook';
+    position: absolute;
+    bottom: 35px;
 }
 .blog-post-item.blog-post-item-v2 .blog-post-entry-content .post-author .post-author-thumb img {
     border-radius: 50%;
@@ -6750,11 +6760,11 @@ button {
 .single-iconic-box .iconic-box-body .iconic-box-content {
     font-size: 17px;
     line-height: 30px;
-    color: #6f667b;
+    color: #243256;
     margin-bottom: 16px;
 }
 .single-iconic-box .iconic-box-body .iconic-box-btn a {
-    color: #6f667b;
+    color: #243256;
     font-family: 'CircularStdBold';
     text-transform: capitalize;
     -webkit-transition: 0.3s;
@@ -8478,6 +8488,10 @@ button {
     border-radius: 50%;
 }
 
+.company-logo-image{
+    padding-bottom: 15px;
+}
+
 .blog-details-wrapper .posts-pagination {
     margin-bottom: 50px;
 }
@@ -9280,21 +9294,23 @@ button {
 }
 .btnn{
     
-    background-color: #ffffff;
-    border: 2px solid #243256;
-    color: #243256; 
-    padding: 5px 16px;
-    border-radius: 5px;
+        background-color: #fffff;
+        border: 2px solid #243256;
+        color: #243256; 
+        padding: 5px 16px;
+        border-radius: 5px;
 }
 
 
 .menu-icon-drop{
         margin: auto;
+        width:75px;
 }
 
 .drop-menu-new-p{
     padding-left: 10px; 
-    font-size: 9px;
+    font-size: 10px;
+    color: #252627;
 }
 
 

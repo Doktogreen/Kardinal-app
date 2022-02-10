@@ -1,5 +1,5 @@
 import React from "react";
-import team_one from "../../../assets/general-assets/img/team/team1.jpg";
+// import team_one from "../../../assets/general-assets/img/team/team1.jpg";
 import { 
     newsletter, 
     particle_five, 
@@ -47,7 +47,7 @@ function Team(){
                     <div className="col-xl-7 col-lg-6">
                         <div className="team-details-images content-right-spacer">
                             <div className="team-details-thumbnail team-details-thumbnail-main animate-float-bob-y wow fadeInDown" data-wow-delay="100ms" data-wow-duration="2000ms" style={{visibility: "visible", animationDuration: "2000ms", animationDelay: "100ms", animationName: "float-bob-y"}}>
-                                <img src={team_one} alt="team skills thumbnail one" />
+                                <img src=".." alt="team skills thumbnail one" />
                             </div>
                         </div> 
                     </div> 

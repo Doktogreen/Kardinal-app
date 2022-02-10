@@ -1,10 +1,10 @@
 import React from "react";
 import Home from "./home/Home";
 
-function UserComponent(){
+function HomeComponents(){
     return(
         <Home />
     )
 }
 
-export default UserComponent;
+export default HomeComponents;

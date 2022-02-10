@@ -1,10 +1,10 @@
 import React from "react";
-import Home from "../../../components";
+import HomeComponents from "../../../components";
 
 function HomePage(){
     return(
         <>
-            <Home />
+            <HomeComponents />
         </>
     )
 }
