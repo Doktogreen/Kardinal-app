@@ -1,11 +1,12 @@
 import React from "react";
 import AuthContainer from "./AuthContainer";
 import login_slide from "../../../assets/general-assets/onboarding/images/login-slide.svg";
+import './index.scss';
 
 export let login;
 login = (
     <div className="wrapper">
-            <form action="/app-page" id="wizard">
+            <form id="wizard">
         		{/* <!-- SECTION 1 --> */}
                 {/* <h2></h2> */}
                 <section>
@@ -27,7 +28,7 @@ login = (
                                 <input type="password" className="form-control" id="password_" />
                             </div>
 							<p className="login-p">Don't have an account with Kardinal? <a href="/register"><b>Create an account</b></a> </p>
-						    <div className="form-group btn-login-div">
+						    <div className="form-group btn-login-cover">
                                 <button className="btn btn-primary btn-login">Login</button>
                             </div>
 						</div>

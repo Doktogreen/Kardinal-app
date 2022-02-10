@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom';
 import Footer from '../../views/components/user/Footer';
 import NavBar from '../../views/components/user/NavBar';
 import { appRoutes } from '../../routes';
@@ -11,10 +11,11 @@ function WebApp(){
                 <Routes>
                 {appRoutes.map((route,index) => (
                     <Route 
-                        key={index} 
-                        path={route.path} 
-                        component={route.component} 
-                        exact={route.exact} 
+                        key={index}
+                        exact={route.exact}
+                        path={route.path}
+                        name={route.name}
+                        element={route.component}
                     />
                 ))}
                 </Routes>
@@ -23,4 +24,4 @@ function WebApp(){
     )
 }
 
-export default WebApp;
+export default React.memo(WebApp);
