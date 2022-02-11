@@ -12,7 +12,46 @@ div.d-inline-flex.row {
     display: none !important;
   }
 }
-
+.nav-items {
+  border-bottom: 1px solid #ccc;
+  line-height: 20px !important;
+}
+.header-wrap {
+  border-bottom: 1px solid #ccc;
+  width: 280px !important;
+}
+.get-started-wrapper {
+  padding: 0px 0px 0px 0px !important;
+}
+.get-close-icon {
+  color: #ffffff !important;
+  font-size: 50px !important;
+  font-weight: 200 !important;
+}
+.header {
+  width: inherit !important;
+}
+.rows {
+  display: flex !important;
+  align-items: center !important;
+  width: inherit !important;
+  flex-wrap: nowrap !important;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+  justify-content: space-between !important;
+}
+a.navlicolap {
+  padding: 10px 0px 10px 15px !important;
+  justify-content: space-between !important;
+}
+.close-icon {
+  background-color: #243256;
+  padding: 8px 5px 5px 5px !important;
+  height: inherit !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 30px !important;
+}
 /**
 * Template Name: NiceAdmin - v2.2.0
 * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
@@ -619,7 +658,6 @@ div.d-inline-flex.row {
     display: block;
     overflow-x: hidden;
     overflow-y: scroll;
-    padding-top: 70px;
     background-color: #fff;
   }
   .left-sidebar:hover {
@@ -679,7 +717,7 @@ div.d-inline-flex.row {
     margin: 0;
     list-style: none;
   }
-  .left-sidebar-nav .nav-item {
+  .left-sidebar-nav .nav-items {
     margin-bottom: 5px;
   }
   .left-sidebar-nav .nav-heading {

@@ -13,7 +13,7 @@ function HomeHeader(){
     useEffect(() => {
        setWidth(width);
        console.log(width)
-    }, [])
+    }, []);
 
     return(
         <header className="header-area header-v1">
@@ -31,7 +31,12 @@ function HomeHeader(){
             </div>
         </div>
         {/* <!-- Desktop and Mobile Menu --> */}
-        <SideBar />
+        <SideBar 
+            travel={travel}
+            kcare={k_care}
+            car={car}
+            hotel={hotel}
+        />
         <div className="col-xl-7 col-lg-3 col-md-1 col-2">
             <div className="primary-menu">
                 <div className="nav-menu">
@@ -42,7 +47,7 @@ function HomeHeader(){
                     <nav className="main-menu">
                         <ul>
                             <li className="menu-item ">
-                                <a href="/" className="nav-link active"> Solutions</a>
+                                <a href="/" className="nav-link active">Solutions</a>
                                 <ul className="sub-menu">
                                     <div className="row">
                                             <div className="col-md-6">
