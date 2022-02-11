@@ -22,78 +22,78 @@ export function Particles(){
 
 function FAQ(){
     return(
-        <section className="faq-area bg-magnolia pt-130 pb-130">
-            <div className="container">
-                <div className="section-internal">
-                    <div className="section-particle-effect d-none d-md-block section-particle-effect-v2">
-                        {Particles}
+        <section class="faq-area bg-magnolia pt-130 pb-130">
+        <div class="container">
+        <div class="section-internal">
+        <div class="section-particle-effect d-none d-md-block section-particle-effect-v2">
+            {/* {Particles} */}
+        </div>
+        <div class="row align-items-center">
+        <div class="col-lg-6">
+            <div class="faq-content content-right-spacer">
+                <div class="section-title mb-30">
+                    <h3>K-CARE, Travel information at your fingertips</h3>
+                </div>
+                <div class="iconic-list-wrapper">
+                    <div class="single-iconic-list-home single-iconic-list iconic-list-padding wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay: "200ms", animationName: "fadeInDown"}}>
+                        <div class="iconic-list-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="iconic-list-body">
+                            <p class="iconic-list-content">
+                                Get <b>automated</b> updates on every location you are visiting.
+                            </p>
+                        </div>
                     </div>
-                        <div className="row align-items-center">
-                        <div className="col-lg-6">
-                            <div className="faq-content content-right-spacer">
-                                <div className="section-title mb-30">
-                                    <h3>K-CARE, Travel information at your fingertips</h3>
-                                </div>
-                                <div className="iconic-list-wrapper">
-                                    <div className="single-iconic-list-home single-iconic-list iconic-list-padding wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                        <div className="iconic-list-icon">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                        <div className="iconic-list-body">
-                                            <p className="iconic-list-content">
-                                                Get <b>automated</b> updates on every location you are visiting.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="single-iconic-list-home single-iconic-list iconic-list-padding wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                        <div className="iconic-list-icon">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                        <div className="iconic-list-body">
-                                            <p className="iconic-list-content">
-                                                Confirm all necessary <b>documents</b> before your trip.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="single-iconic-list-home single-iconic-list iconic-list-padding wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                        <div className="iconic-list-icon">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                        <div className="iconic-list-body">
-                                            <p className="iconic-list-content">
-                                                Get instant <b>Visa</b> and consulate requirement support.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="single-iconic-list-home single-iconic-list iconic-list-padding wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                        <div className="iconic-list-icon">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                        <div className="iconic-list-body">
-                                            <p className="iconic-list-content">
-                                                Dedicated customer <b>support</b> for your concerns.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="single-iconic-list-home single-iconic-list iconic-list-padding wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                        <a href="k-care.html" className="btn1">Discover More</a> 
-                                    </div> 
-                                </div>
-                            </div>
+                    <div class="single-iconic-list-home single-iconic-list iconic-list-padding wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay: "200ms", animationName: "fadeInDown"}}>
+                        <div class="iconic-list-icon">
+                            <i class="fas fa-check"></i>
                         </div>
-                        <div className="col-lg-6">
-                            <div className="section-right-image animate-float-bob-y wow fadeInUp" data-wow-delay="0ms" data-wow-duration="2500ms">
-                                <img src={k_care} alt="faq" />
-                            </div>
+                        <div class="iconic-list-body">
+                            <p class="iconic-list-content">
+                                Confirm all necessary <b>documents</b> before your trip.
+                            </p>
                         </div>
-                    </div> 
-                {/* <!-- /.row --> */}
-                </div> 
-            {/* <!-- /.section-internal --> */}
-            </div> 
+                    </div>
+                    <div class="single-iconic-list-home single-iconic-list iconic-list-padding wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay: "200ms", animationName: "fadeInDown"}}>
+                        <div class="iconic-list-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="iconic-list-body">
+                            <p class="iconic-list-content">
+                                Get instant <b>Visa</b> and consulate requirement support.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="single-iconic-list-home single-iconic-list iconic-list-padding wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay: "200ms", animationName: "fadeInDown"}}>
+                        <div class="iconic-list-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="iconic-list-body">
+                            <p class="iconic-list-content">
+                                Dedicated customer <b>support</b> for your concerns.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="single-iconic-list-home single-iconic-list iconic-list-padding wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms" style={{visibility: "visible", animationDuration: "1500ms", animationDelay: "200ms", animationName: "fadeInDown"}}>
+                        <a href="/k-care" class="btn1">Discover More</a> 
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="section-right-image animate-float-bob-y wow fadeInUp animated" data-wow-delay="0ms" data-wow-duration="2500ms" style={{visibility: "visible", animationDuration: "2500ms", animationDelay: "0ms", animationName: "float-bob-y"}}>
+                <img src={k_care} alt="faq im" />
+            </div>
+        </div>
+        </div> 
+        {/* <!-- /.row --> */}
+        </div> 
+        {/* <!-- /.section-internal --> */}
+        </div> 
         {/* <!-- /.container --> */}
-        </section> 
-        // {/* <!-- /.faq-area --> */}
+        </section>
     )
 }
 

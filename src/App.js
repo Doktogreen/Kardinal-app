@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-// import PrivateRoute from './privateRoute';
-import {  Route, Routes, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Login from "./views/components/authentication/Login";
 import Onboarding from "./views/components/authentication/Registration";
-import Dashboard from "./layout/web-app";
-import Home from "./layout/website";
-
+import CarRentalPage from './views/pages/LandingPages/car-rental-page';
+// import Website from './layout/website';
+// import LandingPage from './views/pages/LandingPages';
+// import PrivateRoute from './privateRoute';
+// import WebApp from './layout/web-app';
 
 // const Login = React.lazy(() => import("./views/components/authentication/Login"));
 // const Onboarding = React.lazy(() => import("./views/components/authentication/Registration"));
@@ -31,17 +32,16 @@ function App() {
           name="Onboarding"
           element={<Onboarding />}
         />
-        <Route
-          exact
-          path="/dashboard"
-          name="Dashboard"
-          element={<Dashboard />}
-        />
+        {/* <PrivateRoute 
+          path={"/dashboard"} 
+          name="Dashboard" 
+          component={<WebApp />} 
+        /> */}
         <Route
           exact
           path="/"
           name="Home"
-          element={<Home />}
+          element={<CarRentalPage />}
         />
       </Routes>
       </div>

@@ -230,14 +230,14 @@ function Onboarding(){
                         </div>
                     </section>) : null}
                     <div className="btn-cover">
-                        <ul role="" className="row buttons" aria-label="Pagination">
+                        <ul role="" className="row buttons" ariaLabel="Pagination">
                             {page > 1 ? (<li className="" onClick={decrement} ariaDisabled="false">
                                 <a href="#previous" role="menuitem" className="btn btn-outline-primary mb-2">Previous</a>
                             </li>): null}
-                            {page === 5 ? (<li aria-hidden="true">
+                            {page === 5 ? (<li ariaHidden="true">
                                 <a href="#finish" role="menuitem" className="btn btn-primary mb-2">Finish</a>
                             </li>):
-                            <li aria-hidden="false" onClick={increment} ariaDisabled="false" className="">
+                            <li ariaHidden="false" onClick={increment} ariaDisabled="false" className="">
                                 <a href="#next" role="menuitem" className="btn btn-primary mb-2">Next</a>
                             </li>}
                         </ul>

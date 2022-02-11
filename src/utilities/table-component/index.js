@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import Pagination from '.';
-import data from './mock-data.json';
+import Pagination from '../pagination';
+import data from '../pagination/mock-data.json';
 import './style.scss';
 
 let PageSize = 10;
@@ -28,12 +28,15 @@ export default function Table() {
         </thead>
         <tbody>
           {currentTableData.map(item => {
+            let code_fn = item.first_name.toLowerCase();
+            let code_ln = item.last_name.toLowerCase();
+            let code_email = item.email.toLowerCase();
             return (
               <tr>
                 <td>{item.id}</td>
-                <td>{item.first_name}</td>
-                <td>{item.last_name}</td>
-                <td>{item.email}</td>
+                <td className={`${code_fn}`}>{item.first_name}</td>
+                <td className={`${code_ln}`}>{item.last_name}</td>
+                <td className={`${code_email}`}>{item.email}</td>
                 <td>{item.phone}</td>
               </tr>
             );

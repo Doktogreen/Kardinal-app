@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import car from "../../../assets/general-assets/img/icons/car.png";
 import kardinal_logo from "../../../assets/general-assets/img/kardinal.png";
 import travel from "../../../assets/general-assets/img/icons/travel.png";
@@ -8,12 +8,12 @@ import './index.css';
 import SideBar from "./SideBar";
 
 function HomeHeader(){
-    const [width, setWidth] = useState(window.innerWidth);
+    // const [width, setWidth] = useState(window.innerWidth);
 
-    useEffect(() => {
-       setWidth(width);
-       console.log(width)
-    }, []);
+    // useEffect(() => {
+    //    setWidth(w => w);
+    //    console.log(width)
+    // }, []);
 
     return(
         <header className="header-area header-v1">

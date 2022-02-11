@@ -39,7 +39,7 @@ function HomeFooter(){
                             <li><a href="/guide">Guides</a></li>
                             <li><a href="/webinar">Webinars</a></li>
                             {/* <!--<li><a href="...">Ebooks</a></li>--> */}
-                            <li><a href="/blog" target="_blank" rel="noreferrer">Blog</a></li>
+                            <li><a href="https://gokardinal.medium.com/" target="_blank" rel="noreferrer">Blog</a></li>
                         </ul>
                     </div>
                 </div>

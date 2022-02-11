@@ -4,7 +4,6 @@ import FAQ from "./FAQ";
 import HomeLoader from "./HomeLoader";
 import HomeSearch from "./HomeSearch";
 import ServicesArea from "./ServicesArea";
-import SideBar from "./SideBar";
 import SimpleCTA from "./SimpleCTA";
 import StartHeroSection from "./StartHeroSection";
 import TeamServiceArea from "./TeamServiceArea";
@@ -27,7 +26,6 @@ function HomeComponent(){
         
         {/* ====== Start Our Services Area ====== */}
             <TeamServiceArea />
-            <SideBar />
         {/* <!--====== End Our Services Area ======--> */}
 
         {/* ====== Start Services Area ====== */}

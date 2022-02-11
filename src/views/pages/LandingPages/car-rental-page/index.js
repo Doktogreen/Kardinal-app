@@ -1,11 +1,12 @@
 import React from "react";
+import CarRentalComponent from "../../../components/car-rental";
 
-function CarRental(){
+function CarRentalPage(){
     return(
         <>
-            <CarRental />
+            <CarRentalComponent />
         </>
     )
 }
 
-export default CarRental;
+export default CarRentalPage;
