@@ -1,10 +1,10 @@
 import React from "react";
-import Auth from "../../../components/authentication";
+import Onboarding from "../../../components/authentication/Registration";
 
 function RegistrationPage(){
     return(
         <>
-            <Auth />
+            <Onboarding />
         </>
     )
 }

@@ -235,7 +235,7 @@ function Onboarding(){
                                 <a href="#previous" role="menuitem" className="btn btn-outline-primary mb-2">Previous</a>
                             </li>): null}
                             {page === 5 ? (<li ariaHidden="true">
-                                <a href="#finish" role="menuitem" className="btn btn-primary mb-2">Finish</a>
+                                <a href="/login" role="menuitem" className="btn btn-primary mb-2">Finish</a>
                             </li>):
                             <li ariaHidden="false" onClick={increment} ariaDisabled="false" className="">
                                 <a href="#next" role="menuitem" className="btn btn-primary mb-2">Next</a>

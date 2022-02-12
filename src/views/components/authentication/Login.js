@@ -29,7 +29,7 @@ login = (
                             </div>
 							<p className="login-p">Don't have an account with Kardinal? <a href="/register"><b>Create an account</b></a> </p>
 						    <div className="form-group btn-login-cover">
-                                <button className="btn btn-primary btn-login">Login</button>
+                                <button href="/dashboard" className="btn btn-primary btn-login">Login</button>
                             </div>
 						</div>
 					</div>

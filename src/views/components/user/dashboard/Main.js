@@ -17,7 +17,7 @@ function Main(){
                             </div>
                             <div className="toggle-switch">
                                 <button type="button" className="btn btn-primary mb-2 mr-2" data-toggle="modal" href="#fundYourAccount">
-                                    Travel Now !
+                                    Fund your account
                                 </button>
                             </div>
                             {/* <!-- Modal --> */}
@@ -67,9 +67,15 @@ function Main(){
                                     </div>
                                     <div className="widget-content">
                                         <div className="invoice-box"> 
+                                            <div className='row balances'>
                                             <div className="acc-total-info">
                                                 <p className="acc-amount">$470</p>
-                                                <h5>Credit Available</h5>
+                                                <h5>Credit Balance</h5>
+                                            </div>
+                                            <div className="acc-total-info">
+                                                <p className="acc-amount">$570</p>
+                                                <h5>Wallet Balance</h5>
+                                            </div>
                                             </div>
                                             <div className="inv-detail" style={{borderBottom:"none"}}>                                        
                                                 <div className="info-detail-1">
