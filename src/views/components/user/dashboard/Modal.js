@@ -1,4 +1,5 @@
 import React from 'react';
+import './dashboard.css';
 
 function Modal(){
     return(
@@ -23,16 +24,17 @@ function Modal(){
                             </ul>
                             <div className="tab-content" id="justify-pills-tabContent">
                                 <div className="tab-pane fade show active" id="justify-pills-home" role="tabpanel" aria-labelledby="justify-pills-home-tab">
-                                    <div className="component-card_9">
-                                    <h5 className="card-title mb-4 mt-4">Bank transfer information</h5>
-                                    <p className="card-text mb-1">Wema Bank</p>
-                                    <p className="card-text mb-1"> Kardinal Corporate Extern</p>
-                                    <p className="card-text mb-1"> 7820059143</p>
+                                    <div className="">
+                                    <h5 style={{lineHeight: "20px"}} className="card-title mb-4">Bank transfer information</h5>
+                                    <p style={{fontSize: "1rem", textAlign: "left", lineHeight: "20px"}} className="card-text mb-1">Wema Bank</p>
+                                    <p style={{fontSize: "1rem", textAlign: "left", lineHeight: "20px"}} className="card-text mb-1"> Kardinal Corporate Extern</p>
+                                    <p style={{fontSize: "1rem", textAlign: "left", lineHeight: "20px"}} className="card-text mb-1"> 7820059143</p>
                                     </div>
                                 </div>
                                 <div className="tab-pane fade" id="justify-pills-profile" role="tabpanel" aria-labelledby="justify-pills-profile-tab">
-                                    <p className="mb-4">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                                
+                                    <p style={{fontSize: "1rem", textAlign: "left", lineHeight: "20px"}} className="mb-4">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                                
                                     </p>
                                 </div>
                             </div>

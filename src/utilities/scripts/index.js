@@ -54,8 +54,8 @@ export let optionVisitors = {
       discrete: [{
       seriesIndex: 0,
       dataPointIndex: 7,
-      fillColor: '#000',
-      strokeColor: '#000',
+      fillColor: '#fff',
+      strokeColor: '#fff',
       size: 5
     }, {
       seriesIndex: 2,
@@ -78,7 +78,7 @@ export let optionVisitors = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     xaxis: {
       axisBorder: {
-        show: false
+        show: true
       },
       axisTicks: {
         show: false
@@ -97,6 +97,9 @@ export let optionVisitors = {
       }
     },
     yaxis: {
+      axisBorder: {
+        show: true
+      },
       labels: {
         formatter: function(value, index) {
           return (value / 10000) + 'K'
@@ -111,11 +114,11 @@ export let optionVisitors = {
       }
     },
     grid: {
-      borderColor: '#e0e6ed',
+      borderColor: '#243256',
       strokeDashArray: 5,
       xaxis: {
           lines: {
-              show: true
+              show: false
           }
       },   
       yaxis: {
@@ -125,9 +128,9 @@ export let optionVisitors = {
       },
       padding: {
         top: 0,
-        right: 0,
-        bottom: 0,
-        left: -10
+        right: 10,
+        bottom: 20,
+        left: 15
       }, 
     }, 
     legend: {

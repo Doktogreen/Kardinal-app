@@ -1,6 +1,6 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
-import { salesByCategory, totalConversations, totalOrders, totalRevenue, totalVisistors, uniqueVisitorsOptions1 } from '../../../../utilities/scripts';
+import { salesByCategory, uniqueVisitorsOptions1 } from '../../../../utilities/scripts';
 
 function Reporting(){
     return(
@@ -10,89 +10,72 @@ function Reporting(){
         {/* <!--  BEGIN CONTENT AREA  --> */}
         <div id="content" className="main-content">
             <div className="layout-px-spacing">
-                <div className="page-header">
-                    <div className="page-title">
+            <div class="page-header">
+                    <div class="page-title">
                         <h3>Reporting</h3>
-                    </div>    
-                </div>
-                <div className="row analytics ">
-                    <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12  layout-spacing">
-                        <div className="widget widget-one" style={{height: "150px"}}>
-                            <div className="w-chart" style={{display: "block"}}>
-                                <div className="w-chart-section" style={{width: "100%"}}>
-                                    <div className="w-detail">
-                                        <p className="w-title">Total Revenue</p>
-                                        <p className="w-stats">$423,964</p>
-                                    </div>
-                                    <div className="w-chart-render-one">
-                                        <ReactApexChart 
-                                            options={totalRevenue}
-                                            series={totalRevenue.series}
-                                            type="line"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12  layout-spacing">
-                        <div className="widget widget-one" style={{height: "150px"}}>
-                            <div className="w-chart" style={{display: "block"}}>
-                                <div className="w-chart-section" style={{width: "100%"}}>
-                                    <div className="w-detail">
-                                        <p className="w-title">Total Orders</p>
-                                        <p className="w-stats">423</p>
-                                    </div>
-                                     <div className="w-chart-render-one">
-                                        <ReactApexChart 
-                                            options={totalOrders}
-                                            series={totalOrders.series}
-                                            type="line"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="toggle-switch row">
+                        <div class="form-group mr-2">
+                            <input type="date" class="form-control" id="start_date" toltip="date" />
+                        </div>             
+                        <div class="form-group mr-2">
+                            <input type="date" class="form-control" id="end_date" toltip="date" />
                         </div>
-                    </div>
-                    <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12  layout-spacing">
-                        <div className="widget widget-one" style={{height: "150px"}}>
-                            <div className="w-chart" style={{display: "block"}}>
-                                <div className="w-chart-section" style={{width: "100%"}}>
-                                    <div className="w-detail">
-                                        <p className="w-title">Total Visitors</p>
-                                        <p className="w-stats">96.4K</p>
-                                    </div>
-                                    <div className="w-chart-render-one">
-                                        <ReactApexChart 
-                                            options={totalVisistors}
-                                            series={totalVisistors.series}
-                                            type="line"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12  layout-spacing">
-                        <div className="widget widget-one" style={{height: "150px"}}>
-                            <div className="w-chart" style={{display: "block"}}>
-                                <div className="w-chart-section" style={{width: "100%"}}>
-                                    <div className="w-detail">
-                                        <p className="w-title">total Conversations</p>
-                                        <p className="w-stats">7,929</p>
-                                    </div>
-                                    <div className="w-chart-render-one">
-                                        <ReactApexChart 
-                                            options={totalConversations}
-                                            series={totalConversations.series}
-                                            type="line"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="form-group mr-2">
+                            <button class="btn btn-primary" style={{padding: "11px 25px"}}>Search</button>
                         </div>
                     </div>
                 </div>
+                <div class="row analytics ">
+                    <div class="col-xl-3 col-sm-12 col-12 layout-spacing">
+                        <div class="widget widget-five">
+                            <div class="widget-content">
+                                <div class="w-content">
+                                    <div class="">                                            
+                                        <h2>2</h2>
+                                        <p class="task-completed"><span>Total Number of Trips</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-12 col-12 layout-spacing">
+                        <div class="widget widget-five">
+                            <div class="widget-content">
+                                <div class="w-content">
+                                    <div class="">                                            
+                                        <h2>₦102</h2>
+                                        <p class="task-completed"><span>Average Ticket Price</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-12 col-12 layout-spacing">
+                        <div class="widget widget-five">
+                            <div class="widget-content">
+                                <div class="w-content">
+                                    <div class="">                                            
+                                        <h2>8</h2>
+                                        <p class="task-completed"><span>Total Number of Stays</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-12 col-12 layout-spacing">
+                        <div class="widget widget-five">
+                            <div class="widget-content">
+                                <div class="w-content">
+                                    <div class="">                                            
+                                        <h2>₦8008</h2>
+                                        <p class="task-completed"><span>Average Hotel Price</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
                 <div className="row analytics">
                     <div className="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
                         <div className="widget widget-chart-three">

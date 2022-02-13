@@ -52,6 +52,7 @@ function Main(){
                                                     options={optionVisitors}
                                                     series={optionVisitors.series}
                                                     type="line"
+                                                    height={380}
                                                 />
                                             </div>
                                         </div>
@@ -90,10 +91,10 @@ function Main(){
                                                     <p>Car Spend</p>
                                                     <p>$1345.00</p>
                                                 </div>
-                                                <div className="info-detail-2">
+                                                {/* <div className="info-detail-2">
                                                     <p>Mileage</p>
                                                     <p>$4,321.25</p>
-                                                </div>
+                                                </div> */}
                                                 <div className="info-detail-2">
                                                     <p>Hotel Spend</p>
                                                     <p>$1345.82</p>

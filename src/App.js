@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-// import Login from "./views/components/authentication/Login";
+import Login from "./views/components/authentication/Login";
 // import EbookPage from './views/pages/LandingPages/ebook-page';
 // import HomeHeader from './views/components/home/HomeHeader';
 // import HomeFooter from './views/components/home/HomeFooter';
@@ -34,6 +34,8 @@ import ReportingPage from './views/pages/AppPages/reporting-page';
 import SettingPage from './views/pages/AppPages/setting-page';
 import TripPage from './views/pages/AppPages/trip-page';
 import TripHistoryPage from './views/pages/AppPages/trip-history-page';
+import Onboarding from './views/components/authentication/Registration';
+import ResetPasswordPage from './views/pages/AppPages/reset-password-page';
 // import Website from './layout/website';
 // import LandingPage from './views/pages/LandingPages';
 // import PrivateRoute from './privateRoute';
@@ -47,141 +49,137 @@ import TripHistoryPage from './views/pages/AppPages/trip-history-page';
 function App() {
 
   return (
-    // <BrowserRouter>
-    //   <div className="App">
-    //     <HomeHeader />
-    //   <Routes>
-    //     <Route
-    //       exact
-    //       path="/blog"
-    //       name="Blog"
-    //       element={<BlogPage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/car-rental"
-    //       name="CarRental"
-    //       element={<CarRentalPage />}
-    //     />
-    //     {/* <PrivateRoute 
-    //       path={"/dashboard"} 
-    //       name="Dashboard" 
-    //       component={<WebApp />} 
-    //     /> */}
-    //     <Route
-    //       exact
-    //       path="/career"
-    //       name="Career"
-    //       element={<CareerPage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/company"
-    //       name="Company"
-    //       element={<CompanyPage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/contact"
-    //       name="Contact"
-    //       element={<ContactPage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/corporate"
-    //       name="Corporate"
-    //       element={<CorporatePage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/customer"
-    //       name="Customer"
-    //       element={<CustomerPage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/demo"
-    //       name="Demo"
-    //       element={<DemoPage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/e-book"
-    //       name="EBook"
-    //       element={<EbookPage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/guide"
-    //       name="Guide"
-    //       element={<GuidePage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/"
-    //       name="Home"
-    //       element={<HomePage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/hotel"
-    //       name="Hotel"
-    //       element={<HotelPage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/k-care"
-    //       name="KCare"
-    //       element={<KCarePage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/login"
-    //       name="Login"
-    //       element={<LoginPage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/pricing"
-    //       name="Pricing"
-    //       element={<PricingPage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/register"
-    //       name="Register"
-    //       element={<RegistrationPage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/team"
-    //       name="Team"
-    //       element={<TeamPage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/travel"
-    //       name="Travel"
-    //       element={<TravelPage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/vendor"
-    //       name="Vendor"
-    //       element={<VendorPage />}
-    //     />
-    //     <Route
-    //       exact
-    //       path="/webinar"
-    //       name="Webinar"
-    //       element={<WebinarPage />}
-    //     />
-    //   </Routes>
-    //   <HomeFooter />
-    //   </div>
-    //   </BrowserRouter>
+    <>
+    {/* <BrowserRouter>
+      <div className="App">
+        <HomeHeader />
+      <Routes>
+        <Route
+          exact
+          path="/blog"
+          name="Blog"
+          element={<BlogPage />}
+        />
+        <Route
+          exact
+          path="/car-rental"
+          name="CarRental"
+          element={<CarRentalPage />}
+        />
+        <Route
+          exact
+          path="/career"
+          name="Career"
+          element={<CareerPage />}
+        />
+        <Route
+          exact
+          path="/company"
+          name="Company"
+          element={<CompanyPage />}
+        />
+        <Route
+          exact
+          path="/contact"
+          name="Contact"
+          element={<ContactPage />}
+        />
+        <Route
+          exact
+          path="/corporate"
+          name="Corporate"
+          element={<CorporatePage />}
+        />
+        <Route
+          exact
+          path="/customer"
+          name="Customer"
+          element={<CustomerPage />}
+        />
+        <Route
+          exact
+          path="/demo"
+          name="Demo"
+          element={<DemoPage />}
+        />
+        <Route
+          exact
+          path="/e-book"
+          name="EBook"
+          element={<EbookPage />}
+        />
+        <Route
+          exact
+          path="/guide"
+          name="Guide"
+          element={<GuidePage />}
+        />
+        <Route
+          exact
+          path="/"
+          name="Home"
+          element={<HomePage />}
+        />
+        <Route
+          exact
+          path="/hotel"
+          name="Hotel"
+          element={<HotelPage />}
+        />
+        <Route
+          exact
+          path="/k-care"
+          name="KCare"
+          element={<KCarePage />}
+        />
+        <Route
+          exact
+          path="/login"
+          name="Login"
+          element={<LoginPage />}
+        />
+        <Route
+          exact
+          path="/pricing"
+          name="Pricing"
+          element={<PricingPage />}
+        />
+        <Route
+          exact
+          path="/register"
+          name="Register"
+          element={<RegistrationPage />}
+        />
+        <Route
+          exact
+          path="/team"
+          name="Team"
+          element={<TeamPage />}
+        />
+        <Route
+          exact
+          path="/travel"
+          name="Travel"
+          element={<TravelPage />}
+        />
+        <Route
+          exact
+          path="/vendor"
+          name="Vendor"
+          element={<VendorPage />}
+        />
+        <Route
+          exact
+          path="/webinar"
+          name="Webinar"
+          element={<WebinarPage />}
+        />
+      </Routes>
+      <HomeFooter />
+      </div>
+      </BrowserRouter> */}
 
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <div className='App'>
         <NavBar />
         <Routes>
@@ -236,7 +234,32 @@ function App() {
         </Routes>
         <Footer />
       </div>
+    </BrowserRouter> */}
+    <BrowserRouter>
+      <div className='App'>
+        <Routes>
+        <Route
+          exact
+          path="/reset-password"
+          name="ResetPassword"
+          element={<ResetPasswordPage />}
+        />
+        <Route
+          exact
+          path="/login"
+          name="Login"
+          element={<Login />}
+        />
+        <Route
+          exact
+          path="/register"
+          name="register"
+          element={<Onboarding />}
+        />
+        </Routes>
+      </div>
     </BrowserRouter>
+    </>
   );
 }
 

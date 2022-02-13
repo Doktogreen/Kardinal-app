@@ -1,4 +1,9 @@
-
+h5 {
+    font-size: 1.2rem !important;
+}
+p.card-text p.mb-4 button {
+    font-size: .7rem !important;
+}
 .apexcharts-legend {
 display: flex;
 overflow: auto;
