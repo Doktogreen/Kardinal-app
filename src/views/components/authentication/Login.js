@@ -4,6 +4,7 @@ import login_slide from "../../../assets/general-assets/onboarding/images/login-
 import { Formik } from 'formik';
 import * as yup from "yup";
 import './index.scss';
+import { Link } from "react-router-dom";
 
 const schema = yup.object({
     // username: yup.string().required('Please Enter a username'),
@@ -96,11 +97,14 @@ login = (
                                     <b>Create an account</b>
                                 </a> 
                             </p>
-                                <button 
+                                <Link to={"/dashboard"}>
+                                <button
+                                    
                                     disabled={isSubmitting} 
                                     className="btn btn-primary btn-login">
                                     Login
                                 </button>
+                                </Link>
 						</div>
 					</div>
                 </section>

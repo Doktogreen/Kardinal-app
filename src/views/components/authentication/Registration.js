@@ -156,7 +156,7 @@ function Onboarding(){
                                 </div> 
                                 <p style={{textAlign: "left", fontSize: "14px"}}>
                                     Already have an account with Kardinal? 
-                                    <a href="/login">
+                                    <a href="/">
                                         <b>Log in instead</b>
                                     </a>
                                 </p>
@@ -187,7 +187,6 @@ function Onboarding(){
                                         value={values.confirmCode}
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        placeholder="work confirmCode" 
                                     />
                                     <div className="alart">
                                         {errors.confirmCode && touched.confirmCode && errors.confirmCode}
@@ -224,7 +223,6 @@ function Onboarding(){
                                             value={values.firstName}
                                             onChange={handleChange}
                                             onBlur={handleBlur}
-                                            placeholder="work firstName" 
                                         />
                                         <div className="alart">
                                             {errors.firstName && touched.firstName && errors.firstName}
@@ -237,8 +235,7 @@ function Onboarding(){
                                             placeholder="Last name" 
                                             value={values.lastName}
                                             onChange={handleChange}
-                                            onBlur={handleBlur}
-                                            placeholder="work lastName" 
+                                            onBlur={handleBlur} 
                                         />
                                         <div className="alart">
                                             {errors.lastName && touched.lastName && errors.lastName}
@@ -254,7 +251,6 @@ function Onboarding(){
                                         value={values.phoneNumber}
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        placeholder="work phoneNumber" 
                                     />
                                     <div className="alart">
                                         {errors.phoneNumber && touched.phoneNumber && errors.phoneNumber}
@@ -269,7 +265,6 @@ function Onboarding(){
                                         value={values.password}
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        placeholder="work password" 
                                     />
                                     <div className="alart">
                                         {errors.password && touched.password && errors.password}
@@ -305,7 +300,6 @@ function Onboarding(){
                                         value={values.companyName}
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        placeholder="work companyName" 
                                     />
                                     <div className="alart">
                                         {errors.companyName && touched.companyName && errors.companyName}
@@ -398,7 +392,6 @@ function Onboarding(){
                                                 value={values.inviteByEmail}
                                                 onChange={handleChange}
                                                 onBlur={handleBlur}
-                                                placeholder="work inviteByEmail" 
                                             />
                                         </div>     
                                     </div>
@@ -415,7 +408,6 @@ function Onboarding(){
                                                 value={values.inviteByLink}
                                                 onChange={handleChange}
                                                 onBlur={handleBlur}
-                                                placeholder="work invite_by_link" 
                                             />
                                         </div>
                                     </div>
