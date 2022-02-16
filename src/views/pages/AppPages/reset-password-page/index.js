@@ -1,5 +1,5 @@
 import React from "react";
-import ResetPassword from "../../../components/authentication/ResetPassword";
+import ResetPassword from "../../../components/actions/ResetPassword";
 
 function ResetPasswordPage(){
     return(

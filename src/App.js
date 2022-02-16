@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Login from "./views/components/authentication/Login";
+import Login from "./views/components/actions/Login";
 import DashboardPage from './views/pages/AppPages/dashboard-one-page';
 import NavBar from './views/components/user/NavBar';
 import Footer from './views/components/user/Footer';
@@ -12,7 +12,7 @@ import ReportingPage from './views/pages/AppPages/reporting-page';
 import SettingPage from './views/pages/AppPages/setting-page';
 import TripPage from './views/pages/AppPages/trip-page';
 import TripHistoryPage from './views/pages/AppPages/trip-history-page';
-import Onboarding from './views/components/authentication/Registration';
+import Onboarding from './views/components/actions/Registration';
 import ResetPasswordPage from './views/pages/AppPages/reset-password-page';
 // import PrivateRoute from './privateRoute';
 // import WebApp from './layout/web-app';
