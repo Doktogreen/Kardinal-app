@@ -8,11 +8,12 @@ import onboarding_slide_5 from "../../../assets/general-assets/onboarding/images
 import { Formik } from 'formik';
 import * as yup from "yup";
 import './index.scss';
-import EmailModal from "./emailVerificationModal";
-import { EmailVerification } from ".";
+import { CodeConfirmation, EmailValidation } from ".";
 
 function Onboarding(){
     const [page, setPage] = useState(1);
+    const [sent, setSent] = useState(false);
+
     const decrement = ()=> {
         setPage(page - 1)
         if (page < 2){
@@ -20,19 +21,35 @@ function Onboarding(){
         };
         console.log(page)
     };
-    const increment = (e, email)=> {
+    const increment = (e)=> {
         e.preventDefault();
-        let actions = {
-            email: email,
-            increasePage: page
-        }
-
-        EmailVerification(actions);
+        setPage(page + 1);
+        
         if (page > 5){
             return setPage(1);
         };
-        return <EmailModal />
     };
+
+    const codeSender = (e, email) => {
+        e.preventDefault();
+        let info = {
+            isPage: page,
+            workEmail: email,
+            isSent: sent
+        }
+        EmailValidation(info);
+    }
+
+    const codeVerifyer = (e, code, email) => {
+        e.preventDefault();
+        let info = {
+            isPage: page,
+            workEmail: email,
+            isCode: code,
+            isSent: sent
+        }
+        CodeConfirmation(info);
+    }
 
     const schema = yup.object({
         email: yup
@@ -87,7 +104,8 @@ function Onboarding(){
                 firstName: '',
                 lastName: '',
                 phoneNumber: '',
-                companyName: ''
+                companyName: '',
+                code: ''
                     }
                 }
                 validationSchema={schema}
@@ -136,7 +154,7 @@ function Onboarding(){
                         </li>
                     </ul>
                 </div>
-                    {page === 1 ? (<form onSubmit={increment}>
+                    {page === 1 ? (<form onSubmit={e => codeSender(e, values.email)}>
                         <div className="inner">
                             <div className="image-hold">
                                 <img src={onboarding} alt="" />
@@ -145,31 +163,48 @@ function Onboarding(){
                                 {/* <!--<div className="form-header">-->
                                 <!--	<h3>Registration</h3>-->
                                 <!--</div>--> */}
-                                <p>Lets get started</p>
-                                <div className="form-group">
+                                <p>Lets get started</p> 
+                                <div className="input-group mb-3">
                                     <label htmlFor="email">
                                         Please put in your work email
                                     </label>
                                     <input 
-                                        type="email" 
+                                        type="text" 
                                         className="form-control" 
+                                        placeholder="Work email" 
+                                        aria-label="Work email" 
+                                        aria-describedby="basic-addon2" 
+                                        type="email"
                                         id="email"
                                         value={values.email}
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        placeholder="work email" 
                                     />
+                                    <div class="input-group-append">
+                                        <button  className="btn btn-outline-secondary" type="submit">Send code</button>
+                                    </div>
                                     <div className="alart">
                                         {errors.email && touched.email && errors.email}
                                     </div>
-                                </div> 
-                                <div className="input-group mb-3">
-                                    <input type="text" className="form-control" placeholder="Code" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                                    <div class="input-group-append">
-                                        <button  className="btn btn-outline-secondary" data-toggle="modal" href="#email" type="button">Verify</button>
-                                        <EmailModal />
-                                    </div>
                                 </div>
+                                {sent ? (<div className="input-group mb-3">
+                                    <input 
+                                        type="text" 
+                                        className="form-control" 
+                                        placeholder="Code" 
+                                        aria-label="Recipient's username" 
+                                        aria-describedby="basic-addon2"
+                                        type="email"
+                                        id="email"
+                                        value={values.code}
+                                        onChange={handleChange}
+                                        onBlur={handleBlur} 
+                                    
+                                    />
+                                    <div class="input-group-append">
+                                        <button onClick={e => codeVerifyer(e, values.code, values.email)} className="btn btn-outline-secondary" type="submit">Verify</button>
+                                    </div>
+                                </div>): null}
                                 <p style={{textAlign: "left", fontSize: "14px"}}>
                                     Already have an account with Kardinal? 
                                     <a href="/">
