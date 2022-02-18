@@ -3,8 +3,12 @@ import AuthContainer from "./AuthContainer";
 import login_slide from "../../../assets/general-assets/onboarding/images/login-slide.svg";
 import { Formik } from 'formik';
 import * as yup from "yup";
-import './index.scss';
 import { Link } from "react-router-dom";
+// import "../../../assets/general-assets/onboarding/css/login.css";
+// import "../../../assets/general-assets/onboarding/css/style.css";
+// import "../../../assets/general-assets/onboarding/css/style.css.map";
+// import "../../../assets/general-assets/onboarding/css/style.scss";
+import './index.scss';
 
 const schema = yup.object({
     // username: yup.string().required('Please Enter a username'),

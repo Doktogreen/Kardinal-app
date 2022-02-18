@@ -1,5 +1,6 @@
 import React from "react";
 import { MultiSelect } from "../../../../utilities/multi-select-form";
+import '../index.css';
 
     const travelers = [
     { value: 'chocolate', label: 'Ghulam Abbas' },
@@ -252,7 +253,7 @@ function Trip(){
                                         </div>
                                     </div>
                                     <div className="form-row mb-4">
-                                        <div className="form-group col-md-12">
+                                        <div className="row col-md-12">
                                             <label className="new-control new-radio radio-primary">
                                                 <input type="radio" className="new-control-input" name="custom-radio-1" checked />
                                                 <span className="new-control-indicator"></span>Roundtrip

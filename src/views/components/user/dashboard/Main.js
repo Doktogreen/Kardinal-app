@@ -151,7 +151,7 @@ function Main(){
                                         </div>
                                     </div>
                                 </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
+                            <div className="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing trip-summary">
                                 <div className="widget widget-three widget-chart-three" style={{padding: "0px"}}>
                                     <div className="widget-heading"  style={{padding: "20px"}}>
                                         <h5 className="">Trip Summary</h5>

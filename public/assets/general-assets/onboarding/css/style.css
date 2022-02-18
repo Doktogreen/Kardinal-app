@@ -205,9 +205,9 @@ select.form-control {
   select.form-control option[value=""][disabled] {
     display: none; }
 
-textarea.form-control {
+/* textarea.form-control {
   padding: 8px 0;
-  background: url("../images/textarea-bg.png") no-repeat right bottom 3px; }
+  background: url("../images/textarea-bg.png") no-repeat right bottom 3px; } */
 
 .actions {
   position: absolute;

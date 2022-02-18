@@ -4,7 +4,6 @@ function AuthContainer(props){
     return(
         <>
             {props.data} 
-           
         </>
     )
 }
