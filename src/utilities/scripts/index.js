@@ -687,7 +687,7 @@ export let optionVisitors = {
     },
     stroke: {
         show: true,
-        width: 2,
+        // width: 2,
         colors: ['transparent']
     },
     series: [{

@@ -21,9 +21,12 @@ import ResetPasswordPage from './views/pages/AppPages/reset-password-page';
 // const Onboarding = React.lazy(() => import("./views/components/authentication/Registration"));
 // const Dashboard = React.lazy(() => import("./layout/web-app"));
 // const Home = React.lazy(() => import("./layout/website"));
-
+export const Backdrop = () => {
+  return(
+    <div className='backdrop'></div>
+  )
+}
 function App() {
-
   return (
     <>
     <BrowserRouter>

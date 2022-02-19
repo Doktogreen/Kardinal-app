@@ -182,7 +182,7 @@ opacity: 0.45;
   border-bottom: 1px dashed #016EB1;
 }
 div.page-header {
-  padding-left: 20px !important;
+  padding-left: 17px !important;
 }
 @media only screen and (max-width: 1200px){
   div.widget.widget-chart-three {
