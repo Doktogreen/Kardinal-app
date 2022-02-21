@@ -1,122 +1,112 @@
-import React from "react";
+import React, { useState } from "react";
 import AuthContainer from "./AuthContainer";
+import { createBrowserHistory } from "history";
 import login_slide from "../../../assets/general-assets/onboarding/images/login-slide.svg";
-import { Formik } from 'formik';
-import * as yup from "yup";
-import { Link } from "react-router-dom";
-// import "../../../assets/general-assets/onboarding/css/login.css";
-// import "../../../assets/general-assets/onboarding/css/style.css";
-// import "../../../assets/general-assets/onboarding/css/style.css.map";
-// import "../../../assets/general-assets/onboarding/css/style.scss";
-import './index.scss';
+import { LoginService } from "."
 
-const schema = yup.object({
-    // username: yup.string().required('Please Enter a username'),
-    email: yup
-      .string()
-      .email()
-      .required(<div className="red">Please enter your email !"</div>),
-    // confirmEmail: yup
-    //   .string()
-    //   .email()
-    //   .required()
-    //   .oneOf([yup.ref("email"), null], "Emails must match"),
-    password: yup
-      .string()
-      .required(<div className="red">Please enter your password !</div>)
-      .matches(
-        "^(?=.*[A-Za-z])(?=.*d)(?=.*[@$!%*#?&])[A-Za-zd@$!%*#?&]{8,}$",
-        "Password must contain at least 8 characters, 1 uppercase, 1 lowercase, 1 number and 1 special case character"
-      ),
-    // confirmPassword: yup
-    //   .string()
-    //   .required()
-    //   .oneOf([yup.ref("password"), null], "Passwords must match")
-  });
+function Login() {
+    const [formErrors, setFormErrors] = useState({});
+    const [page, setPage] = useState(1);
+    const [isLogin, setIsLogin] = useState(false);
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    
+    const initialValues = {
+        username: username,
+        password: password
+    };
 
-export let login;
-login = (
-    <div className="wrapper">
-    <Formik
-       initialValues={
-           { email: '', 
-            password: '' 
-            }
-        }
-        validationSchema={schema}
-        onSubmit={(values, { setSubmitting }) => {
-         setTimeout(() => {
-           alert(JSON.stringify(values, null, 2));
-           setSubmitting(false);
-         }, 400);
-       }}
-     >
-       {({values, errors, touched, handleChange, handleBlur,handleSubmit, isSubmitting,
-       }) => (<form onSubmit={handleSubmit}  id="wizard">
+    let history = createBrowserHistory()
+    const LoginUser = (e) => {
+        e.preventDefault();
+        const data = {
+            username: username,
+            password: password
+        };
+        LoginService(data).then((res) => {
+            res ? history.push('/dashboard') : setPage(page);
+        });
+        setIsLogin(true);
+    };
+    const validate = (values) => {
+        const errors = {};
+        const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        const passwordRegex = /^(?=.*[A-Za-z])(?=.*d)(?=.*[@$!%*#?&])[A-Za-zd@$!%*#?&]{8,}$/;
+        if ( !values.email ) {
+          errors.email = "Email is Required !"
+        }else if ( !emailRegex.test(values.email) ){
+            errors.password = `Invalid email !`
+        };
+        if ( !values.password ) {
+          errors.password = "Password is Required"
+        }else if ( !passwordRegex.test(values.password) ){
+          errors.password = `Password must contain at 
+          least 8 characters, 1 uppercase, 1 lowercase, 
+          1 number and 1 special case character !`
+        };
+    };
+    let login;
+    login = (
+        <div className="wrapper">
+            <form onSubmit={e => LoginUser(e)}  id="wizard">
                 <section>
                     <div className="inner">
-						<div className="image-hold">
-							<img src={login_slide} alt="" />
-						</div>
-						<div className="form-content" >
-							<p>Sign In</p>
-							<div className="form-group">
-                                <label htmlFor="email_">Username</label>
+                        <div className="image-hold">
+                            <img src={login_slide} alt="" />
+                        </div>
+                        <div className="form-content" >
+                            <p>Sign In</p>
+                            <div className="form-group">
+                                <label htmlFor="username">Username</label>
                                 <input 
-                                    type="email" 
-                                    name="email"
-                                    value={values.email}
+                                    type="username" 
+                                    name="username"
+                                    required
+                                    value={username}
                                     className="form-control" 
-                                    id="email_" 
-                                    placeholder="work email"
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
+                                    id="username" 
+                                    placeholder="work username"
+                                    onChange={e => setUsername(e.target.value)}
                                 />
-                                <div className="alart">
-                                    {errors.email && touched.email && errors.email}
-                                </div>
+                                {/* <div className="alart">
+                                    {formErrors.email}
+                                </div> */}
                             </div>
                             <div className="form-group">
                                 <label className="row password-label">
-                                    <label htmlFor="password_">Password</label>
+                                    <label htmlFor="password">Password</label>
                                     <label htmlFor="password_">Forgot password? {" "}
                                     <a className="resetpassword" href="/reset-password">Reset</a></label>
                                 </label>
                                 <input 
                                     type="password"
                                     name="password"
-                                    value={values.password}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
+                                    required
+                                    value={password}
+                                    onChange={e => setPassword(e.target.value)}
                                     className="form-control" 
-                                    id="password_" 
+                                    id="password" 
                                 />
-                                <div className="alart">
-                                    {errors.password && touched.password && errors.password}
-                                </div>
                             </div>
-							<p className="login-p">
+                            <p className="login-p">
                                 Don't have an account with Kardinal? 
                                 <a href="/register">
                                     <b>Create an account</b>
                                 </a> 
                             </p>
-                                <Link to={"/dashboard"}>
-                                <button
-                                    
-                                    disabled={isSubmitting} 
-                                    className="btn btn-primary btn-login">
-                                    Login
-                                </button>
-                                </Link>
-						</div>
-					</div>
-                </section>
-            </form>)}
-        </Formik>
-		</div>
-)
-function Login(){
+                            <button type="submit" 
+                                className="btn btn-primary btn-login">
+                                {isLogin ? 
+                                <div class="spinner-border text-dark" role="status">
+                                    <span className="sr-only login-sr">Loading...</span>
+                                </div>: "Login"}
+                            </button>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </div>
+    )
     return(
         <>
             <AuthContainer data={login}/>

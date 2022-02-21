@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import api from "./apiServices";
 import swal from "sweetalert";
-import { history } from "../../../history";
-import { FETCH_ONBOARDING } from "./types";
+// import { history } from "../../../history";
+// import { FETCH_ONBOARDING } from "./types";
 import { Storage } from "../../../utilities/storage/storage";
 
 export const EmailValidation = async (data) => {
@@ -42,7 +42,7 @@ export const CodeConfirmation = async (info) => {
       if (responseData.message !== "failed") {
         setTimeout(
           swal(
-            "Congratulations, you are now being redirected to the next page"
+            "Congratulations, you are now being redirected to the next page" 
           ),
           3000
         );
@@ -58,7 +58,7 @@ export const CodeConfirmation = async (info) => {
 export const RegisterUser = async (info) => {
   console.log(info)
   let data ={
-    "username": info.username,
+    "username": info.userName,
     "email": info.email,
     "password1": info.password,
     "password2": info.password,
@@ -81,6 +81,111 @@ export const RegisterUser = async (info) => {
         setTimeout(
           swal(
             "Congratulations, you are now being redirected to the next page"
+          ),
+          3000
+        );
+        return true;
+      } else {
+        setTimeout(swal(responseData.data), 3000);
+      }
+      return false;
+    })
+    .catch((err) => {});
+};
+
+export const LoginService = async (info) => {
+  const data = {
+    username: info.username,
+    password: info.password
+  };
+  return await api
+    .post(`/auth/login/`, data)
+      .then((response) => {
+        let responseData = response;
+        console.log(responseData)
+          if ( responseData.key ) {
+            window.localStorage.setItem(
+              "key", responseData["key"]
+            );
+            setTimeout(
+              swal(
+                "Welcome back, you are now being redirected to your account."
+              ),
+              3000
+            );
+            return true;
+          } else {
+            setTimeout(swal(responseData.data), 3000);
+          }
+          return false;
+        }
+      )
+    .catch((err) => {});
+}
+
+export const PasswordResetCode = async (data) => {
+  // const [isSent, setIsSent] = useState(data.isSent)
+  let email = data.workEmail;
+  let body = {
+    email: email,
+  };
+  return await api
+    .post(`/auth/password_reset/`, body)
+    .then((response) => {
+      const resData = response;
+      if (resData.status === "Ok") {
+        setTimeout(
+          swal("Please check your email inbox or spam for verification code"),
+          2000
+        );
+        return true;
+      } else {
+        swal(resData.error);
+        return false;
+      }
+    })
+    .catch((err) => {});
+  // })
+};
+
+export const PasswordReset = async (info) => {
+  let data = {
+    email: info.workEmail,
+    token: `${info.isCode}`,
+  };
+  return await api
+    .post(`/auth/password_reset/confirm/`, data)
+    .then((response) => {
+      const responseData = response;
+      if (responseData.status === "Ok") {
+        setTimeout(
+          swal(
+            "Password reset, you can now login." 
+          ),
+          3000
+        );
+        return true;
+      } else {
+        setTimeout(swal(responseData.data), 3000);
+      }
+      return false;
+    })
+    .catch((err) => {});
+};
+export const PasswordChange = async (info) => {
+  let data = {
+    old_password: info.oldPassword,
+    new_password1: info.newPassword,
+    new_password2: info.confirmPassword
+  };
+  return await api
+    .post(`/auth/password/change/`, data)
+    .then((response) => {
+      const responseData = response;
+      if (responseData.details === "New password has been saved") {
+        setTimeout(
+          swal(
+            "New password has been saved, you can now login." 
           ),
           3000
         );
