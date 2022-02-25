@@ -9,7 +9,7 @@ import { Storage } from "../../../utilities/storage/storage";
 export const API = "http://kardinal-api.herokuapp.com"
 
 
-const token = () => Storage.getItem("token");
+const token = () => window.localStorage.getItem("key");
 function headers() {
   return {
     Accept: 'application/json',

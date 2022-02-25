@@ -3,6 +3,7 @@ import api from "./apiServices";
 import swal from "sweetalert";
 // import { history } from "../../../history";
 // import { FETCH_ONBOARDING } from "./types";
+
 import { Storage } from "../../../utilities/storage/storage";
 
 export const EmailValidation = async (data) => {
@@ -78,6 +79,9 @@ export const RegisterUser = async (info) => {
     .then((response) => {
       const responseData = response;
       if (responseData.message !== "failed") {
+        window.localStorage.setItem(
+          "token", (responseData.key)
+        )
         setTimeout(
           swal(
             "Congratulations, you are now being redirected to the next page"
@@ -101,7 +105,7 @@ export const LoginService = async (info) => {
   return await api
     .post(`/auth/login/`, data)
       .then((response) => {
-        let responseData = response;
+        let responseData = response.data;
         console.log(responseData)
           if ( responseData.key ) {
             window.localStorage.setItem(
@@ -115,12 +119,16 @@ export const LoginService = async (info) => {
             );
             return true;
           } else {
-            setTimeout(swal(responseData.data), 3000);
+            setTimeout(swal(responseData.non_field_errors), 3000);
           }
           return false;
         }
       )
-    .catch((err) => {});
+    .catch((err) => {
+      setTimeout(() => {
+        return swal(err.data.message)
+      }, 3000);
+    });
 }
 
 export const PasswordResetCode = async (data) => {
@@ -172,31 +180,6 @@ export const PasswordReset = async (info) => {
     })
     .catch((err) => {});
 };
-export const PasswordChange = async (info) => {
-  let data = {
-    old_password: info.oldPassword,
-    new_password1: info.newPassword,
-    new_password2: info.confirmPassword
-  };
-  return await api
-    .post(`/auth/password/change/`, data)
-    .then((response) => {
-      const responseData = response;
-      if (responseData.details === "New password has been saved") {
-        setTimeout(
-          swal(
-            "New password has been saved, you can now login." 
-          ),
-          3000
-        );
-        return true;
-      } else {
-        setTimeout(swal(responseData.data), 3000);
-      }
-      return false;
-    })
-    .catch((err) => {});
-};
 
 // export function appLogout (dispatch){
 //     const email = Storage.getItem("user")["username"];
@@ -218,3 +201,32 @@ export const PasswordChange = async (info) => {
 //   return (dispatch) =>
 //     dispatch({ type: "AUTHENTICATION_SUCCESS", response });
 // };
+
+/*----------------------
+      SETTINGS
+----------------------*/
+export const PasswordChange = async (info) => {
+  let data = {
+    old_password: info.oldPassword,
+    new_password1: info.newPassword,
+    new_password2: info.confirmPassword
+  };
+  return await api
+    .post(`/auth/password/change/`, data)
+    .then((response) => {
+      const responseData = response;
+      if (responseData.details === "New password has been saved") {
+        setTimeout(
+          swal(
+            "Congratulations ! New password has been saved." 
+          ),
+          3000
+        );
+        return true;
+      } else {
+        setTimeout(swal(responseData.data), 3000);
+      }
+      return false;
+    })
+    .catch((err) => {});
+};

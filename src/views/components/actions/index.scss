@@ -10,6 +10,10 @@ span.number {
 .login-sr {
     background-color: #fff !important;
 }
+.login-p {
+    font-size: 14px;
+    text-align: left;
+}
 .inner {
     justify-content: center !important;
     align-items: center !important;
@@ -132,9 +136,12 @@ div.image-hold img {
     right: 70px;
 }
 .btn-login-cover {
-    margin-top: 20px;
-    justify-content: flex-end !important;
-    align-items: flex-end !important;
+    position: absolute !important;
+    width: fit-content;
+    height: fit-content;
+    align-self: flex-end;
+    bottom: 0vmin;
+    right: 23vh;
 }
 .alart {
     color: #243256;

@@ -578,7 +578,7 @@ function Onboarding() {
                     </div>
                     <div className="form-group mb-2">
                         <input 
-                          type="text"
+                          type="number"
                           required 
                           className="form-control" 
                           placeholder="Estimated travel monthly spend" 
@@ -589,7 +589,7 @@ function Onboarding() {
                     </div>
                     <div className="form-group mb-2">
                         <input 
-                          type="text"
+                          type="number"
                           required 
                           className="form-control"  
                           placeholder="Estimated annual travel budget" 

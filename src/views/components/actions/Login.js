@@ -16,7 +16,7 @@ function Login() {
         password: password
     };
 
-    let history = createBrowserHistory()
+    let history = createBrowserHistory();
     const LoginUser = (e) => {
         e.preventDefault();
         const data = {
@@ -27,6 +27,9 @@ function Login() {
             res ? history.push('/dashboard') : setPage(page);
         });
         setIsLogin(true);
+        setTimeout(() => {
+            return setIsLogin(false);
+        }, 3000)
     };
     const validate = (values) => {
         const errors = {};
@@ -89,18 +92,24 @@ function Login() {
                                 />
                             </div>
                             <p className="login-p">
-                                Don't have an account with Kardinal? 
+                                Don't have an account with Kardinal? {" "}
                                 <a href="/register">
                                     <b>Create an account</b>
                                 </a> 
                             </p>
-                            <button type="submit" 
-                                className="btn btn-primary btn-login">
+                            <span className="row reset-bottom">
+                            <button
+                                type="submit"
+                                href="#next"
+                                role="menuitem"
+                                className="btn btn-primary mb-2"
+                            >
                                 {isLogin ? 
                                 <div class="spinner-border text-dark" role="status">
                                     <span className="sr-only login-sr">Loading...</span>
                                 </div>: "Login"}
                             </button>
+                        </span>
                     </div>
                 </div>
             </section>
