@@ -2,18 +2,15 @@
 
 import axios from "axios";
 import swal from "sweetalert";
-import { Storage } from "../../../utilities/storage/storage";
 
-
-// export const API = "https://api.simplefi.ng"
 export const API = "http://kardinal-api.herokuapp.com"
 
-
-const token = () => window.localStorage.getItem("key");
+const token = () => localStorage.getItem("token");
 function headers() {
   return {
     Accept: 'application/json',
     'Content-Type': 'application/json',
+    Authorization: `Token ${token()}`
   };
 }
 
@@ -39,7 +36,7 @@ function queryString(params) {
 const api = {
   fetch(url, params = {}, auth = false) {
     return axios.get(`${API}${url}${queryString(params)}`, {
-      headers: auth ? authHeaders() : headers(),
+      headers: auth === true ? authHeaders() : headers(),
       validateStatus: (status) => {
         return status >= 200 && status < 500 // default
       }

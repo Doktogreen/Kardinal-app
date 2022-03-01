@@ -152,6 +152,10 @@ function Onboarding() {
       volume:monthlySpend,
       budget:annualTravelBudget,
     };
+    setIsSubmit(true);
+    setTimeout(() => {
+      setIsSubmit(false)
+    }, 3000)
     console.log(data)
     RegisterUser(data).then((res) => {
       res ? setPage(page + 1) : setPage(3);
@@ -780,7 +784,10 @@ function Onboarding() {
                     role="menuitem"
                     className="btn btn-primary mb-2"
                   >
-                    Register
+                    {isSubmit ? 
+                      <div class="spinner-border text-dark" role="status">
+                          <span className="sr-only login-sr">Loading...</span>
+                      </div>: "Resgister"}
                   </a>
                 </li>
               ) : null}

@@ -1,8 +1,8 @@
 import React from "react";
-import CompanyProfile from "./CompanyProfile";
 import TravelersProfile from "./TravelersProfile";
 import TwoFactor from "./TwoFactor";
 import ChangePassword from "./ChangePassword";
+import CompanyProfileComponent from "./CompanyProfile";
 
 function Setting(){
 
@@ -79,7 +79,7 @@ function Setting(){
                                                             </div>                                                                        
                                                         </div>
                                                     </div>
-                                                    <CompanyProfile />
+                                                    <CompanyProfileComponent />
                                                 </div>
                                             </div>
                                         </div>

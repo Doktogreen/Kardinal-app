@@ -4,10 +4,9 @@ import swal from "sweetalert";
 // import { history } from "../../../history";
 // import { FETCH_ONBOARDING } from "./types";
 
-import { Storage } from "../../../utilities/storage/storage";
+// import { Storage } from "../../../utilities/storage/storage";
 
 export const EmailValidation = async (data) => {
-  // const [isSent, setIsSent] = useState(data.isSent)
   let email = data.workEmail;
   let body = {
     email: email,
@@ -79,8 +78,8 @@ export const RegisterUser = async (info) => {
     .then((response) => {
       const responseData = response;
       if (responseData.message !== "failed") {
-        window.localStorage.setItem(
-          "token", (responseData.key)
+        localStorage.setItem(
+          "token", (JSON.stringify(responseData.key))
         )
         setTimeout(
           swal(
@@ -105,11 +104,10 @@ export const LoginService = async (info) => {
   return await api
     .post(`/auth/login/`, data)
       .then((response) => {
-        let responseData = response.data;
+        let responseData = response.key;
         console.log(responseData)
-          if ( responseData.key ) {
-            window.localStorage.setItem(
-              "key", responseData["key"]
+            localStorage.setItem(
+              "token", (JSON.stringify(responseData))
             );
             setTimeout(
               swal(
@@ -118,10 +116,6 @@ export const LoginService = async (info) => {
               3000
             );
             return true;
-          } else {
-            setTimeout(swal(responseData.non_field_errors), 3000);
-          }
-          return false;
         }
       )
     .catch((err) => {
@@ -207,9 +201,9 @@ export const PasswordReset = async (info) => {
 ----------------------*/
 export const PasswordChange = async (info) => {
   let data = {
-    old_password: info.oldPassword,
-    new_password1: info.newPassword,
-    new_password2: info.confirmPassword
+    old_password: info.old_password,
+    new_password1: info.new_password1,
+    new_password2: info.new_password2
   };
   return await api
     .post(`/auth/password/change/`, data)
@@ -225,6 +219,74 @@ export const PasswordChange = async (info) => {
         return true;
       } else {
         setTimeout(swal(responseData.data), 3000);
+      }
+      return false;
+    })
+    .catch((err) => {});
+};
+
+export const CompanyProfile = async (info) => {
+  let data = {
+    logo: info.logo,
+    business_name: info.business_name, 
+    business_bio: info.business_bio,
+    business_industry: info.business_industry,
+    business_address: info.business_address,
+    business_city: info.business_city,
+    business_state: info.business_state,
+    business_country: info.business_country
+  };
+  return await api
+    .post(`/api/trips/company/`, data)
+    .then((response) => {
+      const responseData = response;
+      if (responseData) {
+        setTimeout(
+          swal(
+            "Congrats ! Business profile saved." 
+          ),
+          3000
+        );
+        return true;
+      } else {
+        setTimeout(swal(responseData), 3000);
+      }
+      return false;
+    })
+    .catch((err) => {});
+};
+
+export const AddTraveler = async (info) => {
+  let data = {
+    title: info.title,
+    first_name: info.first_name,
+    last_name: info.last_name,
+    email: info.email,
+    phone_number: info.phone_number,
+    gender: info.gender,
+    date_of_birth: info.date_of_birth,
+    nationality: info.nationality,
+    identification_expiry: info.identification_expiry,
+    identification_issue: info.identification_issue,
+    identification_country: info.identification_country,
+    means_of_identification: info.means_of_identification,
+    identification_number: info.identification_number,
+    passenger_type: info.passenger_type
+  };
+  return await api
+    .post(`/api/trips/passenger/`, data)
+    .then((response) => {
+      const responseData = response;
+      if (responseData) {
+        setTimeout(
+          swal(
+            "Traveler successfully added." 
+          ),
+          3000
+        );
+        return true;
+      } else {
+        setTimeout(swal(responseData), 3000);
       }
       return false;
     })

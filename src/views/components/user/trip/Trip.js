@@ -1,6 +1,7 @@
 import React from "react";
 import { MultiSelect } from "../../../../utilities/multi-select-form";
 import '../index.css';
+import GuestTravelModal from "./GuestTravelModal";
 
     const travelers = [
     { value: 'chocolate', label: 'Ghulam Abbas' },
@@ -62,7 +63,8 @@ function Trip(){
                                         
                                         <div className="form-group col-md-6">
                                             <label for="input">Are you making a booking for a guest?</label>
-                                            <p className="form-control"><a href="#addGuestTravelerModal" dataToggle="modal" dataTarget="#addGuestTravelerModal">+ Add guest traveler</a></p>
+                                            <p className="form-control"><a href="#addGuestTravelerModal" data-toggle="modal" data-target="#addGuestTravelerModal">+ Add guest traveler</a></p>
+                                            <GuestTravelModal />
                                         </div>
                                     </div>
                                     <div className="form-row mb-4">
@@ -147,7 +149,8 @@ function Trip(){
                                         </div>
                                         <div className="form-group col-md-6">
                                             <label for="input">Are you making a booking for a guest?</label>
-                                            <p className="form-control"><a href="#addGuestTravelerModal" dataToggle="modal" dataTarget="#addGuestTravelerModal">+ Add guest traveler</a></p>
+                                            <p className="form-control"><button data-toggle="modal" data-target="#addGuestTravelerModal">+ Add guest traveler</button></p>
+                                            <GuestTravelModal />
                                         </div>
                                     </div>
                                     <div className="form-row mb-4">
@@ -249,7 +252,8 @@ function Trip(){
                                         </div>
                                         <div className="form-group col-md-6">
                                             <label for="input">Are you making a booking for a guest?</label>
-                                            <p className="form-control"><a href="#addGuestTravelerModal" dataToggle="modal" dataTarget="#addGuestTravelerModal">+ Add guest traveler</a></p>
+                                            <p className="form-control"><button data-toggle="modal" data-target="#addGuestTravelerModal">+ Add guest traveler</button></p>
+                                            <GuestTravelModal />
                                         </div>
                                     </div>
                                     <div className="form-row mb-4">

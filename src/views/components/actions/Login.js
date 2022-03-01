@@ -5,16 +5,10 @@ import login_slide from "../../../assets/general-assets/onboarding/images/login-
 import { LoginService } from "."
 
 function Login() {
-    const [formErrors, setFormErrors] = useState({});
     const [page, setPage] = useState(1);
     const [isLogin, setIsLogin] = useState(false);
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    
-    const initialValues = {
-        username: username,
-        password: password
-    };
 
     let history = createBrowserHistory();
     const LoginUser = (e) => {
@@ -31,27 +25,10 @@ function Login() {
             return setIsLogin(false);
         }, 3000)
     };
-    const validate = (values) => {
-        const errors = {};
-        const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        const passwordRegex = /^(?=.*[A-Za-z])(?=.*d)(?=.*[@$!%*#?&])[A-Za-zd@$!%*#?&]{8,}$/;
-        if ( !values.email ) {
-          errors.email = "Email is Required !"
-        }else if ( !emailRegex.test(values.email) ){
-            errors.password = `Invalid email !`
-        };
-        if ( !values.password ) {
-          errors.password = "Password is Required"
-        }else if ( !passwordRegex.test(values.password) ){
-          errors.password = `Password must contain at 
-          least 8 characters, 1 uppercase, 1 lowercase, 
-          1 number and 1 special case character !`
-        };
-    };
     let login;
     login = (
         <div className="wrapper">
-            <form onSubmit={e => LoginUser(e)}  id="wizard">
+            <form onSubmit={LoginUser}  id="wizard">
                 <section>
                     <div className="inner">
                         <div className="image-hold">
@@ -85,6 +62,7 @@ function Login() {
                                     type="password"
                                     name="password"
                                     required
+                                    placeholder="Password"
                                     value={password}
                                     onChange={e => setPassword(e.target.value)}
                                     className="form-control" 
@@ -99,6 +77,7 @@ function Login() {
                             </p>
                             <span className="row reset-bottom">
                             <button
+                                onClick={() => LoginUser()}
                                 type="submit"
                                 href="#next"
                                 role="menuitem"

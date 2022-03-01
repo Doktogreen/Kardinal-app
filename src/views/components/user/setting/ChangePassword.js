@@ -7,6 +7,7 @@ export default function ChangePassword(){
     const [old_password, setOld_password] = useState("");
     const [new_password1, setNew_password1] = useState("");
     const [new_password2, setNew_password2] = useState("");
+    const [isSubmit, setIsSubmit] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,8 +16,12 @@ export default function ChangePassword(){
             new_password1: new_password1,
             new_password2: new_password1
         }
+        setIsSubmit(true);
+        setTimeout(() => {
+            return setIsSubmit(false);
+        }, 3000)
         return PasswordChange(data).then((res) => {
-            return history.push('/setting');
+            return res;
         })
     }
 
@@ -71,7 +76,12 @@ export default function ChangePassword(){
                     </div>
                 </div>
                 <div className="mb-3" style={{padding: "0 20px", textAlign: "right"}}>
-                    <button type="submit" className="btn btn-primary mt-3">Change Password</button>
+                    <button type="submit" className="btn btn-primary mt-3"> 
+                    {isSubmit ? 
+                    <div class="spinner-border text-white" role="status">
+                        <span className="sr-only login-sr">Loading...</span>
+                    </div>: "Change password"}
+                    </button>
                 </div>  
             </form>
         </div>    

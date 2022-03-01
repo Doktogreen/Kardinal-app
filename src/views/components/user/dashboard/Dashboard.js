@@ -6,7 +6,7 @@ function Dashboard(){
     return(
         <body className="alt-menu sidebar-noneoverflow">
             {/* BEGIN LOADER */}
-                {/* <Loader/> */}
+                <Loader/>
             {/* END LOADER */}
 
             {/* BEGIN MAIN CONTAINER */}
